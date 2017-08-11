@@ -1,0 +1,12 @@
+/* Just for funs and it looks cool */
+::-moz-selection {
+	background: #fcd700;
+	color: #fff;
+	text-shadow: none;
+}
+
+::selection {
+	background: orange;
+	color: #fff;
+	text-shadow: none;
+}

@@ -1,0 +1,1021 @@
+/*
+Theme Name: Forta Master
+Theme URI: http://underscores.me/
+Author: John H for Delia Associates
+Author URI: http://www.johnswork.com,%20http://www.delianet.com
+Description: Parent theme for Forta Website s Family
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: forta-master
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+Forta Master is based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
+*/
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Normalize
+# Typography
+# Elements
+# Forms
+# Navigation
+	## Links
+	## Menus
+# Accessibility
+# Alignments
+# Clearings
+# Widgets
+# Content
+	## Posts and pages
+	## Comments
+# Infinite scroll
+# Media
+	## Captions
+	## Galleries
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Normalize
+--------------------------------------------------------------*/
+/* line 51, assets/style.scss */
+html {
+  font-family: sans-serif;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+/* line 57, assets/style.scss */
+body {
+  margin: 0;
+}
+
+/* line 61, assets/style.scss */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/* line 76, assets/style.scss */
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  vertical-align: baseline;
+}
+
+/* line 84, assets/style.scss */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/* line 89, assets/style.scss */
+[hidden],
+template {
+  display: none;
+}
+
+/* line 94, assets/style.scss */
+a {
+  background-color: transparent;
+}
+
+/* line 98, assets/style.scss */
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/* line 103, assets/style.scss */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/* line 107, assets/style.scss */
+b,
+strong {
+  font-weight: bold;
+}
+
+/* line 112, assets/style.scss */
+dfn {
+  font-style: italic;
+}
+
+/* line 116, assets/style.scss */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* line 121, assets/style.scss */
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/* line 126, assets/style.scss */
+small {
+  font-size: 80%;
+}
+
+/* line 130, assets/style.scss */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+/* line 138, assets/style.scss */
+sup {
+  top: -0.5em;
+}
+
+/* line 142, assets/style.scss */
+sub {
+  bottom: -0.25em;
+}
+
+/* line 146, assets/style.scss */
+img {
+  border: 0;
+}
+
+/* line 150, assets/style.scss */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* line 154, assets/style.scss */
+figure {
+  margin: 1em 40px;
+}
+
+/* line 158, assets/style.scss */
+hr {
+  box-sizing: content-box;
+  height: 0;
+}
+
+/* line 163, assets/style.scss */
+pre {
+  overflow: auto;
+}
+
+/* line 167, assets/style.scss */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+/* line 175, assets/style.scss */
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+/* line 185, assets/style.scss */
+button {
+  overflow: visible;
+}
+
+/* line 189, assets/style.scss */
+button,
+select {
+  text-transform: none;
+}
+
+/* line 194, assets/style.scss */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+/* line 202, assets/style.scss */
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+/* line 207, assets/style.scss */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/* line 213, assets/style.scss */
+input {
+  line-height: normal;
+}
+
+/* line 217, assets/style.scss */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+/* line 223, assets/style.scss */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/* line 228, assets/style.scss */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/* line 233, assets/style.scss */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/* line 239, assets/style.scss */
+legend {
+  border: 0;
+  padding: 0;
+}
+
+/* line 244, assets/style.scss */
+textarea {
+  overflow: auto;
+}
+
+/* line 248, assets/style.scss */
+optgroup {
+  font-weight: bold;
+}
+
+/* line 252, assets/style.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 257, assets/style.scss */
+td,
+th {
+  padding: 0;
+}
+
+/*--------------------------------------------------------------
+# Site Helper Classes
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Typography
+--------------------------------------------------------------*/
+/* line 271, assets/style.scss */
+body,
+button,
+input,
+select,
+optgroup,
+textarea {
+  color: #404040;
+  font-family: sans-serif;
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* line 284, assets/style.scss */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  clear: both;
+}
+
+/* line 293, assets/style.scss */
+p {
+  margin-bottom: 1.5em;
+}
+
+/* line 297, assets/style.scss */
+dfn,
+cite,
+em,
+i {
+  font-style: italic;
+}
+
+/* line 304, assets/style.scss */
+blockquote {
+  margin: 0 1.5em;
+}
+
+/* line 308, assets/style.scss */
+address {
+  margin: 0 0 1.5em;
+}
+
+/* line 312, assets/style.scss */
+pre {
+  background: #eee;
+  font-family: "Courier 10 Pitch", Courier, monospace;
+  font-size: 15px;
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  margin-bottom: 1.6em;
+  max-width: 100%;
+  overflow: auto;
+  padding: 1.6em;
+}
+
+/* line 324, assets/style.scss */
+code,
+kbd,
+tt,
+var {
+  font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+  font-size: 15px;
+  font-size: 0.9375rem;
+}
+
+/* line 333, assets/style.scss */
+abbr,
+acronym {
+  border-bottom: 1px dotted #666;
+  cursor: help;
+}
+
+/* line 339, assets/style.scss */
+mark,
+ins {
+  background: #fff9c0;
+  text-decoration: none;
+}
+
+/* line 345, assets/style.scss */
+big {
+  font-size: 125%;
+}
+
+/*--------------------------------------------------------------
+# Elements
+--------------------------------------------------------------*/
+/* line 354, assets/style.scss */
+html {
+  box-sizing: border-box;
+}
+
+/* line 358, assets/style.scss */
+*,
+*:before,
+*:after {
+  /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+  box-sizing: inherit;
+}
+
+/* line 364, assets/style.scss */
+body {
+  background: #fff;
+  /* Fallback for when there is no custom background color defined. */
+}
+
+/* line 368, assets/style.scss */
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+}
+
+/* line 375, assets/style.scss */
+blockquote,
+q {
+  quotes: "" "";
+}
+
+/* line 380, assets/style.scss */
+hr {
+  background-color: #ccc;
+  border: 0;
+  height: 1px;
+  margin-bottom: 1.5em;
+}
+
+/* line 387, assets/style.scss */
+ul,
+ol {
+  margin: 0 0 1.5em 3em;
+}
+
+/* line 392, assets/style.scss */
+ul {
+  list-style: disc;
+}
+
+/* line 396, assets/style.scss */
+ol {
+  list-style: decimal;
+}
+
+/* line 400, assets/style.scss */
+li > ul,
+li > ol {
+  margin-bottom: 0;
+  margin-left: 1.5em;
+}
+
+/* line 406, assets/style.scss */
+dt {
+  font-weight: bold;
+}
+
+/* line 410, assets/style.scss */
+dd {
+  margin: 0 1.5em 1.5em;
+}
+
+/* line 414, assets/style.scss */
+img {
+  height: auto;
+  /* Make sure images are scaled correctly. */
+  max-width: 100%;
+  /* Adhere to container width. */
+}
+
+/* line 419, assets/style.scss */
+figure {
+  margin: 1em 0;
+  /* Extra wide images within figure tags don't overflow the content area. */
+}
+
+/* line 423, assets/style.scss */
+table {
+  margin: 0 0 1.5em;
+  width: 100%;
+}
+
+/* Just for funs and it looks cool */
+/* line 2, assets/_elements.scss */
+::-moz-selection {
+  background: #fcd700;
+  color: #fff;
+  text-shadow: none;
+}
+
+/* line 8, assets/_elements.scss */
+::selection {
+  background: orange;
+  color: #fff;
+  text-shadow: none;
+}
+
+/*--------------------------------------------------------------
+# Forms
+--------------------------------------------------------------*/
+/* line 433, assets/style.scss */
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  border: 1px solid;
+  border-color: #ccc #ccc #bbb;
+  border-radius: 3px;
+  background: #e6e6e6;
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 12px;
+  font-size: 0.75rem;
+  line-height: 1;
+  padding: .6em 1em .4em;
+}
+
+/* line 448, assets/style.scss */
+button:hover,
+input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover {
+  border-color: #ccc #bbb #aaa;
+}
+
+/* line 455, assets/style.scss */
+button:focus,
+input[type="button"]:focus,
+input[type="reset"]:focus,
+input[type="submit"]:focus,
+button:active,
+input[type="button"]:active,
+input[type="reset"]:active,
+input[type="submit"]:active {
+  border-color: #aaa #bbb #bbb;
+}
+
+/* line 466, assets/style.scss */
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"],
+textarea {
+  color: #666;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  padding: 3px;
+}
+
+/* line 488, assets/style.scss */
+select {
+  border: 1px solid #ccc;
+}
+
+/* line 492, assets/style.scss */
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+input[type="number"]:focus,
+input[type="tel"]:focus,
+input[type="range"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="week"]:focus,
+input[type="time"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="color"]:focus,
+textarea:focus {
+  color: #111;
+}
+
+/* line 511, assets/style.scss */
+textarea {
+  width: 100%;
+}
+
+/*--------------------------------------------------------------
+# Navigation
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+## Links
+--------------------------------------------------------------*/
+/* line 521, assets/style.scss */
+a {
+  color: royalblue;
+}
+
+/* line 525, assets/style.scss */
+a:visited {
+  color: purple;
+}
+
+/* line 529, assets/style.scss */
+a:hover,
+a:focus,
+a:active {
+  color: midnightblue;
+}
+
+/* line 535, assets/style.scss */
+a:focus {
+  outline: thin dotted;
+}
+
+/* line 539, assets/style.scss */
+a:hover,
+a:active {
+  outline: 0;
+}
+
+/*--------------------------------------------------------------
+## Menus
+--------------------------------------------------------------*/
+/* line 547, assets/style.scss */
+.main-navigation {
+  clear: both;
+  display: block;
+  float: left;
+  width: 100%;
+}
+
+/* line 554, assets/style.scss */
+.main-navigation ul {
+  display: none;
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+}
+
+/* line 561, assets/style.scss */
+.main-navigation li {
+  float: left;
+  position: relative;
+}
+
+/* line 566, assets/style.scss */
+.main-navigation a {
+  display: block;
+  text-decoration: none;
+}
+
+/* line 571, assets/style.scss */
+.main-navigation ul ul {
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+  float: left;
+  position: absolute;
+  top: 100%;
+  left: -999em;
+  z-index: 99999;
+}
+
+/* line 580, assets/style.scss */
+.main-navigation ul ul ul {
+  left: -999em;
+  top: 0;
+}
+
+/* line 585, assets/style.scss */
+.main-navigation ul ul a {
+  width: 200px;
+}
+
+/* line 605, assets/style.scss */
+.main-navigation ul li:hover > ul,
+.main-navigation ul li.focus > ul {
+  left: auto;
+}
+
+/* line 610, assets/style.scss */
+.main-navigation ul ul li:hover > ul,
+.main-navigation ul ul li.focus > ul {
+  left: 100%;
+}
+
+/* Small menu. */
+/* line 622, assets/style.scss */
+.menu-toggle,
+.main-navigation.toggled ul {
+  display: block;
+}
+
+@media screen and (min-width: 37.5em) {
+  /* line 628, assets/style.scss */
+  .menu-toggle {
+    display: none;
+  }
+
+  /* line 631, assets/style.scss */
+  .main-navigation ul {
+    display: block;
+  }
+}
+/* line 636, assets/style.scss */
+.site-main .comment-navigation,
+.site-main .posts-navigation,
+.site-main .post-navigation {
+  margin: 0 0 1.5em;
+  overflow: hidden;
+}
+
+/* line 643, assets/style.scss */
+.comment-navigation .nav-previous,
+.posts-navigation .nav-previous,
+.post-navigation .nav-previous {
+  float: left;
+  width: 50%;
+}
+
+/* line 650, assets/style.scss */
+.comment-navigation .nav-next,
+.posts-navigation .nav-next,
+.post-navigation .nav-next {
+  float: right;
+  text-align: right;
+  width: 50%;
+}
+
+/*--------------------------------------------------------------
+# Accessibility
+--------------------------------------------------------------*/
+/* Text meant only for screen readers. */
+/* line 662, assets/style.scss */
+.screen-reader-text {
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  word-wrap: normal !important;
+  /* Many screen reader and browser combinations announce broken words as they would appear visually. */
+}
+
+/* line 671, assets/style.scss */
+.screen-reader-text:focus {
+  background-color: #f1f1f1;
+  border-radius: 3px;
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+  clip: auto !important;
+  color: #21759b;
+  display: block;
+  font-size: 14px;
+  font-size: 0.875rem;
+  font-weight: bold;
+  height: auto;
+  left: 5px;
+  line-height: normal;
+  padding: 15px 23px 14px;
+  text-decoration: none;
+  top: 5px;
+  width: auto;
+  z-index: 100000;
+  /* Above WP toolbar. */
+}
+
+/* Do not show the outline on the skip link target. */
+/* line 692, assets/style.scss */
+#content[tabindex="-1"]:focus {
+  outline: 0;
+}
+
+/*--------------------------------------------------------------
+# Alignments
+--------------------------------------------------------------*/
+/* line 699, assets/style.scss */
+.alignleft {
+  display: inline;
+  float: left;
+  margin-right: 1.5em;
+}
+
+/* line 705, assets/style.scss */
+.alignright {
+  display: inline;
+  float: right;
+  margin-left: 1.5em;
+}
+
+/* line 711, assets/style.scss */
+.aligncenter {
+  clear: both;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*--------------------------------------------------------------
+# Clearings
+--------------------------------------------------------------*/
+/* line 721, assets/style.scss */
+.clear:before,
+.clear:after,
+.entry-content:before,
+.entry-content:after,
+.comment-content:before,
+.comment-content:after,
+.site-header:before,
+.site-header:after,
+.site-content:before,
+.site-content:after,
+.site-footer:before,
+.site-footer:after {
+  content: "";
+  display: table;
+  table-layout: fixed;
+}
+
+/* line 738, assets/style.scss */
+.clear:after,
+.entry-content:after,
+.comment-content:after,
+.site-header:after,
+.site-content:after,
+.site-footer:after {
+  clear: both;
+}
+
+/*--------------------------------------------------------------
+# Widgets
+--------------------------------------------------------------*/
+/* line 750, assets/style.scss */
+.widget {
+  margin: 0 0 1.5em;
+}
+
+/* Make sure select elements fit in widgets. */
+/* line 755, assets/style.scss */
+.widget select {
+  max-width: 100%;
+}
+
+/*--------------------------------------------------------------
+# Content
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+## Header
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+## Posts and pages
+--------------------------------------------------------------*/
+/* line 772, assets/style.scss */
+.sticky {
+  display: block;
+}
+
+/* line 776, assets/style.scss */
+.hentry {
+  margin: 0 0 1.5em;
+}
+
+/* line 780, assets/style.scss */
+.updated:not(.published) {
+  display: none;
+}
+
+/* line 784, assets/style.scss */
+.page-content,
+.entry-content,
+.entry-summary {
+  margin: 1.5em 0 0;
+}
+
+/* line 790, assets/style.scss */
+.page-links {
+  clear: both;
+  margin: 0 0 1.5em;
+}
+
+/*--------------------------------------------------------------
+# Site Helper Classes
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Main Content Layout Classes
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+## Comments
+--------------------------------------------------------------*/
+/* line 804, assets/style.scss */
+.comment-content a {
+  word-wrap: break-word;
+}
+
+/* line 808, assets/style.scss */
+.bypostauthor {
+  display: block;
+}
+
+/*--------------------------------------------------------------
+## Footer
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Media
+--------------------------------------------------------------*/
+/* line 821, assets/style.scss */
+.page-content .wp-smiley,
+.entry-content .wp-smiley,
+.comment-content .wp-smiley {
+  border: none;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding: 0;
+}
+
+/* Make sure embeds and iframes fit their containers. */
+/* line 831, assets/style.scss */
+embed,
+iframe,
+object {
+  max-width: 100%;
+}
+
+/* Make sure logo link wraps around logo image. */
+/* line 838, assets/style.scss */
+.custom-logo-link {
+  display: inline-block;
+}
+
+/*--------------------------------------------------------------
+## Captions
+--------------------------------------------------------------*/
+/* line 845, assets/style.scss */
+.wp-caption {
+  margin-bottom: 1.5em;
+  max-width: 100%;
+}
+
+/* line 850, assets/style.scss */
+.wp-caption img[class*="wp-image-"] {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 856, assets/style.scss */
+.wp-caption .wp-caption-text {
+  margin: 0.8075em 0;
+}
+
+/* line 860, assets/style.scss */
+.wp-caption-text {
+  text-align: center;
+}
+
+/*--------------------------------------------------------------
+## Galleries
+--------------------------------------------------------------*/
+/* line 867, assets/style.scss */
+.gallery {
+  margin-bottom: 1.5em;
+}
+
+/* line 871, assets/style.scss */
+.gallery-item {
+  display: inline-block;
+  text-align: center;
+  vertical-align: top;
+  width: 100%;
+}
+
+/* line 878, assets/style.scss */
+.gallery-columns-2 .gallery-item {
+  max-width: 50%;
+}
+
+/* line 882, assets/style.scss */
+.gallery-columns-3 .gallery-item {
+  max-width: 33.33333%;
+}
+
+/* line 886, assets/style.scss */
+.gallery-columns-4 .gallery-item {
+  max-width: 25%;
+}
+
+/* line 890, assets/style.scss */
+.gallery-columns-5 .gallery-item {
+  max-width: 20%;
+}
+
+/* line 894, assets/style.scss */
+.gallery-columns-6 .gallery-item {
+  max-width: 16.66667%;
+}
+
+/* line 898, assets/style.scss */
+.gallery-columns-7 .gallery-item {
+  max-width: 14.28571%;
+}
+
+/* line 902, assets/style.scss */
+.gallery-columns-8 .gallery-item {
+  max-width: 12.5%;
+}
+
+/* line 906, assets/style.scss */
+.gallery-columns-9 .gallery-item {
+  max-width: 11.11111%;
+}
+
+/* line 910, assets/style.scss */
+.gallery-caption {
+  display: block;
+}
