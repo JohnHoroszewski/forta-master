@@ -8,6 +8,8 @@
  */
 
 if ( ! function_exists( 'forta_master_setup' ) ) :
+
+
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
 	 *
