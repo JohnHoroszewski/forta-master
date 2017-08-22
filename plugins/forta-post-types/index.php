@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Forta Post Type Plugins
  * Plugin URI: 
- * Description: This plugin is inteded to be used with the Forta Websites to add the custom post types needed.
+ * Description: This plugin is intended to be used with the Forta Websites to add the custom post types needed.
  * Version: 1.0
  * Author: John Horoszewski for Delia Associates
  * Author URI: http://www.johnswork.com, http://www.delianet.com
