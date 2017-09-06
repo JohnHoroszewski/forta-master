@@ -97,6 +97,62 @@ function forta_master_content_width() {
 }
 add_action( 'after_setup_theme', 'forta_master_content_width', 0 );
 
+
+/**
+ * Enqueue scripts and styles.
+ */
+function forta_master_scripts() {
+	// Add slick.js
+	wp_enqueue_script( 'forta-master-slick-js', get_template_directory_uri() . '/js/slick.min.js', array( 'jquery' ), '20151215', true );
+
+	// Add slick-theme.css
+	wp_enqueue_style( 'forta-master-style', get_template_directory_uri() . '/slick-theme.css' );
+
+	wp_enqueue_style( 'forta-master-style', get_stylesheet_uri() );
+
+	wp_enqueue_script( 'forta-master-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
+
+	wp_enqueue_script( 'forta-master-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
+
+	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
+		wp_enqueue_script( 'comment-reply' );
+	}
+}
+add_action( 'wp_enqueue_scripts', 'forta_master_scripts' );
+
+/**
+ * Register top menu
+ */
+function register_forta_topmenu() {
+  register_nav_menu('forta-top-menu',__( 'Top Site Menu' ));
+}
+add_action( 'init', 'register_forta_topmenu' );
+
+/**
+ * Register Site Top Left Widget Area for Menu
+ */
+function top_widget_areas() {
+
+	$args = array(
+		'id'            => 'top-left-area',
+		'class'         => 'top-widget',
+		'name'          => __( 'TopLeft Widget Area', 'text_domain' ),
+		'description'   => __( 'Holds custom menu items', 'text_domain' ),
+	);
+	register_sidebar( $args );
+
+	$args = array(
+		'id'            => 'top-right-area',
+		'class'         => 'top-widget',
+		'name'          => __( 'Top Right Widget Area', 'text_domain' ),
+		'description'   => __( 'Initial intention is for the placement of the \'Request a Quote\' form - can be used to hold link or short text', 'text_domain' ),
+	);
+	register_sidebar( $args );
+
+
+}
+add_action( 'widgets_init', 'top_widget_areas' );
+
 /**
  * Register widget area.
  *
@@ -114,22 +170,6 @@ function forta_master_widgets_init() {
 	) );
 }
 add_action( 'widgets_init', 'forta_master_widgets_init' );
-
-/**
- * Enqueue scripts and styles.
- */
-function forta_master_scripts() {
-	wp_enqueue_style( 'forta-master-style', get_stylesheet_uri() );
-
-	wp_enqueue_script( 'forta-master-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
-
-	wp_enqueue_script( 'forta-master-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
-
-	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-		wp_enqueue_script( 'comment-reply' );
-	}
-}
-add_action( 'wp_enqueue_scripts', 'forta_master_scripts' );
 
 /**
  * Implement the Custom Header feature.
@@ -157,3 +197,8 @@ require get_template_directory() . '/inc/customizer.php';
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
+
+/**
+ * Hide admin Bar
+ */
+show_admin_bar(false);

@@ -24,22 +24,24 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'forta-master' ); ?></a>
 
-	<header id="masthead" class="site-header">
-		<div class="site-branding">
-			<?php
-			the_custom_logo();
-			if ( is_front_page() && is_home() ) : ?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-			<?php else : ?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-			<?php
-			endif;
+	<?php if ( is_active_sidebar( 'top-left-area' ) ) : ?>
+		<div class="sitetop-links">
+			<div class="constrain flexxed">
+				<div class="top-left">
+					<?php dynamic_sidebar( 'top-left-area' ); ?>
+				</div>
+				<div class="top-right">
+					<?php dynamic_sidebar( 'top-right-area' ); ?>
+				</div>
+			</div>
+		</div>
+	<?php endif; ?>
 
-			$description = get_bloginfo( 'description', 'display' );
-			if ( $description || is_customize_preview() ) : ?>
-				<p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
-			<?php
-			endif; ?>
+	<header id="masthead" class="main-header">
+		<div class="site-branding">
+			<div class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></div>
+			<?php $description = get_bloginfo( 'description', 'display' ); ?>
+			<p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
 		</div><!-- .site-branding -->
 
 		<nav id="site-navigation" class="main-navigation">

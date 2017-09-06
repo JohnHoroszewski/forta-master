@@ -1,3 +1,12 @@
-// ---------------------------------------------------
-//    #Clear Fix
-// ---------------------------------------------------
+.constrain {
+	display: block;
+	max-width: 1024px;
+	min-width: 320px;
+	margin: 0 auto;
+}
+
+.flexxed {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+}
