@@ -12,12 +12,17 @@
 	display: flex;
 }
 
+div.wpcf7 .ajax-loader {
+	display: none;
+}
+
 .site-accent {
 	background-color: #505050;
 }
 
 .social-media-links {
-	width: 35%;
+	width: 40%;
+	max-width: 120px;
 
 	&.flexxed {
 		-webkit-box-orient: horizontal;

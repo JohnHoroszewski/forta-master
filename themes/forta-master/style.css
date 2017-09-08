@@ -314,15 +314,21 @@ th {
 }
 
 /* line 15, assets/_classes.scss */
+div.wpcf7 .ajax-loader {
+  display: none;
+}
+
+/* line 19, assets/_classes.scss */
 .site-accent {
   background-color: #505050;
 }
 
-/* line 19, assets/_classes.scss */
+/* line 23, assets/_classes.scss */
 .social-media-links {
-  width: 35%;
+  width: 40%;
+  max-width: 120px;
 }
-/* line 22, assets/_classes.scss */
+/* line 27, assets/_classes.scss */
 .social-media-links.flexxed {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
@@ -332,7 +338,7 @@ th {
   -ms-flex-pack: justify;
   justify-content: space-between;
 }
-/* line 32, assets/_classes.scss */
+/* line 37, assets/_classes.scss */
 .social-media-links a {
   position: relative;
   display: block;
@@ -340,7 +346,7 @@ th {
   height: 24px;
   text-indent: -99999px;
 }
-/* line 40, assets/_classes.scss */
+/* line 45, assets/_classes.scss */
 .social-media-links a.facebook-icon:before, .social-media-links a.twitter-icon:before, .social-media-links a.gplus-icon:before, .social-media-links a.linkedin-icon:before, .social-media-links a.youtube-icon:before, .social-media-links a.vimeo-icon:before, .social-media-links a.pinterest-icon:before {
   position: absolute;
   top: 0;
@@ -352,32 +358,32 @@ th {
   font-size: 18px;
   text-indent: 0;
 }
-/* line 59, assets/_classes.scss */
+/* line 64, assets/_classes.scss */
 .social-media-links a.facebook-icon:before {
   content: '\f09a';
 }
-/* line 63, assets/_classes.scss */
+/* line 68, assets/_classes.scss */
 .social-media-links a.twitter-icon:before {
   content: '\f099';
 }
-/* line 67, assets/_classes.scss */
+/* line 72, assets/_classes.scss */
 .social-media-links a.gplus-icon:before {
   content: '\f0d5';
 }
-/* line 71, assets/_classes.scss */
+/* line 76, assets/_classes.scss */
 .social-media-links a.linkedin-icon:before {
   content: '\f0e1';
 }
-/* line 75, assets/_classes.scss */
+/* line 80, assets/_classes.scss */
 .social-media-links a.youtube-icon:before {
   content: '\f16a';
   font-size: 16px;
 }
-/* line 80, assets/_classes.scss */
+/* line 85, assets/_classes.scss */
 .social-media-links a.vimeo-icon:before {
   content: '\f27d';
 }
-/* line 84, assets/_classes.scss */
+/* line 89, assets/_classes.scss */
 .social-media-links a.pinterest-icon:before {
   content: '\f231';
 }
@@ -862,7 +868,6 @@ a:active {
 .sitetop-links {
   position: fixed;
   display: block;
-  background-color: rgba(0, 0, 0, 0.75);
   height: auto;
   width: 100%;
   z-index: 99999;
@@ -917,15 +922,16 @@ a:active {
 .top-right {
   display: block;
   background-color: #505050;
+  width: 100%;
   color: #FFFFFF;
 }
 
-/* line 67, assets/_header.scss */
+/* line 69, assets/_header.scss */
 .top-quote a {
   position: relative;
   padding: 10px 0;
 }
-/* line 71, assets/_header.scss */
+/* line 73, assets/_header.scss */
 .top-quote a:before {
   content: '\f1ec';
   position: absolute;
@@ -933,7 +939,7 @@ a:active {
   font-family: "FontAwesome", sans-serif;
 }
 
-/* line 81, assets/_header.scss */
+/* line 83, assets/_header.scss */
 .top-form {
   position: relative;
   background-color: #505050;
@@ -946,44 +952,50 @@ a:active {
   -o-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
-/* line 94, assets/_header.scss */
+/* line 96, assets/_header.scss */
 .top-form #close-this {
   float: right;
   margin: 5px 0 10px 0;
   font-size: 24px;
 }
-/* line 101, assets/_header.scss */
+/* line 103, assets/_header.scss */
 .top-form form {
   clear: both;
 }
-/* line 105, assets/_header.scss */
+/* line 107, assets/_header.scss */
 .top-form input {
-  width: 95%;
+  width: calc(100% - 30px);
 }
-/* line 109, assets/_header.scss */
+/* line 111, assets/_header.scss */
 .top-form textarea {
-  width: 95%;
+  width: calc(100% - 30px);
 }
 
-/* line 114, assets/_header.scss */
+/* line 116, assets/_header.scss */
 .mobile-nav {
   position: absolute;
-  padding: 20px 0 10px 0;
+  padding: 50px 0 30px 0;
+  height: 100vh;
   width: 100%;
   z-index: 99999;
   color: #FFFFFF;
-  text-align: center;
   -webkit-transition: all 0.5s ease-in-out;
   -moz-transition: all 0.5s ease-in-out;
   -ms-transition: all 0.5s ease-in-out;
   -o-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
-/* line 129, assets/_header.scss */
-.mobile-nav a {
-  color: #FFFFFF;
+/* line 131, assets/_header.scss */
+.mobile-nav .menu {
+  margin: 30px 0 0 0;
 }
-/* line 133, assets/_header.scss */
+/* line 135, assets/_header.scss */
+.mobile-nav a {
+  display: block;
+  padding: 5px 0;
+  font-size: 21px;
+}
+/* line 142, assets/_header.scss */
 .mobile-nav #close-this {
   position: absolute;
   top: 10px;
@@ -991,12 +1003,12 @@ a:active {
   margin: 5px 0 10px 0;
   font-size: 24px;
 }
-/* line 142, assets/_header.scss */
+/* line 151, assets/_header.scss */
 .mobile-nav .social-media-links {
-  margin: 0 auto 10px auto;
+  margin: 0 0 10px 0;
 }
 
-/* line 148, assets/_header.scss */
+/* line 157, assets/_header.scss */
 .main-header {
   position: absolute;
   top: 74px;
@@ -1005,11 +1017,11 @@ a:active {
   width: 100%;
   z-index: 10;
 }
-/* line 156, assets/_header.scss */
+/* line 165, assets/_header.scss */
 .main-header .main-navigation {
   display: none;
 }
-/* line 160, assets/_header.scss */
+/* line 169, assets/_header.scss */
 .main-header .mobile-nav-btn {
   position: absolute;
   right: 5px;
@@ -1017,6 +1029,18 @@ a:active {
   padding: 0 5px;
   color: #FFFFFF;
   font-size: 24px;
+}
+
+/* line 180, assets/_header.scss */
+.main-navigation,
+.mobile-nav {
+  font-weight: 300;
+  text-transform: uppercase;
+}
+/* line 185, assets/_header.scss */
+.main-navigation a,
+.mobile-nav a {
+  color: #FFFFFF;
 }
 
 /*--------------------------------------------------------------

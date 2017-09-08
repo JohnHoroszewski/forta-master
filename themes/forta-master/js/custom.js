@@ -22,7 +22,9 @@ jQuery(document).ready(function($) {
 	{
 		// Pull menu up above viewport
 		$siteTopLeft.css( 'top', -$sitopLeftHeight );
-		$mobileMenu.css( 'top', -$mobileNavHeight );
+		$mobileMenu.css( 'left', -$winWidth );
+		$topForm.css( 'width', $winWidth );
+		$siteTopLeft.css( 'width', $winWidth );
 
 		// Move menu down on 'Ellipses' click
 		$moreEllips.on( 'click', function()
@@ -38,10 +40,10 @@ jQuery(document).ready(function($) {
 
 		$mobileBtn.on( 'click', function()
 		{
-			$mobileMenu.css( 'top', 0 );
+			$mobileMenu.css( 'left', 0 );
 
 			$mobileClose.on( 'click', function(){
-				$mobileMenu.css( 'top', -$mobileNavHeight );
+				$mobileMenu.css( 'left', -$winWidth );
 			});
 		});
 	}
@@ -57,5 +59,11 @@ jQuery(document).ready(function($) {
 			$topForm.css( 'height', 0 );
 		});
 	});
+
+	// If window is smaller than 1024px
+	if ( $winWidth >= 640 )
+	{
+		$topForm.css( 'maxWidth', 640 );
+	}
 
 });
