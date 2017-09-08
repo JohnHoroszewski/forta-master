@@ -11,3 +11,79 @@
 	display: -ms-flexbox;
 	display: flex;
 }
+
+.site-accent {
+	background-color: #505050;
+}
+
+.social-media-links {
+	width: 35%;
+
+	&.flexxed {
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		    -ms-flex-flow: row;
+		        flex-flow: row;
+		    -webkit-box-pack: justify;
+		        -ms-flex-pack: justify;
+		            justify-content: space-between;
+	}
+
+	a {
+		position: relative;
+		display: block;
+		width: 20px;
+		height: 24px;
+
+		text-indent: -99999px;
+
+		&.facebook-icon:before,
+		&.twitter-icon:before,
+		&.gplus-icon:before,
+		&.linkedin-icon:before,
+		&.youtube-icon:before,
+		&.vimeo-icon:before,
+		&.pinterest-icon:before {
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			margin: 0 auto;
+
+			font-family: $fa;
+			font-size: 18px;
+			text-indent: 0;
+		}
+
+		&.facebook-icon:before {
+			content: '\f09a';
+		}
+
+		&.twitter-icon:before {
+			content: '\f099';
+		}
+
+		&.gplus-icon:before {
+			content: '\f0d5';
+		}
+
+		&.linkedin-icon:before {
+			content: '\f0e1';
+		}
+
+		&.youtube-icon:before {
+			content: '\f16a';
+			font-size: 16px;
+		}
+
+		&.vimeo-icon:before {
+			content: '\f27d';
+		}
+
+		&.pinterest-icon:before {
+			content: '\f231';
+		}
+
+	}
+}

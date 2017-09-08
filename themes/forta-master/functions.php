@@ -7,6 +7,8 @@
  * @package Forta_Master
  */
 
+include( get_stylesheet_directory() . '/includes/customizer.php' );
+
 if ( ! function_exists( 'forta_master_setup' ) ) :
 
 
@@ -85,6 +87,7 @@ if ( ! function_exists( 'forta_master_setup' ) ) :
 endif;
 add_action( 'after_setup_theme', 'forta_master_setup' );
 
+
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
  *
@@ -106,7 +109,7 @@ function forta_master_scripts() {
 	wp_enqueue_script( 'forta-master-slick-js', get_template_directory_uri() . '/js/slick.min.js', array( 'jquery' ), '20151215', true );
 
 	// Add slick-theme.css
-	wp_enqueue_style( 'forta-master-style', get_template_directory_uri() . '/slick-theme.css' );
+	wp_enqueue_style( 'forta-master-slick-style', get_template_directory_uri() . '/slick-theme.css' );
 
 	wp_enqueue_style( 'forta-master-style', get_stylesheet_uri() );
 

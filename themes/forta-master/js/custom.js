@@ -3,15 +3,18 @@ jQuery(document).ready(function($) {
 	var $siteTopLeft = $( '.sitetop-links' ).find( '.top-left' ),
 		$sitopLeftHeight = $siteTopLeft.outerHeight(),
 		$winWidth = $( window ).width(),
-		// $winHeight = $( window ).height(),
 		$moreEllips = $( '#more-ellipsis' ),
-		$closeTopLeft = $siteTopLeft.find( '#close-this' ),
+		$topLeftClose = $siteTopLeft.find( '#close-this' ),
 		$quoteLink = $( '.top-quote a' ),
 		$topForm = $( '.top-form' ),
 		$topFormClose = $topForm.find( '#close-this' ),
-		$mainHeader = $( '.main-header' );
+		$mainHeader = $( '.main-header' ),
+		$mobileBtn = $mainHeader.find( '.mobile-nav-btn' ),
+		$mobileMenu = $( '.mobile-nav' ),
+		$mobileNavHeight = $mobileMenu.outerHeight(),
+		$mobileClose = $mobileMenu.find( '#close-this' );
 
-	console.log( $sitopLeftHeight );
+	console.log( $mobileNavHeight );
 	console.log( $winWidth );
 
 	// If window is smaller than 1024px
@@ -19,6 +22,7 @@ jQuery(document).ready(function($) {
 	{
 		// Pull menu up above viewport
 		$siteTopLeft.css( 'top', -$sitopLeftHeight );
+		$mobileMenu.css( 'top', -$mobileNavHeight );
 
 		// Move menu down on 'Ellipses' click
 		$moreEllips.on( 'click', function()
@@ -26,9 +30,18 @@ jQuery(document).ready(function($) {
 			$siteTopLeft.css( 'top', 0 );
 
 			// Close menu
-			$closeTopLeft.on( 'click', function()
+			$topLeftClose.on( 'click', function()
 			{
 				$siteTopLeft.css( 'top', -$sitopLeftHeight );
+			});
+		});
+
+		$mobileBtn.on( 'click', function()
+		{
+			$mobileMenu.css( 'top', 0 );
+
+			$mobileClose.on( 'click', function(){
+				$mobileMenu.css( 'top', -$mobileNavHeight );
 			});
 		});
 	}

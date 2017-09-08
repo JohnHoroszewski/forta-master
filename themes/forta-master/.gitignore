@@ -24,3 +24,17 @@ temp/
  
 .npm-debug.log 
 .sass-cache
+
+
+############
+## Wordpress
+############
+
+wp-content/uploads/
+wp-content/upgrade/
+wp-content/backup-db/
+wp-content/advanced-cache.php
+wp-content/wp-cache-config.php
+*.log
+wp-content/cache/
+wp-content/backups/

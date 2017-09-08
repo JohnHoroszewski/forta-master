@@ -11,7 +11,10 @@
 	text-transform: uppercase;
 
 	.flexxed {
-		flex-flow: column;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		    -ms-flex-flow: column;
+		        flex-flow: column;
 	}
 
 	a {
@@ -55,7 +58,7 @@
 
 .top-right {
 	display: block;
-	background-color: grey;
+	background-color: #505050;
 	color: $white-color;
 }
 
@@ -77,7 +80,7 @@
 
 .top-form {
 	position: relative;
-	background-color: grey;
+	background-color: #505050;
 	height: 0;
 	z-index: 990;
 	overflow-y: auto;
@@ -89,9 +92,14 @@
 	transition: all 0.5s ease-in-out;
 
 	#close-this {
-	    margin: 5px 0 0 0;
+		float: right;
+	    margin: 5px 0 10px 0;
 
 	    font-size: 24px;
+	}
+
+	form {
+		clear: both;
 	}
 
 	input {
@@ -103,10 +111,59 @@
 	}
 }
 
+.mobile-nav {
+	position: absolute;
+	padding: 20px 0 10px 0;
+	width: 100%;
+	z-index: 99999;
+
+	color: $white-color;
+	text-align: center;
+
+	-webkit-transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.5s ease-in-out;
+	-ms-transition: all 0.5s ease-in-out;
+	-o-transition: all 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;
+
+	a {
+		color: $white-color;
+	}
+
+	#close-this {
+		position: absolute;
+		top: 10px;
+		right: 10px;
+	    margin: 5px 0 10px 0;
+
+	    font-size: 24px;
+	}
+
+	.social-media-links {
+		margin: 0 auto 10px auto;
+	}
+
+}
+
 .main-header {
 	position: absolute;
 	top: 74px;
 	background-color: rgba( $black-color, 0.5 );
+	padding: 15px 0;
 	width: 100%;
 	z-index: 10;
+
+	.main-navigation {
+		display: none;
+	}
+
+	.mobile-nav-btn {
+		position: absolute;
+		right: 5px;
+		top: calc(50% - 20px);
+		padding: 0 5px;
+
+		color: $white-color;
+		font-size: 24px;
+	}
 }
