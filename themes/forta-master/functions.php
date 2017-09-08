@@ -110,9 +110,9 @@ function forta_master_scripts() {
 
 	wp_enqueue_style( 'forta-master-style', get_stylesheet_uri() );
 
-	wp_enqueue_script( 'forta-master-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
-
 	wp_enqueue_script( 'forta-master-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
+
+	wp_enqueue_script( 'forta-master-custom-js', get_template_directory_uri() . '/js/custom.js', array( 'jquery' ), '20151215', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -136,8 +136,10 @@ function top_widget_areas() {
 	$args = array(
 		'id'            => 'top-left-area',
 		'class'         => 'top-widget',
-		'name'          => __( 'TopLeft Widget Area', 'text_domain' ),
+		'name'          => __( 'Top Left Widget Area', 'text_domain' ),
 		'description'   => __( 'Holds custom menu items', 'text_domain' ),
+		'before_widget' => '',
+		'after_widget'  => '',
 	);
 	register_sidebar( $args );
 
@@ -146,9 +148,20 @@ function top_widget_areas() {
 		'class'         => 'top-widget',
 		'name'          => __( 'Top Right Widget Area', 'text_domain' ),
 		'description'   => __( 'Initial intention is for the placement of the \'Request a Quote\' form - can be used to hold link or short text', 'text_domain' ),
+		'before_widget' => '',
+		'after_widget'  => '',
 	);
 	register_sidebar( $args );
 
+	$args = array(
+		'id'            => 'top-form-block',
+		'class'         => 'top-widget',
+		'name'          => __( 'Top Form Area', 'text_domain' ),
+		'description'   => __( 'Copy and paste the contact form shortcode here to display for \'Request a Quote\'', 'text_domain' ),
+		'before_widget' => '',
+		'after_widget'  => '',
+	);
+	register_sidebar( $args );
 
 }
 add_action( 'widgets_init', 'top_widget_areas' );

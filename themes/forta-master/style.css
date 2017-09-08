@@ -300,12 +300,13 @@ th {
 /* line 1, assets/_classes.scss */
 .constrain {
   display: block;
+  padding: 0 10px;
   max-width: 1024px;
   min-width: 320px;
   margin: 0 auto;
 }
 
-/* line 8, assets/_classes.scss */
+/* line 9, assets/_classes.scss */
 .flexxed {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -323,7 +324,7 @@ select,
 optgroup,
 textarea {
   color: #404040;
-  font-family: sans-serif;
+  font-family: "Roboto", Helvetica, Arial, sans-serif;
   font-size: 16px;
   font-size: 1rem;
   line-height: 1.5;
@@ -516,6 +517,28 @@ table {
   text-shadow: none;
 }
 
+/* line 14, assets/_elements.scss */
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+/* line 21, assets/_elements.scss */
+li {
+  list-style-type: none;
+}
+
+/* line 25, assets/_elements.scss */
+a {
+  text-decoration: none;
+}
+
+/* line 29, assets/_elements.scss */
+input, textarea {
+  border: 0;
+}
+
 /*--------------------------------------------------------------
 # Forms
 --------------------------------------------------------------*/
@@ -524,9 +547,6 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-  border: 1px solid;
-  border-color: #ccc #ccc #bbb;
-  border-radius: 3px;
   background: #e6e6e6;
   color: rgba(0, 0, 0, 0.8);
   font-size: 12px;
@@ -535,27 +555,7 @@ input[type="submit"] {
   padding: .6em 1em .4em;
 }
 
-/* line 448, assets/style.scss */
-button:hover,
-input[type="button"]:hover,
-input[type="reset"]:hover,
-input[type="submit"]:hover {
-  border-color: #ccc #bbb #aaa;
-}
-
-/* line 455, assets/style.scss */
-button:focus,
-input[type="button"]:focus,
-input[type="reset"]:focus,
-input[type="submit"]:focus,
-button:active,
-input[type="button"]:active,
-input[type="reset"]:active,
-input[type="submit"]:active {
-  border-color: #aaa #bbb #bbb;
-}
-
-/* line 466, assets/style.scss */
+/* line 461, assets/style.scss */
 input[type="text"],
 input[type="email"],
 input[type="url"],
@@ -573,17 +573,16 @@ input[type="datetime-local"],
 input[type="color"],
 textarea {
   color: #666;
-  border: 1px solid #ccc;
-  border-radius: 3px;
   padding: 3px;
+  outline: none !important;
 }
 
-/* line 488, assets/style.scss */
+/* line 482, assets/style.scss */
 select {
   border: 1px solid #ccc;
 }
 
-/* line 492, assets/style.scss */
+/* line 486, assets/style.scss */
 input[type="text"]:focus,
 input[type="email"]:focus,
 input[type="url"]:focus,
@@ -601,9 +600,10 @@ input[type="datetime-local"]:focus,
 input[type="color"]:focus,
 textarea:focus {
   color: #111;
+  outline: none !important;
 }
 
-/* line 511, assets/style.scss */
+/* line 506, assets/style.scss */
 textarea {
   width: 100%;
 }
@@ -614,29 +614,29 @@ textarea {
 /*--------------------------------------------------------------
 ## Links
 --------------------------------------------------------------*/
-/* line 521, assets/style.scss */
+/* line 516, assets/style.scss */
 a {
   color: royalblue;
 }
 
-/* line 525, assets/style.scss */
+/* line 520, assets/style.scss */
 a:visited {
   color: purple;
 }
 
-/* line 529, assets/style.scss */
+/* line 524, assets/style.scss */
 a:hover,
 a:focus,
 a:active {
   color: midnightblue;
 }
 
-/* line 535, assets/style.scss */
+/* line 530, assets/style.scss */
 a:focus {
   outline: thin dotted;
 }
 
-/* line 539, assets/style.scss */
+/* line 534, assets/style.scss */
 a:hover,
 a:active {
   outline: 0;
@@ -645,86 +645,7 @@ a:active {
 /*--------------------------------------------------------------
 ## Menus
 --------------------------------------------------------------*/
-/* line 547, assets/style.scss */
-.main-navigation {
-  clear: both;
-  display: block;
-  float: left;
-  width: 100%;
-}
-
-/* line 554, assets/style.scss */
-.main-navigation ul {
-  display: none;
-  list-style: none;
-  margin: 0;
-  padding-left: 0;
-}
-
-/* line 561, assets/style.scss */
-.main-navigation li {
-  float: left;
-  position: relative;
-}
-
-/* line 566, assets/style.scss */
-.main-navigation a {
-  display: block;
-  text-decoration: none;
-}
-
-/* line 571, assets/style.scss */
-.main-navigation ul ul {
-  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-  float: left;
-  position: absolute;
-  top: 100%;
-  left: -999em;
-  z-index: 99999;
-}
-
-/* line 580, assets/style.scss */
-.main-navigation ul ul ul {
-  left: -999em;
-  top: 0;
-}
-
-/* line 585, assets/style.scss */
-.main-navigation ul ul a {
-  width: 200px;
-}
-
-/* line 605, assets/style.scss */
-.main-navigation ul li:hover > ul,
-.main-navigation ul li.focus > ul {
-  left: auto;
-}
-
-/* line 610, assets/style.scss */
-.main-navigation ul ul li:hover > ul,
-.main-navigation ul ul li.focus > ul {
-  left: 100%;
-}
-
-/* Small menu. */
-/* line 622, assets/style.scss */
-.menu-toggle,
-.main-navigation.toggled ul {
-  display: block;
-}
-
-@media screen and (min-width: 37.5em) {
-  /* line 628, assets/style.scss */
-  .menu-toggle {
-    display: none;
-  }
-
-  /* line 631, assets/style.scss */
-  .main-navigation ul {
-    display: block;
-  }
-}
-/* line 636, assets/style.scss */
+/* line 631, assets/style.scss */
 .site-main .comment-navigation,
 .site-main .posts-navigation,
 .site-main .post-navigation {
@@ -732,7 +653,7 @@ a:active {
   overflow: hidden;
 }
 
-/* line 643, assets/style.scss */
+/* line 638, assets/style.scss */
 .comment-navigation .nav-previous,
 .posts-navigation .nav-previous,
 .post-navigation .nav-previous {
@@ -740,7 +661,7 @@ a:active {
   width: 50%;
 }
 
-/* line 650, assets/style.scss */
+/* line 645, assets/style.scss */
 .comment-navigation .nav-next,
 .posts-navigation .nav-next,
 .post-navigation .nav-next {
@@ -753,7 +674,7 @@ a:active {
 # Accessibility
 --------------------------------------------------------------*/
 /* Text meant only for screen readers. */
-/* line 662, assets/style.scss */
+/* line 657, assets/style.scss */
 .screen-reader-text {
   clip: rect(1px, 1px, 1px, 1px);
   position: absolute !important;
@@ -764,7 +685,7 @@ a:active {
   /* Many screen reader and browser combinations announce broken words as they would appear visually. */
 }
 
-/* line 671, assets/style.scss */
+/* line 666, assets/style.scss */
 .screen-reader-text:focus {
   background-color: #f1f1f1;
   border-radius: 3px;
@@ -787,7 +708,7 @@ a:active {
 }
 
 /* Do not show the outline on the skip link target. */
-/* line 692, assets/style.scss */
+/* line 687, assets/style.scss */
 #content[tabindex="-1"]:focus {
   outline: 0;
 }
@@ -795,21 +716,21 @@ a:active {
 /*--------------------------------------------------------------
 # Alignments
 --------------------------------------------------------------*/
-/* line 699, assets/style.scss */
+/* line 694, assets/style.scss */
 .alignleft {
   display: inline;
   float: left;
   margin-right: 1.5em;
 }
 
-/* line 705, assets/style.scss */
+/* line 700, assets/style.scss */
 .alignright {
   display: inline;
   float: right;
   margin-left: 1.5em;
 }
 
-/* line 711, assets/style.scss */
+/* line 706, assets/style.scss */
 .aligncenter {
   clear: both;
   display: block;
@@ -820,7 +741,7 @@ a:active {
 /*--------------------------------------------------------------
 # Clearings
 --------------------------------------------------------------*/
-/* line 721, assets/style.scss */
+/* line 716, assets/style.scss */
 .clear:before,
 .clear:after,
 .entry-content:before,
@@ -838,7 +759,7 @@ a:active {
   table-layout: fixed;
 }
 
-/* line 738, assets/style.scss */
+/* line 733, assets/style.scss */
 .clear:after,
 .entry-content:after,
 .comment-content:after,
@@ -851,13 +772,13 @@ a:active {
 /*--------------------------------------------------------------
 # Widgets
 --------------------------------------------------------------*/
-/* line 750, assets/style.scss */
+/* line 745, assets/style.scss */
 .widget {
   margin: 0 0 1.5em;
 }
 
 /* Make sure select elements fit in widgets. */
-/* line 755, assets/style.scss */
+/* line 750, assets/style.scss */
 .widget select {
   max-width: 100%;
 }
@@ -872,35 +793,136 @@ a:active {
 .sitetop-links {
   position: fixed;
   display: block;
+  background-color: rgba(0, 0, 0, 0.75);
   height: auto;
+  width: 100%;
+  z-index: 99999;
+  color: #FFFFFF;
+  text-align: center;
+  text-transform: uppercase;
+}
+/* line 13, assets/_header.scss */
+.sitetop-links .flexxed {
+  flex-flow: column;
+}
+/* line 17, assets/_header.scss */
+.sitetop-links a {
+  display: inline-block;
+  padding: 5px 0;
+  color: #FFFFFF;
+}
+/* line 24, assets/_header.scss */
+.sitetop-links .more-tab {
+  background: #000000;
+  width: 100%;
+  font-size: 20px;
+  text-align: center;
+}
+
+/* line 33, assets/_header.scss */
+.top-left {
+  position: absolute;
+  display: block;
+  background-color: #000000;
+  padding: 10px 0;
+  overflow-y: auto;
+  z-index: 999;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+/* line 47, assets/_header.scss */
+.top-left .fa-times {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+}
+
+/* line 56, assets/_header.scss */
+.top-right {
+  display: block;
+  background-color: grey;
+  color: #FFFFFF;
+}
+
+/* line 64, assets/_header.scss */
+.top-quote a {
+  position: relative;
+  padding: 10px 0;
+}
+/* line 68, assets/_header.scss */
+.top-quote a:before {
+  content: '\f1ec';
+  position: absolute;
+  left: -25px;
+  font-family: "FontAwesome", sans-serif;
+}
+
+/* line 78, assets/_header.scss */
+.top-form {
+  position: relative;
+  background-color: grey;
+  height: 0;
+  z-index: 990;
+  overflow-y: auto;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+/* line 91, assets/_header.scss */
+.top-form #close-this {
+  margin: 5px 0 0 0;
+  font-size: 24px;
+}
+/* line 97, assets/_header.scss */
+.top-form input {
+  width: 95%;
+}
+/* line 101, assets/_header.scss */
+.top-form textarea {
+  width: 95%;
+}
+
+/* line 106, assets/_header.scss */
+.main-header {
+  position: absolute;
+  top: 74px;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  z-index: 10;
 }
 
 /*--------------------------------------------------------------
 ## Posts and pages
 --------------------------------------------------------------*/
-/* line 772, assets/style.scss */
+/* line 767, assets/style.scss */
 .sticky {
   display: block;
 }
 
-/* line 776, assets/style.scss */
+/* line 771, assets/style.scss */
 .hentry {
   margin: 0 0 1.5em;
 }
 
-/* line 780, assets/style.scss */
+/* line 775, assets/style.scss */
 .updated:not(.published) {
   display: none;
 }
 
-/* line 784, assets/style.scss */
+/* line 779, assets/style.scss */
 .page-content,
 .entry-content,
 .entry-summary {
   margin: 1.5em 0 0;
 }
 
-/* line 790, assets/style.scss */
+/* line 785, assets/style.scss */
 .page-links {
   clear: both;
   margin: 0 0 1.5em;
@@ -915,12 +937,12 @@ a:active {
 /*--------------------------------------------------------------
 ## Comments
 --------------------------------------------------------------*/
-/* line 804, assets/style.scss */
+/* line 799, assets/style.scss */
 .comment-content a {
   word-wrap: break-word;
 }
 
-/* line 808, assets/style.scss */
+/* line 803, assets/style.scss */
 .bypostauthor {
   display: block;
 }
@@ -931,7 +953,7 @@ a:active {
 /*--------------------------------------------------------------
 # Media
 --------------------------------------------------------------*/
-/* line 821, assets/style.scss */
+/* line 816, assets/style.scss */
 .page-content .wp-smiley,
 .entry-content .wp-smiley,
 .comment-content .wp-smiley {
@@ -942,7 +964,7 @@ a:active {
 }
 
 /* Make sure embeds and iframes fit their containers. */
-/* line 831, assets/style.scss */
+/* line 826, assets/style.scss */
 embed,
 iframe,
 object {
@@ -950,7 +972,7 @@ object {
 }
 
 /* Make sure logo link wraps around logo image. */
-/* line 838, assets/style.scss */
+/* line 833, assets/style.scss */
 .custom-logo-link {
   display: inline-block;
 }
@@ -958,25 +980,25 @@ object {
 /*--------------------------------------------------------------
 ## Captions
 --------------------------------------------------------------*/
-/* line 845, assets/style.scss */
+/* line 840, assets/style.scss */
 .wp-caption {
   margin-bottom: 1.5em;
   max-width: 100%;
 }
 
-/* line 850, assets/style.scss */
+/* line 845, assets/style.scss */
 .wp-caption img[class*="wp-image-"] {
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
 
-/* line 856, assets/style.scss */
+/* line 851, assets/style.scss */
 .wp-caption .wp-caption-text {
   margin: 0.8075em 0;
 }
 
-/* line 860, assets/style.scss */
+/* line 855, assets/style.scss */
 .wp-caption-text {
   text-align: center;
 }
@@ -984,12 +1006,12 @@ object {
 /*--------------------------------------------------------------
 ## Galleries
 --------------------------------------------------------------*/
-/* line 867, assets/style.scss */
+/* line 862, assets/style.scss */
 .gallery {
   margin-bottom: 1.5em;
 }
 
-/* line 871, assets/style.scss */
+/* line 866, assets/style.scss */
 .gallery-item {
   display: inline-block;
   text-align: center;
@@ -997,47 +1019,64 @@ object {
   width: 100%;
 }
 
-/* line 878, assets/style.scss */
+/* line 873, assets/style.scss */
 .gallery-columns-2 .gallery-item {
   max-width: 50%;
 }
 
-/* line 882, assets/style.scss */
+/* line 877, assets/style.scss */
 .gallery-columns-3 .gallery-item {
   max-width: 33.33333%;
 }
 
-/* line 886, assets/style.scss */
+/* line 881, assets/style.scss */
 .gallery-columns-4 .gallery-item {
   max-width: 25%;
 }
 
-/* line 890, assets/style.scss */
+/* line 885, assets/style.scss */
 .gallery-columns-5 .gallery-item {
   max-width: 20%;
 }
 
-/* line 894, assets/style.scss */
+/* line 889, assets/style.scss */
 .gallery-columns-6 .gallery-item {
   max-width: 16.66667%;
 }
 
-/* line 898, assets/style.scss */
+/* line 893, assets/style.scss */
 .gallery-columns-7 .gallery-item {
   max-width: 14.28571%;
 }
 
-/* line 902, assets/style.scss */
+/* line 897, assets/style.scss */
 .gallery-columns-8 .gallery-item {
   max-width: 12.5%;
 }
 
-/* line 906, assets/style.scss */
+/* line 901, assets/style.scss */
 .gallery-columns-9 .gallery-item {
   max-width: 11.11111%;
 }
 
-/* line 910, assets/style.scss */
+/* line 905, assets/style.scss */
 .gallery-caption {
   display: block;
+}
+
+@media only screen and (min-width: 1024px) {
+  /* line 3, assets/_media-queries.scss */
+  .top-left {
+    position: initial;
+    background: transparent;
+  }
+  /* line 7, assets/_media-queries.scss */
+  .top-left .fa-times {
+    display: none;
+  }
+
+  /* line 12, assets/_media-queries.scss */
+  .more-tab {
+    display: none;
+  }
 }

@@ -10,3 +10,22 @@
 	color: #fff;
 	text-shadow: none;
 }
+
+ul {
+	padding: 0;
+	margin: 0;
+
+	list-style: none;
+}
+
+li {
+	list-style-type: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+input, textarea {
+	border: 0;
+}

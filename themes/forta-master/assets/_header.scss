@@ -1,5 +1,112 @@
 .sitetop-links {
 	position: fixed;
 	display: block;
+	background-color: rgba( $black-color, 0.75 );
 	height: auto;
+	width: 100%;
+	z-index: 99999;
+
+	color: $white-color;
+	text-align: center;
+	text-transform: uppercase;
+
+	.flexxed {
+		flex-flow: column;
+	}
+
+	a {
+		display: inline-block;
+		padding: 5px 0;
+
+		color: $white-color;
+	}
+
+	.more-tab {
+		background: $black-color;
+		width: 100%;
+
+		font-size: 20px;
+		text-align: center;
+	}
+}
+
+.top-left {
+	position: absolute;
+	display: block;
+	background-color: $black-color;
+	padding: 10px 0;
+	overflow-y: auto;
+	z-index: 999;
+
+	-webkit-transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.5s ease-in-out;
+	-ms-transition: all 0.5s ease-in-out;
+	-o-transition: all 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;
+
+	.fa-times {
+		position: absolute;
+		top: 10px;
+		right: 10px;
+
+		font-size: 24px;
+	}
+}
+
+.top-right {
+	display: block;
+	background-color: grey;
+	color: $white-color;
+}
+
+.top-quote {
+
+	a {
+		position: relative;
+		padding: 10px 0;
+
+		&:before {
+			content: '\f1ec';
+			position: absolute;
+			left: -25px;
+
+			font-family: $fa;
+		}
+	}
+}
+
+.top-form {
+	position: relative;
+	background-color: grey;
+	height: 0;
+	z-index: 990;
+	overflow-y: auto;
+
+	-webkit-transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.5s ease-in-out;
+	-ms-transition: all 0.5s ease-in-out;
+	-o-transition: all 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;
+
+	#close-this {
+	    margin: 5px 0 0 0;
+
+	    font-size: 24px;
+	}
+
+	input {
+		width: 95%;
+	}
+
+	textarea {
+		width: 95%;
+	}
+}
+
+.main-header {
+	position: absolute;
+	top: 74px;
+	background-color: rgba( $black-color, 0.5 );
+	width: 100%;
+	z-index: 10;
 }
