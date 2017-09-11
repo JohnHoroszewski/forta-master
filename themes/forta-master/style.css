@@ -875,20 +875,22 @@ a:active {
   text-align: center;
   text-transform: uppercase;
 }
-/* line 13, assets/_header.scss */
+/* line 12, assets/_header.scss */
 .sitetop-links .flexxed {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-flow: column;
   flex-flow: column;
+  max-width: 1024px;
+  margin: 0 auto;
 }
-/* line 20, assets/_header.scss */
+/* line 21, assets/_header.scss */
 .sitetop-links a {
   display: inline-block;
   padding: 5px 0;
   color: #FFFFFF;
 }
-/* line 27, assets/_header.scss */
+/* line 28, assets/_header.scss */
 .sitetop-links .more-tab {
   background: #000000;
   width: 100%;
@@ -896,7 +898,7 @@ a:active {
   text-align: center;
 }
 
-/* line 36, assets/_header.scss */
+/* line 37, assets/_header.scss */
 .top-left {
   position: absolute;
   display: block;
@@ -910,7 +912,7 @@ a:active {
   -o-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
-/* line 50, assets/_header.scss */
+/* line 51, assets/_header.scss */
 .top-left .fa-times {
   position: absolute;
   top: 10px;
@@ -918,7 +920,7 @@ a:active {
   font-size: 24px;
 }
 
-/* line 59, assets/_header.scss */
+/* line 60, assets/_header.scss */
 .top-right {
   display: block;
   background-color: #505050;
@@ -926,12 +928,12 @@ a:active {
   color: #FFFFFF;
 }
 
-/* line 69, assets/_header.scss */
+/* line 70, assets/_header.scss */
 .top-quote a {
   position: relative;
   padding: 10px 0;
 }
-/* line 73, assets/_header.scss */
+/* line 74, assets/_header.scss */
 .top-quote a:before {
   content: '\f1ec';
   position: absolute;
@@ -939,11 +941,12 @@ a:active {
   font-family: "FontAwesome", sans-serif;
 }
 
-/* line 83, assets/_header.scss */
+/* line 84, assets/_header.scss */
 .top-form {
   position: relative;
   background-color: #505050;
   height: 0;
+  max-width: 640px;
   z-index: 990;
   overflow-y: auto;
   -webkit-transition: all 0.5s ease-in-out;
@@ -952,26 +955,26 @@ a:active {
   -o-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
-/* line 96, assets/_header.scss */
+/* line 98, assets/_header.scss */
 .top-form #close-this {
   float: right;
   margin: 5px 0 10px 0;
   font-size: 24px;
 }
-/* line 103, assets/_header.scss */
+/* line 105, assets/_header.scss */
 .top-form form {
   clear: both;
 }
-/* line 107, assets/_header.scss */
+/* line 109, assets/_header.scss */
 .top-form input {
   width: calc(100% - 30px);
 }
-/* line 111, assets/_header.scss */
+/* line 113, assets/_header.scss */
 .top-form textarea {
   width: calc(100% - 30px);
 }
 
-/* line 116, assets/_header.scss */
+/* line 118, assets/_header.scss */
 .mobile-nav {
   position: absolute;
   padding: 50px 0 30px 0;
@@ -985,17 +988,17 @@ a:active {
   -o-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
-/* line 131, assets/_header.scss */
+/* line 133, assets/_header.scss */
 .mobile-nav .menu {
   margin: 30px 0 0 0;
 }
-/* line 135, assets/_header.scss */
+/* line 137, assets/_header.scss */
 .mobile-nav a {
   display: block;
   padding: 5px 0;
   font-size: 21px;
 }
-/* line 142, assets/_header.scss */
+/* line 144, assets/_header.scss */
 .mobile-nav #close-this {
   position: absolute;
   top: 10px;
@@ -1003,12 +1006,12 @@ a:active {
   margin: 5px 0 10px 0;
   font-size: 24px;
 }
-/* line 151, assets/_header.scss */
+/* line 153, assets/_header.scss */
 .mobile-nav .social-media-links {
   margin: 0 0 10px 0;
 }
 
-/* line 157, assets/_header.scss */
+/* line 159, assets/_header.scss */
 .main-header {
   position: absolute;
   top: 74px;
@@ -1016,12 +1019,17 @@ a:active {
   padding: 15px 0;
   width: 100%;
   z-index: 10;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
-/* line 165, assets/_header.scss */
+/* line 173, assets/_header.scss */
 .main-header .main-navigation {
   display: none;
 }
-/* line 169, assets/_header.scss */
+/* line 177, assets/_header.scss */
 .main-header .mobile-nav-btn {
   position: absolute;
   right: 5px;
@@ -1031,13 +1039,13 @@ a:active {
   font-size: 24px;
 }
 
-/* line 180, assets/_header.scss */
+/* line 188, assets/_header.scss */
 .main-navigation,
 .mobile-nav {
   font-weight: 300;
   text-transform: uppercase;
 }
-/* line 185, assets/_header.scss */
+/* line 193, assets/_header.scss */
 .main-navigation a,
 .mobile-nav a {
   color: #FFFFFF;
@@ -1080,6 +1088,19 @@ a:active {
 /*--------------------------------------------------------------
 # Main Content Layout Classes
 --------------------------------------------------------------*/
+/* line 7, assets/_content.scss */
+.homepage.content-area {
+  margin-top: 100vh;
+}
+
+/* line 11, assets/_content.scss */
+.home-bg-slider {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
 /*--------------------------------------------------------------
 ## Comments
 --------------------------------------------------------------*/
@@ -1211,18 +1232,147 @@ object {
 }
 
 @media only screen and (min-width: 1024px) {
-  /* line 3, assets/_media-queries.scss */
-  .top-left {
-    position: initial;
-    background: transparent;
+  /* line 4, assets/_media-queries.scss */
+  .sitetop-links {
+    background-color: rgba(0, 0, 0, 0.8);
   }
   /* line 7, assets/_media-queries.scss */
+  .sitetop-links .flexxed {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+  /* line 14, assets/_media-queries.scss */
+  .sitetop-links a {
+    padding: 10px 0;
+  }
+
+  /* line 19, assets/_media-queries.scss */
+  .top-left {
+    position: static;
+    background: transparent;
+    -ms-flex-preferred-size: 75%;
+    flex-basis: 75%;
+  }
+  /* line 25, assets/_media-queries.scss */
   .top-left .fa-times {
     display: none;
   }
+  /* line 29, assets/_media-queries.scss */
+  .top-left ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-directon: row;
+    justify-content: space-around;
+  }
 
-  /* line 12, assets/_media-queries.scss */
+  /* line 38, assets/_media-queries.scss */
+  .top-right {
+    position: relative;
+    -ms-flex-preferred-size: 25%;
+    flex-basis: 25%;
+    padding: 10px 0;
+  }
+  /* line 44, assets/_media-queries.scss */
+  .top-right:after {
+    content: '';
+    position: absolute;
+    background-color: inherit;
+    left: 100%;
+    top: 0;
+    height: 100%;
+    width: 1000px;
+  }
+
+  /* line 55, assets/_media-queries.scss */
   .more-tab {
     display: none;
+    flex-basis: 0;
+  }
+
+  /* line 60, assets/_media-queries.scss */
+  .mobile-nav {
+    display: none;
+  }
+
+  /* line 64, assets/_media-queries.scss */
+  .mobile-nav-btn {
+    display: none;
+  }
+
+  /* line 68, assets/_media-queries.scss */
+  .main-header {
+    position: fixed;
+    top: 64px;
+  }
+  /* line 72, assets/_media-queries.scss */
+  .main-header .flexxed {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+  /* line 81, assets/_media-queries.scss */
+  .main-header .main-navigation {
+    display: block;
+  }
+  /* line 85, assets/_media-queries.scss */
+  .main-header a {
+    color: #FFFFFF;
+  }
+
+  /* line 90, assets/_media-queries.scss */
+  .site-branding {
+    -ms-flex-preferred-size: 20%;
+    flex-basis: 20%;
+  }
+
+  /* line 95, assets/_media-queries.scss */
+  .main-navigation {
+    -ms-flex-preferred-size: 50%;
+    flex-basis: 50%;
+  }
+
+  /* line 100, assets/_media-queries.scss */
+  .social-media-links {
+    -ms-flex-preferred-size: 11%;
+    flex-basis: 11%;
+  }
+
+  /* line 105, assets/_media-queries.scss */
+  .main-navigation .menu-main-menu-container ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    font-size: 14px;
+  }
+
+  /* line 119, assets/_media-queries.scss */
+  .page-template-homepage .main-header {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    top: auto;
+  }
+  /* line 125, assets/_media-queries.scss */
+  .page-template-homepage .main-header.locked {
+    position: fixed;
+    bottom: auto;
+    top: 64px;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
   }
 }

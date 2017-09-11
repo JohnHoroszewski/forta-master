@@ -61,10 +61,10 @@ $socialArray = array(
 				<div class="top-right constrain site-accent">
 					<?php dynamic_sidebar( 'top-right-area' ); ?>
 				</div>
-				<div class="top-form constrain site-accent">
-					<i id="close-this" class="fa fa-times" aria-hidden="true"></i>
-					<?php dynamic_sidebar( 'top-form-block' ); ?>
-				</div>
+			</div>
+			<div class="top-form constrain site-accent">
+				<i id="close-this" class="fa fa-times" aria-hidden="true"></i>
+				<?php dynamic_sidebar( 'top-form-block' ); ?>
 			</div>
 		</div>
 	<?php endif; ?>
@@ -138,9 +138,37 @@ $socialArray = array(
 					) );
 				?>
 			</nav><!-- #site-navigation -->
+
+			<?php if ( !empty( $socialArray ) ) : ?>
+				<div class="social-media-links flexxed">
+					<?php if ( get_theme_mod( 'forta_master_social_facebook_link' ) ) : ?>
+						<a class="facebook-icon" href="<?php echo esc_attr( get_theme_mod( 'forta_master_social_facebook_link' ) ); ?>">Facebook</a>
+					<?php endif; ?>
+					<?php if ( get_theme_mod( 'forta_master_social_twitter_link' ) ) : ?>
+						<a class="twitter-icon" href="<?php echo esc_attr( get_theme_mod( 'forta_master_social_twitter_link' ) ); ?>">Twitter</a>
+					<?php endif; ?>
+					<?php if ( get_theme_mod( 'forta_master_social_gplus_link' ) ) : ?>
+						<a class="gplus-icon" href="<?php echo esc_attr( get_theme_mod( 'forta_master_social_gplus_link' ) ); ?>">Google Plus</a>
+					<?php endif; ?>
+					<?php if ( get_theme_mod( 'forta_master_social_linkedin_link' ) ) : ?>
+						<a class="linkedin-icon" href="<?php echo esc_attr( get_theme_mod( 'forta_master_social_linkedin_link' ) ); ?>">LinkedIn</a>
+					<?php endif; ?>
+					<?php if ( get_theme_mod( 'forta_master_social_youtube_link' ) ) : ?>
+						<a class="youtube-icon" href="<?php echo esc_attr( get_theme_mod( 'forta_master_social_youtube_link' ) ); ?>">Youtube</a>
+					<?php endif; ?>
+					<?php if ( get_theme_mod( 'forta_master_social_vimeo_link' ) ) : ?>
+						<a class="vimeo-icon" href="<?php echo esc_attr( get_theme_mod( 'forta_master_social_vimeo_link' ) ); ?>">Vimeo</a>
+					<?php endif; ?>
+					<?php if ( get_theme_mod( 'forta_master_social_pinterest_link' ) ) : ?>
+						<a class="pinterest-icon" href="<?php echo esc_attr( get_theme_mod( 'forta_master_social_pinterest_link' ) ); ?>">Pinterest</a>
+					<?php endif; ?>
+				</div>
+			<?php endif; ?>
 		</div><!-- .constrained.flexxed -->
+
 		<a class="mobile-nav-btn" href="#">
 			<i class="fa fa-bars" aria-hidden="true"></i>
 		</a>
 	</header><!-- #masthead -->
+
 	<div id="content" class="site-content">

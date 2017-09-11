@@ -1,3 +1,16 @@
 /*--------------------------------------------------------------
 # Main Content Layout Classes
 --------------------------------------------------------------*/
+
+// Homepage
+
+.homepage.content-area {
+	margin-top: 100vh;
+}
+
+.home-bg-slider {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+}

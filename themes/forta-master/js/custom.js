@@ -3,22 +3,25 @@ jQuery(document).ready(function($) {
 	var $siteTopLeft = $( '.sitetop-links' ).find( '.top-left' ),
 		$sitopLeftHeight = $siteTopLeft.outerHeight(),
 		$winWidth = $( window ).width(),
+		$winHeight = $( window ).height(),
 		$moreEllips = $( '#more-ellipsis' ),
 		$topLeftClose = $siteTopLeft.find( '#close-this' ),
 		$quoteLink = $( '.top-quote a' ),
 		$topForm = $( '.top-form' ),
 		$topFormClose = $topForm.find( '#close-this' ),
 		$mainHeader = $( '.main-header' ),
+		$mainHeaderHome = $( '.page-template-homepage .main-header' ),
+		$headerBlock = $( '.main-header' ).outerHeight(),
 		$mobileBtn = $mainHeader.find( '.mobile-nav-btn' ),
 		$mobileMenu = $( '.mobile-nav' ),
 		$mobileNavHeight = $mobileMenu.outerHeight(),
-		$mobileClose = $mobileMenu.find( '#close-this' );
+		$mobileClose = $mobileMenu.find( '#close-this' ),
+		$hmSlider = $( '.home-bg-slider' );
 
-	console.log( $mobileNavHeight );
-	console.log( $winWidth );
+	console.log( $hmSlider );
 
 	// If window is smaller than 1024px
-	if ( $winWidth <= 1024 )
+	if ( $winWidth < 1024 )
 	{
 		// Pull menu up above viewport
 		$siteTopLeft.css( 'top', -$sitopLeftHeight );
@@ -60,10 +63,28 @@ jQuery(document).ready(function($) {
 		});
 	});
 
-	// If window is smaller than 1024px
-	if ( $winWidth >= 640 )
-	{
-		$topForm.css( 'maxWidth', 640 );
-	}
+	// Set homepage slider height
+	$hmSlider.css( 'height', $winHeight );
 
+	// Lock header to top of window navigation when scrollpoint reached
+	$( window ).on( 'scroll', function(){
+		var $winScroll = $( window ).scrollTop(),
+
+			$headerScroll = $mainHeaderHome.offset().top,
+			$contentScroll = $( '.homepage.content-area' ).offset().top,
+			$topOffset = $winScroll + $sitopLeftHeight;
+			$blockHeight = $sitopLeftHeight + $headerBlock;
+
+
+			if ( $headerScroll < $topOffset )
+			{
+				$mainHeader.addClass( 'locked' );
+			}
+
+			if ( $contentScroll > $winScroll + $blockHeight )
+			{
+				$mainHeader.removeClass( 'locked' );
+			}
+
+	});
 });

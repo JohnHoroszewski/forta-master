@@ -9,7 +9,13 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
+	<div class="home-slider">
+		<div class="home-bg-slider">
+				Homepage Slider Area
+		</div>
+	</div><!-- .home-slider -->
+
+	<div id="primary" class="homepage content-area">
 		<main id="main" class="site-main">
 
 			<?php

@@ -1,7 +1,6 @@
 .sitetop-links {
 	position: fixed;
 	display: block;
-	// background-color: rgba( $black-color, 0.75 );
 	height: auto;
 	width: 100%;
 	z-index: 99999;
@@ -15,6 +14,8 @@
 		-webkit-box-direction: normal;
 		    -ms-flex-flow: column;
 		        flex-flow: column;
+		max-width: 1024px;
+		margin: 0 auto;
 	}
 
 	a {
@@ -84,6 +85,7 @@
 	position: relative;
 	background-color: #505050;
 	height: 0;
+	max-width: 640px;
 	z-index: 990;
 	overflow-y: auto;
 
@@ -161,6 +163,12 @@
 	padding: 15px 0;
 	width: 100%;
 	z-index: 10;
+
+	-webkit-transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.5s ease-in-out;
+	-ms-transition: all 0.5s ease-in-out;
+	-o-transition: all 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;
 
 	.main-navigation {
 		display: none;
