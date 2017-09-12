@@ -1094,6 +1094,21 @@ a:active {
 }
 
 /* line 11, assets/_content.scss */
+.home-slider {
+  position: relative;
+}
+
+/* line 15, assets/_content.scss */
+.hm-vid-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url("images/az-subtle.png");
+  display: block;
+  width: 100%;
+}
+
+/* line 24, assets/_content.scss */
 .home-bg-slider {
   position: fixed;
   top: 0;

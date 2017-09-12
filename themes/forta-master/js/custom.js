@@ -16,7 +16,8 @@ jQuery(document).ready(function($) {
 		$mobileMenu = $( '.mobile-nav' ),
 		$mobileNavHeight = $mobileMenu.outerHeight(),
 		$mobileClose = $mobileMenu.find( '#close-this' ),
-		$hmSlider = $( '.home-bg-slider' );
+		$hmSlider = $( '.home-bg-slider' ),
+		$vidOverlay = $( '.hm-vid-overlay' );
 
 	console.log( $hmSlider );
 
@@ -65,6 +66,7 @@ jQuery(document).ready(function($) {
 
 	// Set homepage slider height
 	$hmSlider.css( 'height', $winHeight );
+	$vidOverlay.css( 'height', $winHeight );
 
 	// Lock header to top of window navigation when scrollpoint reached
 	$( window ).on( 'scroll', function(){

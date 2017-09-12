@@ -9,7 +9,8 @@
 
 get_header(); ?>
 
-	<div class="home-slider">
+	<div class="home-slider">	
+		<div class="hm-vid-overlay"></div>
 		<div class="home-bg-slider">
 				Homepage Slider Area
 		</div>

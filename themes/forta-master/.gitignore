@@ -30,7 +30,7 @@ temp/
 ## Wordpress
 ############
 
-wp-content/uploads/
+*wp-content/uploads/
 wp-content/upgrade/
 wp-content/backup-db/
 wp-content/advanced-cache.php

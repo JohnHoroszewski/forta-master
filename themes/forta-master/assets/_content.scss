@@ -8,6 +8,19 @@
 	margin-top: 100vh;
 }
 
+.home-slider {
+	position: relative;
+}
+
+.hm-vid-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: url('images/az-subtle.png');
+	display: block;
+	width: 100%;
+}
+
 .home-bg-slider {
 	position: fixed;
 	top: 0;
