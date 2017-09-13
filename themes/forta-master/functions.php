@@ -105,15 +105,19 @@ add_action( 'after_setup_theme', 'forta_master_content_width', 0 );
  * Enqueue scripts and styles.
  */
 function forta_master_scripts() {
-	// Add slick.js
-	wp_enqueue_script( 'forta-master-slick-js', get_template_directory_uri() . '/js/slick.min.js', array( 'jquery' ), '20151215', true );
+
+	// Add slick.css
+	wp_enqueue_style( 'forta-master-slick-style', get_template_directory_uri() . '/css/slick.css' );
 
 	// Add slick-theme.css
-	wp_enqueue_style( 'forta-master-slick-style', get_template_directory_uri() . '/slick-theme.css' );
+	wp_enqueue_style( 'forta-master-slicktheme-style', get_template_directory_uri() . '/css/slick-theme.css' );
 
 	wp_enqueue_style( 'forta-master-style', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'forta-master-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
+
+	// Add slick.js
+	wp_enqueue_script( 'forta-master-slick-js', get_template_directory_uri() . '/js/slick.min.js', array( 'jquery' ), '20151215', true );
 
 	wp_enqueue_script( 'forta-master-custom-js', get_template_directory_uri() . '/js/custom.js', array( 'jquery' ), '20151215', true );
 

@@ -388,6 +388,11 @@ div.wpcf7 .ajax-loader {
   content: '\f231';
 }
 
+/* line 96, assets/_classes.scss */
+.content-area {
+  background: #FFFFFF;
+}
+
 /*--------------------------------------------------------------
 # Typography
 --------------------------------------------------------------*/
@@ -1060,23 +1065,18 @@ a:active {
 }
 
 /* line 771, assets/style.scss */
-.hentry {
-  margin: 0 0 1.5em;
-}
-
-/* line 775, assets/style.scss */
 .updated:not(.published) {
   display: none;
 }
 
-/* line 779, assets/style.scss */
+/* line 775, assets/style.scss */
 .page-content,
 .entry-content,
 .entry-summary {
   margin: 1.5em 0 0;
 }
 
-/* line 785, assets/style.scss */
+/* line 781, assets/style.scss */
 .page-links {
   clear: both;
   margin: 0 0 1.5em;
@@ -1090,41 +1090,41 @@ a:active {
 --------------------------------------------------------------*/
 /* line 7, assets/_content.scss */
 .homepage.content-area {
-  margin-top: 100vh;
-}
-
-/* line 11, assets/_content.scss */
-.home-slider {
   position: relative;
+  margin-top: 100vh;
+  z-index: 5;
 }
 
-/* line 15, assets/_content.scss */
+/* line 13, assets/_content.scss */
+.home-slider {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+}
+/* line 18, assets/_content.scss */
+.home-slider .slide {
+  background-size: cover;
+}
+
+/* line 23, assets/_content.scss */
 .hm-vid-overlay {
   position: absolute;
   top: 0;
   left: 0;
-  background: url("images/az-subtle.png");
+  background: url("images/darth-stripe.png");
   display: block;
-  width: 100%;
-}
-
-/* line 24, assets/_content.scss */
-.home-bg-slider {
-  position: fixed;
-  top: 0;
-  left: 0;
   width: 100%;
 }
 
 /*--------------------------------------------------------------
 ## Comments
 --------------------------------------------------------------*/
-/* line 799, assets/style.scss */
+/* line 795, assets/style.scss */
 .comment-content a {
   word-wrap: break-word;
 }
 
-/* line 803, assets/style.scss */
+/* line 799, assets/style.scss */
 .bypostauthor {
   display: block;
 }
@@ -1132,10 +1132,15 @@ a:active {
 /*--------------------------------------------------------------
 ## Footer
 --------------------------------------------------------------*/
+/* line 1, assets/_footer.scss */
+.site-footer {
+  background: #FFFFFF;
+}
+
 /*--------------------------------------------------------------
 # Media
 --------------------------------------------------------------*/
-/* line 816, assets/style.scss */
+/* line 812, assets/style.scss */
 .page-content .wp-smiley,
 .entry-content .wp-smiley,
 .comment-content .wp-smiley {
@@ -1146,7 +1151,7 @@ a:active {
 }
 
 /* Make sure embeds and iframes fit their containers. */
-/* line 826, assets/style.scss */
+/* line 822, assets/style.scss */
 embed,
 iframe,
 object {
@@ -1154,7 +1159,7 @@ object {
 }
 
 /* Make sure logo link wraps around logo image. */
-/* line 833, assets/style.scss */
+/* line 829, assets/style.scss */
 .custom-logo-link {
   display: inline-block;
 }
@@ -1162,25 +1167,25 @@ object {
 /*--------------------------------------------------------------
 ## Captions
 --------------------------------------------------------------*/
-/* line 840, assets/style.scss */
+/* line 836, assets/style.scss */
 .wp-caption {
   margin-bottom: 1.5em;
   max-width: 100%;
 }
 
-/* line 845, assets/style.scss */
+/* line 841, assets/style.scss */
 .wp-caption img[class*="wp-image-"] {
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
 
-/* line 851, assets/style.scss */
+/* line 847, assets/style.scss */
 .wp-caption .wp-caption-text {
   margin: 0.8075em 0;
 }
 
-/* line 855, assets/style.scss */
+/* line 851, assets/style.scss */
 .wp-caption-text {
   text-align: center;
 }
@@ -1188,12 +1193,12 @@ object {
 /*--------------------------------------------------------------
 ## Galleries
 --------------------------------------------------------------*/
-/* line 862, assets/style.scss */
+/* line 858, assets/style.scss */
 .gallery {
   margin-bottom: 1.5em;
 }
 
-/* line 866, assets/style.scss */
+/* line 862, assets/style.scss */
 .gallery-item {
   display: inline-block;
   text-align: center;
@@ -1201,47 +1206,47 @@ object {
   width: 100%;
 }
 
-/* line 873, assets/style.scss */
+/* line 869, assets/style.scss */
 .gallery-columns-2 .gallery-item {
   max-width: 50%;
 }
 
-/* line 877, assets/style.scss */
+/* line 873, assets/style.scss */
 .gallery-columns-3 .gallery-item {
   max-width: 33.33333%;
 }
 
-/* line 881, assets/style.scss */
+/* line 877, assets/style.scss */
 .gallery-columns-4 .gallery-item {
   max-width: 25%;
 }
 
-/* line 885, assets/style.scss */
+/* line 881, assets/style.scss */
 .gallery-columns-5 .gallery-item {
   max-width: 20%;
 }
 
-/* line 889, assets/style.scss */
+/* line 885, assets/style.scss */
 .gallery-columns-6 .gallery-item {
   max-width: 16.66667%;
 }
 
-/* line 893, assets/style.scss */
+/* line 889, assets/style.scss */
 .gallery-columns-7 .gallery-item {
   max-width: 14.28571%;
 }
 
-/* line 897, assets/style.scss */
+/* line 893, assets/style.scss */
 .gallery-columns-8 .gallery-item {
   max-width: 12.5%;
 }
 
-/* line 901, assets/style.scss */
+/* line 897, assets/style.scss */
 .gallery-columns-9 .gallery-item {
   max-width: 11.11111%;
 }
 
-/* line 905, assets/style.scss */
+/* line 901, assets/style.scss */
 .gallery-caption {
   display: block;
 }

@@ -9,10 +9,31 @@
 
 get_header(); ?>
 
+<!-- 	<div class="home-slider">	
+		<?php echo do_shortcode( '[slick-slider]' ); ?>
+	</div> --><!-- .home-slider -->
+
 	<div class="home-slider">	
-		<div class="hm-vid-overlay"></div>
+		
 		<div class="home-bg-slider">
-				Homepage Slider Area
+			
+			<!-- Iterate through fields for slick slider -->
+			<?php if ( have_rows( 'homepage_slider' ) ) : ?>
+
+				<?php while ( have_rows( 'homepage_slider' ) ) : the_row();
+					$image = get_sub_field( 'hp_slide_image' );
+				?>
+				<div class="slide" style="background-image: url( <?php echo $image[ 'url' ]; ?> );" >
+					<div class="constrain">
+						<?php the_sub_field( 'hp_slide_content' ); ?>
+					</div>
+					<div class="hm-vid-overlay"></div>
+				</div>
+
+				<?php endwhile; ?>
+
+			<?php endif; ?>
+
 		</div>
 	</div><!-- .home-slider -->
 
@@ -36,5 +57,5 @@ get_header(); ?>
 	</div><!-- #primary -->
 
 <?php
-get_sidebar();
+
 get_footer();

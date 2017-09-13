@@ -14,11 +14,15 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			Site Footer information here
-		</div><!-- .site-info -->
+		<div class="constrain">
+			<div class="site-info">
+				Site Footer information here
+			</div><!-- .site-info -->
+		</div><!-- .constrain -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
+
+<a id="btt-button" class="back-to-top site-accent" href="#" >Top</a>
 
 <?php wp_footer(); ?>
 

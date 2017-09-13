@@ -16,10 +16,8 @@ jQuery(document).ready(function($) {
 		$mobileMenu = $( '.mobile-nav' ),
 		$mobileNavHeight = $mobileMenu.outerHeight(),
 		$mobileClose = $mobileMenu.find( '#close-this' ),
-		$hmSlider = $( '.home-bg-slider' ),
+		$hmSlides = $( '.home-slider' ).find( '.slide' ),
 		$vidOverlay = $( '.hm-vid-overlay' );
-
-	console.log( $hmSlider );
 
 	// If window is smaller than 1024px
 	if ( $winWidth < 1024 )
@@ -65,8 +63,16 @@ jQuery(document).ready(function($) {
 	});
 
 	// Set homepage slider height
-	$hmSlider.css( 'height', $winHeight );
 	$vidOverlay.css( 'height', $winHeight );
+	$hmSlides.css( 'height', $winHeight );
+
+	// On window height change update window vh size
+	$( window ).resize( function()
+	{
+		$winHeight = $( window ).height(),
+		$vidOverlay.css( 'height', $winHeight );
+		$hmSlides.css( 'height', $winHeight );
+	});
 
 	// Lock header to top of window navigation when scrollpoint reached
 	$( window ).on( 'scroll', function(){
@@ -88,5 +94,12 @@ jQuery(document).ready(function($) {
 				$mainHeader.removeClass( 'locked' );
 			}
 
+	});
+
+	// Initialize slick on homepage
+	$('.home-bg-slider').slick({
+		arrows: true,
+		fade: true,
+		cssEase: 'linear'
 	});
 });

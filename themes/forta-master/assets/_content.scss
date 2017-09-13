@@ -5,25 +5,26 @@
 // Homepage
 
 .homepage.content-area {
+	position: relative;
 	margin-top: 100vh;
+	z-index: 5;
 }
 
 .home-slider {
-	position: relative;
+	position: fixed;
+	height: 100vh;
+	width: 100vw;
+
+	.slide {
+		background-size: cover;
+	}
 }
 
 .hm-vid-overlay {
 	position: absolute;
 	top: 0;
 	left: 0;
-	background: url('images/az-subtle.png');
+	background: url('images/darth-stripe.png');
 	display: block;
-	width: 100%;
-}
-
-.home-bg-slider {
-	position: fixed;
-	top: 0;
-	left: 0;
 	width: 100%;
 }
