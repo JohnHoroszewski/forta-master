@@ -279,6 +279,7 @@ textarea {
 	font-size: 16px;
 	font-size: 1rem;
 	line-height: 1.5;
+	text-rendering: optimizeLegibility;
 }
 
 h1,
@@ -513,19 +514,19 @@ textarea {
 /*--------------------------------------------------------------
 ## Links
 --------------------------------------------------------------*/
-a {
-	color: royalblue;
-}
+// a {
+// 	color: royalblue;
+// }
 
 a:visited {
-	color: purple;
+	color: $white-color;
 }
 
-a:hover,
-a:focus,
-a:active {
-	color: midnightblue;
-}
+// a:hover,
+// a:focus,
+// a:active {
+// 	color: midnightblue;
+// }
 
 a:focus {
 	outline: thin dotted;
@@ -904,3 +905,5 @@ object {
 
 
 @import "media-queries";
+
+@import "ms";

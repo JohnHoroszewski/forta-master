@@ -25,7 +25,9 @@ get_header(); ?>
 				?>
 				<div class="slide" style="background-image: url( <?php echo $image[ 'url' ]; ?> );" >
 					<div class="constrain">
-						<?php the_sub_field( 'hp_slide_content' ); ?>
+						<div class="slider-text">
+							<?php the_sub_field( 'hp_slide_content' ); ?>
+						</div>
 					</div>
 					<div class="hm-vid-overlay"></div>
 				</div>

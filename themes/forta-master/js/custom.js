@@ -4,7 +4,7 @@ jQuery(document).ready(function($) {
 		$sitopLeftHeight = $siteTopLeft.outerHeight(),
 		$winWidth = $( window ).width(),
 		$winHeight = $( window ).height(),
-		$moreEllips = $( '#more-ellipsis' ),
+		$moreEllips = $( '.more-tab' ),
 		$topLeftClose = $siteTopLeft.find( '#close-this' ),
 		$quoteLink = $( '.top-quote a' ),
 		$topForm = $( '.top-form' ),
@@ -17,12 +17,15 @@ jQuery(document).ready(function($) {
 		$mobileNavHeight = $mobileMenu.outerHeight(),
 		$mobileClose = $mobileMenu.find( '#close-this' ),
 		$hmSlides = $( '.home-slider' ).find( '.slide' ),
-		$vidOverlay = $( '.hm-vid-overlay' );
+		$vidOverlay = $( '.hm-vid-overlay' ),
+		// $secHeading = $( '.secondary' ).find( 'h1' ),
+		$parentNavItem = $( '#primary-menu > .menu-item-has-children' ),
+		$parentIcon = $parentNavItem.find( '.fa' );
 
 	// If window is smaller than 1024px
 	if ( $winWidth < 1024 )
 	{
-		// Pull menu up above viewport
+		// Pull menu behind viewport and set width
 		$siteTopLeft.css( 'top', -$sitopLeftHeight );
 		$mobileMenu.css( 'left', -$winWidth );
 		$topForm.css( 'width', $winWidth );
@@ -40,6 +43,7 @@ jQuery(document).ready(function($) {
 			});
 		});
 
+		// Open mobile menu
 		$mobileBtn.on( 'click', function()
 		{
 			$mobileMenu.css( 'left', 0 );
@@ -50,9 +54,34 @@ jQuery(document).ready(function($) {
 		});
 	}
 
+	if ( $winWidth > 1023 ) {
+
+		// Keep secondary page content and sidebar aligned
+		// if ( $secHeading.outerHeight() > 55 )
+		// {
+		// 	$secHeading.css(
+		// 	{
+		// 		'fontSize' : '40px',
+		// 		'height' : '55px'
+		// 	});
+		// }
+
+		// Parallax effect on secondary page header images
+		$( window ).scroll( function(){
+
+			var $headerImage = $( '.header-image' ),
+				wScroll = $( this ).scrollTop();
+
+			$headerImage.css({
+				'background-position-y' : -wScroll /8,
+			});
+		});
+	}
+
 	// Open form block on 'Request a Quote' click
-	$quoteLink.on( 'click', function()
+	$quoteLink.on( 'click', function( e )
 	{
+		e.preventDefault();
 		$topForm.css( 'height', 'calc(100vh - 80px )' );
 
 		// Close form block on 'Close' click
@@ -74,9 +103,24 @@ jQuery(document).ready(function($) {
 		$hmSlides.css( 'height', $winHeight );
 	});
 
+	// Add down chevron icon to any menu item with children
+	$parentNavItem.prepend( '<i class="fa fa-chevron-down" aria-hidden="true"></i>' );
+
+	// Open sub menu on menu chevron icon click
+	$parentIcon.live( 'click', function(){
+		$parentNavItem.find( '.sub-menu' ).slideToggle();
+	});
+
+	$parentIcon.on( 'click', function()
+		{console.log( 'I was clicked' ) });
+
 	// Lock header to top of window navigation when scrollpoint reached
 	$( window ).on( 'scroll', function(){
-		var $winScroll = $( window ).scrollTop(),
+
+		//  Test if variable has length(on homepage or not)
+		if ( $mainHeaderHome.length > 0 ) {
+
+			var $winScroll = $( window ).scrollTop(),
 
 			$headerScroll = $mainHeaderHome.offset().top,
 			$contentScroll = $( '.homepage.content-area' ).offset().top,
@@ -93,13 +137,106 @@ jQuery(document).ready(function($) {
 			{
 				$mainHeader.removeClass( 'locked' );
 			}
-
+		}
 	});
 
 	// Initialize slick on homepage
 	$('.home-bg-slider').slick({
 		arrows: true,
+		autoplay: true,
+		autoplaySpeed: 5000,
 		fade: true,
-		cssEase: 'linear'
+		cssEase: 'linear',
+		prevArrow: '<i class="fa fa-caret-left site-accent-border"></i>',
+		nextArrow: '<i class="fa fa-caret-right site-accent-border"></i>'
 	});
+
+	// Turn animation on or off depending on current slide
+	function myTimer() {
+
+		setTimeout( function(){
+			$currentSlide = $hmSlides.find( '.slick-current' );
+			$slide = $( '.slick-current' );
+			$noSLide = $( '.slide' ).not( '.slick-current' );
+			
+			$slide.find( '.animated' ).css( 'display', 'block' );
+			$noSLide.find( '.animated' ).css( 'display', 'none' );
+
+			myTimer();
+		}, 100);
+
+	}
+
+	myTimer();
+
+	// Smooth Scroll for Back To Top Button *Thank you CSS-TRICKS*
+	$('a[href*="#"]:not([href="#"])').click(function() {
+		if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+			var target = $(this.hash);
+			target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+			if (target.length) {
+				$('html, body').animate({
+				scrollTop: target.offset().top
+			}, 1000);
+				return false;
+			}
+		}
+	});
+
+	// Show/Hide Back to Top button on scroll
+	$( window ).on( 'scroll', function()
+	{
+		var $scrolled = $( window ).scrollTop(),
+			$btt = $( '.back-to-top' );
+
+		if ( $scrolled > 100 )
+		{
+			$btt.addClass( 'visible' );
+		} else if ( $scrolled < 100 )
+		{
+			$btt.removeClass( 'visible' );
+		}
+	});
+
+	// Set 1st product tab and tab content to visible on page load 
+	$( '.product-tabs' ).find( 'li' ).first().find( 'a' ).addClass( 'active' );
+	$( '.product-listings' ).find( '.tabBlock' ).first().addClass( 'visible' );
+
+	// Tabs
+	$( '.product-tabs a' ).on( 'click', function( e ) {
+
+	  e.preventDefault();
+	  
+	  $allAnchors = $( '.product-tabs li a' ),
+	  $clicked = $( this ),
+	  $curTab = $clicked.data( 'ref' ),
+	  $allTabs = $( '.product-listings' ).find( '.tabBlock' ),
+	  $selectedTab = $( '.product-listings' ).find( '#' + $curTab );
+	  
+	  if ( !$selectedTab.hasClass( '.visible' ) ) {
+	   
+	    // Remove active from all tabs
+	    $allAnchors.removeClass( 'active' );
+	 
+	    // Add active to clicked tab
+	    $clicked.addClass( 'active' );
+	    
+	    // Hide all tab content
+	    $allTabs.removeClass( 'visible' );
+	    
+	    // Display selected tab content
+	    $selectedTab.addClass( 'visible' );
+	    
+	  } 
+	});
+
+	// Initialize Fancybox
+	$("a.project_gallery").fancybox({
+		'transitionIn'	:	'elastic',
+		'transitionOut'	:	'elastic',
+		'speedIn'		:	600, 
+		'speedOut'		:	200, 
+		'overlayShow'	:	true
+	});
+
 });

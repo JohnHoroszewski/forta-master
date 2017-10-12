@@ -8,6 +8,7 @@
  */
 
 include( get_stylesheet_directory() . '/includes/customizer.php' );
+include( get_stylesheet_directory() . '/includes/wyswig_styles.php' );
 
 if ( ! function_exists( 'forta_master_setup' ) ) :
 
@@ -112,12 +113,21 @@ function forta_master_scripts() {
 	// Add slick-theme.css
 	wp_enqueue_style( 'forta-master-slicktheme-style', get_template_directory_uri() . '/css/slick-theme.css' );
 
+	// Add facybox.css
+	wp_enqueue_style( 'forta-master-fancybox-style', get_template_directory_uri() . '/css/jquery.fancybox-1.3.4.css' );
+
 	wp_enqueue_style( 'forta-master-style', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'forta-master-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
 	// Add slick.js
 	wp_enqueue_script( 'forta-master-slick-js', get_template_directory_uri() . '/js/slick.min.js', array( 'jquery' ), '20151215', true );
+
+	// Add fancybox.js
+	wp_enqueue_script( 'forta-master-fancybox-js', get_template_directory_uri() . '/js/fancybox/jquery.fancybox-1.3.4.js', array( 'jquery' ), '20151215', true );
+
+	// Add fancybox-easing.js
+	wp_enqueue_script( 'forta-master-fancyboxeasing-js', get_template_directory_uri() . '/js/fancybox/jquery.easing-1.3.pack.js', array( 'jquery' ), '20151215', true );
 
 	wp_enqueue_script( 'forta-master-custom-js', get_template_directory_uri() . '/js/custom.js', array( 'jquery' ), '20151215', true );
 
@@ -134,6 +144,8 @@ function register_forta_topmenu() {
   register_nav_menu('forta-top-menu',__( 'Top Site Menu' ));
 }
 add_action( 'init', 'register_forta_topmenu' );
+
+
 
 /**
  * Register Site Top Left Widget Area for Menu
@@ -174,22 +186,50 @@ function top_widget_areas() {
 add_action( 'widgets_init', 'top_widget_areas' );
 
 /**
+ * Register Footer Menu Item Areas
+ */
+function footer_menu_area() {
+
+	$args = array(
+		'id'            => 'footer-column-one',
+		'class'         => 'footer-menu',
+		'name'          => __( 'Footer Column One Menu Area', 'text_domain' ),
+		'description'   => __( 'Area for custom footer menu links in first column', 'text_domain' ),
+		'before_widget' => '',
+		'after_widget'  => '',
+	);
+	register_sidebar( $args );
+
+	$args = array(
+		'id'            => 'footer-column-two',
+		'class'         => 'footer-menu',
+		'name'          => __( 'Footer Column Two Menu Area', 'text_domain' ),
+		'description'   => __( 'Area for custom footer menu links in second column', 'text_domain' ),
+		'before_widget' => '',
+		'after_widget'  => '',
+	);
+	register_sidebar( $args );
+
+}
+add_action( 'widgets_init', 'footer_menu_area' );
+
+/**
  * Register widget area.
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
-function forta_master_widgets_init() {
-	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar', 'forta-master' ),
-		'id'            => 'sidebar-1',
-		'description'   => esc_html__( 'Add widgets here.', 'forta-master' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
-	) );
-}
-add_action( 'widgets_init', 'forta_master_widgets_init' );
+// function forta_master_widgets_init() {
+// 	register_sidebar( array(
+// 		'name'          => esc_html__( 'Sidebar', 'forta-master' ),
+// 		'id'            => 'sidebar-1',
+// 		'description'   => esc_html__( 'Add widgets here.', 'forta-master' ),
+// 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+// 		'after_widget'  => '</section>',
+// 		'before_title'  => '<h2 class="widget-title">',
+// 		'after_title'   => '</h2>',
+// 	) );
+// }
+// add_action( 'widgets_init', 'forta_master_widgets_init' );
 
 /**
  * Implement the Custom Header feature.
@@ -222,3 +262,201 @@ if ( defined( 'JETPACK__VERSION' ) ) {
  * Hide admin Bar
  */
 show_admin_bar(false);
+
+
+/**
+ * Register Product Custom Post Type
+ */
+function products_custom_post_type() {
+
+	$labels = array(
+		'name'                  => _x( 'Products', 'Post Type General Name', 'text_domain' ),
+		'singular_name'         => _x( 'Products', 'Post Type Singular Name', 'text_domain' ),
+		'menu_name'             => __( 'Products', 'text_domain' ),
+		'name_admin_bar'        => __( 'Products', 'text_domain' ),
+		'archives'              => __( 'Product Archives', 'text_domain' ),
+		'attributes'            => __( 'Product Attributes', 'text_domain' ),
+		'parent_item_colon'     => __( 'Parent Product:', 'text_domain' ),
+		'all_items'             => __( 'All Products', 'text_domain' ),
+		'add_new_item'          => __( 'Add New Products', 'text_domain' ),
+		'add_new'               => __( 'Add New', 'text_domain' ),
+		'new_item'              => __( 'New Product', 'text_domain' ),
+		'edit_item'             => __( 'Edit Product', 'text_domain' ),
+		'update_item'           => __( 'Update Product', 'text_domain' ),
+		'view_item'             => __( 'View Product', 'text_domain' ),
+		'view_items'            => __( 'View Products', 'text_domain' ),
+		'search_items'          => __( 'Search Product', 'text_domain' ),
+		'not_found'             => __( 'Not found', 'text_domain' ),
+		'not_found_in_trash'    => __( 'Not found in Trash', 'text_domain' ),
+		'featured_image'        => __( 'Featured Image', 'text_domain' ),
+		'set_featured_image'    => __( 'Set featured image', 'text_domain' ),
+		'remove_featured_image' => __( 'Remove featured image', 'text_domain' ),
+		'use_featured_image'    => __( 'Use as featured image', 'text_domain' ),
+		'insert_into_item'      => __( 'Insert into product', 'text_domain' ),
+		'uploaded_to_this_item' => __( 'Uploaded to this product', 'text_domain' ),
+		'items_list'            => __( 'Products list', 'text_domain' ),
+		'items_list_navigation' => __( 'Products list navigation', 'text_domain' ),
+		'filter_items_list'     => __( 'Filter products list', 'text_domain' ),
+	);
+	$args = array(
+		'label'                 => __( 'Products', 'text_domain' ),
+		'description'           => __( 'All Forta Products', 'text_domain' ),
+		'labels'                => $labels,
+		'supports'              => array( 'title', 'editor', 'excerpt', 'thumbnail', 'page-attributes', 'post-formats', ),
+		'taxonomies'            => array( 'category', 'post_tag' ),
+		'hierarchical'          => true,
+		'public'                => true,
+		'show_ui'               => true,
+		'show_in_menu'          => true,
+		'menu_position'         => 5,
+		'menu_icon'             => 'dashicons-cart',
+		'show_in_admin_bar'     => true,
+		'show_in_nav_menus'     => true,
+		'can_export'            => true,
+		'has_archive'           => true,		
+		'exclude_from_search'   => false,
+		'publicly_queryable'    => true,
+		'capability_type'       => 'page',
+	);
+	register_post_type( 'products', $args );
+
+}
+add_action( 'init', 'products_custom_post_type', 0 );
+
+
+// Register Product Categories Taxonomy
+function product_categories() {
+
+	$labels = array(
+		'name'                       => _x( 'Product Categories', 'Taxonomy General Name', 'text_domain' ),
+		'singular_name'              => _x( 'Product Category', 'Taxonomy Singular Name', 'text_domain' ),
+		'menu_name'                  => __( 'Product Categories', 'text_domain' ),
+		'all_items'                  => __( 'All Product Categories', 'text_domain' ),
+		'parent_item'                => __( 'Parent Product Category', 'text_domain' ),
+		'parent_item_colon'          => __( 'Parent Product Category:', 'text_domain' ),
+		'new_item_name'              => __( 'New Product Category Name', 'text_domain' ),
+		'add_new_item'               => __( 'Add New Product Category', 'text_domain' ),
+		'edit_item'                  => __( 'Edit Product Category', 'text_domain' ),
+		'update_item'                => __( 'Update Product Category', 'text_domain' ),
+		'view_item'                  => __( 'View Product Category', 'text_domain' ),
+		'separate_items_with_commas' => __( 'Separate product categories with commas', 'text_domain' ),
+		'add_or_remove_items'        => __( 'Add or remove product categories', 'text_domain' ),
+		'choose_from_most_used'      => __( 'Choose from the most used', 'text_domain' ),
+		'popular_items'              => __( 'Popular Product Categories', 'text_domain' ),
+		'search_items'               => __( 'Search Product Categories', 'text_domain' ),
+		'not_found'                  => __( 'Not Found', 'text_domain' ),
+		'no_terms'                   => __( 'No product categories', 'text_domain' ),
+		'items_list'                 => __( 'Product Categories list', 'text_domain' ),
+		'items_list_navigation'      => __( 'Product Categories list navigation', 'text_domain' ),
+	);
+	$args = array(
+		'labels'                     => $labels,
+		'hierarchical'               => true,
+		'public'                     => true,
+		'show_ui'                    => true,
+		'show_admin_column'          => true,
+		'show_in_nav_menus'          => true,
+		'show_tagcloud'              => true,
+	);
+	register_taxonomy( 'product_categories', array( 'products' ), $args );
+
+}
+add_action( 'init', 'product_categories', 0 );
+
+/**
+ * Register Project Custom Post Type
+ */
+function project_post_type() {
+
+	$labels = array(
+		'name'                  => _x( 'Projects', 'Post Type General Name', 'text_domain' ),
+		'singular_name'         => _x( 'Project', 'Post Type Singular Name', 'text_domain' ),
+		'menu_name'             => __( 'Projects', 'text_domain' ),
+		'name_admin_bar'        => __( 'Project', 'text_domain' ),
+		'archives'              => __( 'Project Archives', 'text_domain' ),
+		'attributes'            => __( 'Project Attributes', 'text_domain' ),
+		'parent_item_colon'     => __( 'Parent Project:', 'text_domain' ),
+		'all_items'             => __( 'All Projects', 'text_domain' ),
+		'add_new_item'          => __( 'Add New Project', 'text_domain' ),
+		'add_new'               => __( 'Add New', 'text_domain' ),
+		'new_item'              => __( 'New Project', 'text_domain' ),
+		'edit_item'             => __( 'Edit Project', 'text_domain' ),
+		'update_item'           => __( 'Update Project', 'text_domain' ),
+		'view_item'             => __( 'View Project', 'text_domain' ),
+		'view_items'            => __( 'View Project', 'text_domain' ),
+		'search_items'          => __( 'Search Project', 'text_domain' ),
+		'not_found'             => __( 'Not found', 'text_domain' ),
+		'not_found_in_trash'    => __( 'Not found in Trash', 'text_domain' ),
+		'featured_image'        => __( 'Featured Image', 'text_domain' ),
+		'set_featured_image'    => __( 'Set featured image', 'text_domain' ),
+		'remove_featured_image' => __( 'Remove featured image', 'text_domain' ),
+		'use_featured_image'    => __( 'Use as featured image', 'text_domain' ),
+		'insert_into_item'      => __( 'Insert into project', 'text_domain' ),
+		'uploaded_to_this_item' => __( 'Uploaded to this project', 'text_domain' ),
+		'items_list'            => __( 'Projects list', 'text_domain' ),
+		'items_list_navigation' => __( 'Projects list navigation', 'text_domain' ),
+		'filter_items_list'     => __( 'Filter projectss list', 'text_domain' ),
+	);
+	$args = array(
+		'label'                 => __( 'Project', 'text_domain' ),
+		'description'           => __( 'Project Item', 'text_domain' ),
+		'labels'                => $labels,
+		'supports'              => array( 'title', 'editor', 'excerpt', 'thumbnail', ),
+		'taxonomies'            => array( 'category', 'post_tag' ),
+		'hierarchical'          => true,
+		'public'                => true,
+		'show_ui'               => true,
+		'show_in_menu'          => true,
+		'menu_position'         => 5,
+		'menu_icon'             => 'dashicons-location',
+		'show_in_admin_bar'     => true,
+		'show_in_nav_menus'     => true,
+		'can_export'            => true,
+		'has_archive'           => true,		
+		'exclude_from_search'   => false,
+		'publicly_queryable'    => true,
+		'capability_type'       => 'page',
+	);
+	register_post_type( 'project', $args );
+
+}
+add_action( 'init', 'project_post_type', 0 );
+
+// Register Project Categories Taxonomy
+function project_categories() {
+
+	$labels = array(
+		'name'                       => _x( 'Project Categories', 'Taxonomy General Name', 'text_domain' ),
+		'singular_name'              => _x( 'Project Category', 'Taxonomy Singular Name', 'text_domain' ),
+		'menu_name'                  => __( 'Project Categories', 'text_domain' ),
+		'all_items'                  => __( 'All Project Categories', 'text_domain' ),
+		'parent_item'                => __( 'Parent Project Category', 'text_domain' ),
+		'parent_item_colon'          => __( 'Parent Project Category:', 'text_domain' ),
+		'new_item_name'              => __( 'New Project Category Name', 'text_domain' ),
+		'add_new_item'               => __( 'Add New Project Category', 'text_domain' ),
+		'edit_item'                  => __( 'Edit Project Category', 'text_domain' ),
+		'update_item'                => __( 'Update Project Category', 'text_domain' ),
+		'view_item'                  => __( 'View Project Category', 'text_domain' ),
+		'separate_items_with_commas' => __( 'Separate project categories with commas', 'text_domain' ),
+		'add_or_remove_items'        => __( 'Add or remove project categories', 'text_domain' ),
+		'choose_from_most_used'      => __( 'Choose from the most used', 'text_domain' ),
+		'popular_items'              => __( 'Popular Project Categories', 'text_domain' ),
+		'search_items'               => __( 'Search Project Categories', 'text_domain' ),
+		'not_found'                  => __( 'Not Found', 'text_domain' ),
+		'no_terms'                   => __( 'No project categories', 'text_domain' ),
+		'items_list'                 => __( 'Project Categories list', 'text_domain' ),
+		'items_list_navigation'      => __( 'Project Categories list navigation', 'text_domain' ),
+	);
+	$args = array(
+		'labels'                     => $labels,
+		'hierarchical'               => true,
+		'public'                     => true,
+		'show_ui'                    => true,
+		'show_admin_column'          => true,
+		'show_in_nav_menus'          => true,
+		'show_tagcloud'              => true,
+	);
+	register_taxonomy( 'project_categories', array( 'project' ), $args );
+
+}
+add_action( 'init', 'project_categories', 0 );

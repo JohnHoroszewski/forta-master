@@ -12,18 +12,21 @@
 ?>
 
 <?php
-$socialArray = array( 
-	get_theme_mod( 'forta_master_social_facebook_link' ),
-	get_theme_mod( 'forta_master_social_twitter_link' ),
-	get_theme_mod( 'forta_master_social_gplus_link' ),
-	get_theme_mod( 'forta_master_social_linkedin_link' ),
-	get_theme_mod( 'forta_master_social_youtube_link' ),
-	get_theme_mod( 'forta_master_social_vimeo_link' ),
-	get_theme_mod( 'forta_master_social_pinterest_link' )
-);
+	$socialArray = array( 
+		get_theme_mod( 'forta_master_social_facebook_link' ),
+		get_theme_mod( 'forta_master_social_twitter_link' ),
+		get_theme_mod( 'forta_master_social_gplus_link' ),
+		get_theme_mod( 'forta_master_social_linkedin_link' ),
+		get_theme_mod( 'forta_master_social_youtube_link' ),
+		get_theme_mod( 'forta_master_social_vimeo_link' ),
+		get_theme_mod( 'forta_master_social_pinterest_link' )
+	);
+	$iconsCount = 'icons' . count(array_filter($socialArray));
 ?>
+
+
 <!doctype html>
-<html <?php language_attributes(); ?>>
+<html id="top" <?php language_attributes(); ?>>
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -32,13 +35,41 @@ $socialArray = array(
 	<script src="https://use.fontawesome.com/d0180db23a.js"></script>
 
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
-	<link href="https://fonts.googleapis.com/css?family=Raleway:600,700|Roboto:300,400,500,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Raleway:600,700|Roboto:100,300,400,500,700" rel="stylesheet">
+
+	<link rel="apple-touch-icon" sizes="120x120" href="<?php echo get_template_directory_uri(); ?>/favicons/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="<?php echo get_template_directory_uri(); ?>/favicons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="<?php echo get_template_directory_uri(); ?>/favicons/favicon-16x16.png">
+	<link rel="manifest" href="<?php echo get_template_directory_uri(); ?>/favicons/manifest.json">
+	<link rel="mask-icon" href="<?php echo get_template_directory_uri(); ?>/favicons/safari-pinned-tab.svg" color="#5bbad5">
+	<link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/favicons/favicon.ico">
+	<meta name="msapplication-config" content="<?php echo get_template_directory_uri(); ?>/favicons/browserconfig.xml">
+	<meta name="theme-color" content="#ffffff">
 
 	<?php wp_head(); ?>
 
 	<?php if ( get_theme_mod( 'forta_master_accent_color' ) ) : ?>
 	<style>
+		::-moz-selection { background-color: <?php echo get_theme_mod( 'forta_master_accent_color' ); ?>; }
+		::selection { background-color: <?php echo get_theme_mod( 'forta_master_accent_color' ); ?>; }
 		.site-accent { background-color: <?php echo get_theme_mod( 'forta_master_accent_color' ); ?>; }
+		.site-font-accent { color:  <?php echo get_theme_mod( 'forta_master_accent_color' ); ?>; }
+		.main-header a:hover { color: <?php echo get_theme_mod( 'forta_master_accent_color' ); ?>; }
+		.site-accent-border { border-color: <?php echo get_theme_mod( 'forta_master_accent_color' ); ?> !important; }
+		.slider-btn { border-color: <?php echo get_theme_mod( 'forta_master_accent_color' ); ?> !important; }
+		.main-navigation li a:hover { color: <?php echo get_theme_mod( 'forta_master_accent_color' ); ?>; }
+		.main-navigation .menu-main-menu-container ul.sub-menu { background-color:  <?php echo get_theme_mod( 'forta_master_accent_color' ); ?>; }
+		.footer-menu li a:hover { color:  <?php echo get_theme_mod( 'forta_master_accent_color' ); ?>; }
+		.footer-menu li a:before { color:  <?php echo get_theme_mod( 'forta_master_accent_color' ); ?>; }
+		h2, h3 { color:  <?php echo get_theme_mod( 'forta_master_accent_color' ); ?>;border-color: <?php echo get_theme_mod( 'forta_master_accent_color' ); ?> }
+		.products-lists-text .subtitle { color: <?php echo get_theme_mod( 'forta_master_accent_color' ); ?>; }
+		a.products-btn { color: <?php echo get_theme_mod( 'forta_master_accent_color' ); ?>; }
+		a.products-btn:hover { color: #fff; background-color: <?php echo get_theme_mod( 'forta_master_accent_color' ); ?>; }
+		a.border-btn { border-color: <?php echo get_theme_mod( 'forta_master_accent_color' );  ?>; color: <?php echo get_theme_mod( 'forta_master_accent_color' ); ?>; }
+		a.border-btn:hover { background-color: <?php echo get_theme_mod( 'forta_master_accent_color' ); ?>; color: #fff; }
+		.calc-heading { border-color: <?php echo get_theme_mod( 'forta_master_accent_color' ); ?> }
+		a.OpenCalc { color: <?php echo get_theme_mod( 'forta_master_accent_color' ); ?>; }
+		.product-tabs a.active { color: <?php echo get_theme_mod( 'forta_master_accent_color' ); ?>; }
 	</style>
 	<?php endif; ?>
 </head>
@@ -76,25 +107,25 @@ $socialArray = array(
 			<?php if ( !empty( $socialArray ) ) : ?>
 				<div class="social-media-links flexxed">
 					<?php if ( get_theme_mod( 'forta_master_social_facebook_link' ) ) : ?>
-						<a class="facebook-icon" href="<?php echo esc_attr( get_theme_mod( 'forta_master_social_facebook_link' ) ); ?>">Facebook</a>
+						<a class="facebook-icon <?php echo $iconsCount; ?>" href="<?php echo esc_attr( get_theme_mod( 'forta_master_social_facebook_link' ) ); ?>">Facebook</a>
 					<?php endif; ?>
 					<?php if ( get_theme_mod( 'forta_master_social_twitter_link' ) ) : ?>
-						<a class="twitter-icon" href="<?php echo esc_attr( get_theme_mod( 'forta_master_social_twitter_link' ) ); ?>">Twitter</a>
+						<a class="twitter-icon <?php echo $iconsCount; ?>" href="<?php echo esc_attr( get_theme_mod( 'forta_master_social_twitter_link' ) ); ?>">Twitter</a>
 					<?php endif; ?>
 					<?php if ( get_theme_mod( 'forta_master_social_gplus_link' ) ) : ?>
-						<a class="gplus-icon" href="<?php echo esc_attr( get_theme_mod( 'forta_master_social_gplus_link' ) ); ?>">Google Plus</a>
+						<a class="gplus-icon <?php echo $iconsCount; ?>" href="<?php echo esc_attr( get_theme_mod( 'forta_master_social_gplus_link' ) ); ?>">Google Plus</a>
 					<?php endif; ?>
 					<?php if ( get_theme_mod( 'forta_master_social_linkedin_link' ) ) : ?>
-						<a class="linkedin-icon" href="<?php echo esc_attr( get_theme_mod( 'forta_master_social_linkedin_link' ) ); ?>">LinkedIn</a>
+						<a class="linkedin-icon <?php echo $iconsCount; ?>" href="<?php echo esc_attr( get_theme_mod( 'forta_master_social_linkedin_link' ) ); ?>">LinkedIn</a>
 					<?php endif; ?>
 					<?php if ( get_theme_mod( 'forta_master_social_youtube_link' ) ) : ?>
-						<a class="youtube-icon" href="<?php echo esc_attr( get_theme_mod( 'forta_master_social_youtube_link' ) ); ?>">Youtube</a>
+						<a class="youtube-icon <?php echo $iconsCount; ?>" href="<?php echo esc_attr( get_theme_mod( 'forta_master_social_youtube_link' ) ); ?>">Youtube</a>
 					<?php endif; ?>
 					<?php if ( get_theme_mod( 'forta_master_social_vimeo_link' ) ) : ?>
-						<a class="vimeo-icon" href="<?php echo esc_attr( get_theme_mod( 'forta_master_social_vimeo_link' ) ); ?>">Vimeo</a>
+						<a class="vimeo-icon <?php echo $iconsCount; ?>" href="<?php echo esc_attr( get_theme_mod( 'forta_master_social_vimeo_link' ) ); ?>">Vimeo</a>
 					<?php endif; ?>
 					<?php if ( get_theme_mod( 'forta_master_social_pinterest_link' ) ) : ?>
-						<a class="pinterest-icon" href="<?php echo esc_attr( get_theme_mod( 'forta_master_social_pinterest_link' ) ); ?>">Pinterest</a>
+						<a class="pinterest-icon <?php echo $iconsCount; ?>" href="<?php echo esc_attr( get_theme_mod( 'forta_master_social_pinterest_link' ) ); ?>">Pinterest</a>
 					<?php endif; ?>
 				</div>
 			<?php endif; ?>
@@ -131,6 +162,10 @@ $socialArray = array(
 			</div><!-- .site-branding -->
 
 			<nav id="site-navigation" class="main-navigation">
+				<div class="site-motto motto site-font-accent">
+					<?php printf( get_bloginfo ( 'description' ) ); ?>
+				</div>
+				
 				<?php
 					wp_nav_menu( array(
 						'theme_location' => 'menu-1',
@@ -142,25 +177,25 @@ $socialArray = array(
 			<?php if ( !empty( $socialArray ) ) : ?>
 				<div class="social-media-links flexxed">
 					<?php if ( get_theme_mod( 'forta_master_social_facebook_link' ) ) : ?>
-						<a class="facebook-icon" href="<?php echo esc_attr( get_theme_mod( 'forta_master_social_facebook_link' ) ); ?>">Facebook</a>
+						<a class="facebook-icon <?php echo $iconsCount; ?>" href="<?php echo esc_attr( get_theme_mod( 'forta_master_social_facebook_link' ) ); ?>">Facebook</a>
 					<?php endif; ?>
 					<?php if ( get_theme_mod( 'forta_master_social_twitter_link' ) ) : ?>
-						<a class="twitter-icon" href="<?php echo esc_attr( get_theme_mod( 'forta_master_social_twitter_link' ) ); ?>">Twitter</a>
+						<a class="twitter-icon <?php echo $iconsCount; ?>" href="<?php echo esc_attr( get_theme_mod( 'forta_master_social_twitter_link' ) ); ?>">Twitter</a>
 					<?php endif; ?>
 					<?php if ( get_theme_mod( 'forta_master_social_gplus_link' ) ) : ?>
-						<a class="gplus-icon" href="<?php echo esc_attr( get_theme_mod( 'forta_master_social_gplus_link' ) ); ?>">Google Plus</a>
+						<a class="gplus-icon <?php echo $iconsCount; ?>" href="<?php echo esc_attr( get_theme_mod( 'forta_master_social_gplus_link' ) ); ?>">Google Plus</a>
 					<?php endif; ?>
 					<?php if ( get_theme_mod( 'forta_master_social_linkedin_link' ) ) : ?>
-						<a class="linkedin-icon" href="<?php echo esc_attr( get_theme_mod( 'forta_master_social_linkedin_link' ) ); ?>">LinkedIn</a>
+						<a class="linkedin-icon <?php echo $iconsCount; ?>" href="<?php echo esc_attr( get_theme_mod( 'forta_master_social_linkedin_link' ) ); ?>">LinkedIn</a>
 					<?php endif; ?>
 					<?php if ( get_theme_mod( 'forta_master_social_youtube_link' ) ) : ?>
-						<a class="youtube-icon" href="<?php echo esc_attr( get_theme_mod( 'forta_master_social_youtube_link' ) ); ?>">Youtube</a>
+						<a class="youtube-icon <?php echo $iconsCount; ?>" href="<?php echo esc_attr( get_theme_mod( 'forta_master_social_youtube_link' ) ); ?>">Youtube</a>
 					<?php endif; ?>
 					<?php if ( get_theme_mod( 'forta_master_social_vimeo_link' ) ) : ?>
-						<a class="vimeo-icon" href="<?php echo esc_attr( get_theme_mod( 'forta_master_social_vimeo_link' ) ); ?>">Vimeo</a>
+						<a class="vimeo-icon <?php echo $iconsCount; ?>" href="<?php echo esc_attr( get_theme_mod( 'forta_master_social_vimeo_link' ) ); ?>">Vimeo</a>
 					<?php endif; ?>
 					<?php if ( get_theme_mod( 'forta_master_social_pinterest_link' ) ) : ?>
-						<a class="pinterest-icon" href="<?php echo esc_attr( get_theme_mod( 'forta_master_social_pinterest_link' ) ); ?>">Pinterest</a>
+						<a class="pinterest-icon <?php echo $iconsCount; ?>" href="<?php echo esc_attr( get_theme_mod( 'forta_master_social_pinterest_link' ) ); ?>">Pinterest</a>
 					<?php endif; ?>
 				</div>
 			<?php endif; ?>

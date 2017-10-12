@@ -93,6 +93,124 @@ div.wpcf7 .ajax-loader {
 	}
 }
 
+a.icons3 {
+	width: 33%;
+}
+
+a.icons4 {
+	width: 25%;
+}
+
+a.icons5 {
+	width: 20%;
+}
+
+a.icons6 {
+	width: 16.666%;
+}
+
+a.icons7 {
+	width: 14.285%
+}
+
+a.icons8 {
+	width: 12.5%;
+}
+
 .content-area {
 	background: $white-color;
+}
+
+.motto {
+	font-weight: 500;
+	text-transform: uppercase;
+}
+
+.slider-btn {
+	border: 2px solid;
+	display: inline-block;
+	font-family: $rale-font;
+	font-size: 18px;
+	letter-spacing: .5px;
+	margin: 20px auto 0 auto;
+	padding: 7px 0 5px 10px;
+	position: relative;
+	text-align: left;
+	text-transform: uppercase;
+	width: 80%;
+
+	&:after {
+		content: '\f105';
+		font-family: $fa;
+		position: absolute;
+		right: 10px;
+	}
+}
+
+a.slider-btn {
+	color: $white-color;
+}
+
+.cta-btn {
+	padding: 10px 15px;
+}
+
+.products-btn {
+	background-color: $white-color;
+	border: 1px solid;
+	-webkit-box-shadow: 2px 2px 5px 1px rgba(0,0,0,.15);
+	box-shadow: 2px 2px 5px 1px rgba(0,0,0,.15);
+	display: block;
+	font-size: 14px;
+	padding: 5px 7px;
+}
+
+a.border-btn {
+	border: 1px solid;
+	display: inline-block;
+	min-width: 200px;
+	padding: 5px 15px;
+	text-align: center;
+}
+
+.back-to-top {
+	display: block;
+	border-radius: 3px;
+	bottom: 10px;
+	height: 44px;
+	opacity: .5;
+	position: fixed;
+	right: -50px;
+	width: 44px;
+	z-index: 999;
+
+	-webkit-box-shadow: 2px 2px 5px 1px rgba(0,0,0,.15);
+	box-shadow: 2px 2px 5px 1px rgba(0,0,0,.15);
+
+	-webkit-transition: all .5s ease-in-out;
+	-moz-transition: all .5s ease-in-out;
+	-ms-transition: all .5s ease-in-out;
+	-o-transition: all .5s ease-in-out;
+	transition: all .5s ease-in-out;
+
+	&.visible {
+		right: 10px;
+
+		-webkit-transition: all .5s ease-in-out;
+		-moz-transition: all .5s ease-in-out;
+		-ms-transition: all .5s ease-in-out;
+		-o-transition: all .5s ease-in-out;
+		transition: all .5s ease-in-out;
+	}
+}
+
+.back-to-top:after {
+	color: $white-color;
+	content: '\f0d8';
+	display: block;
+    font-family: 'FontAwesome', dingbats, Helvetica, sans-serif;
+    font-size: 40px;
+    left: 11px;
+    position: absolute;
+    top: 7px;
 }

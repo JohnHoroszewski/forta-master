@@ -3,7 +3,6 @@
 --------------------------------------------------------------*/
 
 // Homepage
-
 .homepage.content-area {
 	position: relative;
 	margin-top: 100vh;
@@ -18,6 +17,42 @@
 	.slide {
 		background-size: cover;
 	}
+
+	.constrain {
+		height: 100vh;
+		position: relative;
+	}
+
+	h1, h2, h3 {
+		border: 0 !important;
+		color: initial !important;
+		font-family: $rale-font;
+		text-transform: initial;
+	}
+}
+
+.slider-text {
+	left: 0;
+	margin: 0 auto;
+	padding: 0 10px;
+	position: absolute;
+	right: 0;
+	text-align: center;
+	top: 45%;
+	width: 100%;
+	z-index: 999;
+
+	h2 {
+		font-size: 36px;
+		font-weight: 500;
+		margin: 0;
+		padding: 0;
+	}
+
+	p {
+		font-weight: 100;
+		text-transform: uppercase;
+	}
 }
 
 .hm-vid-overlay {
@@ -27,4 +62,255 @@
 	background: url('images/darth-stripe.png');
 	display: block;
 	width: 100%;
+	z-index: 10;
+}
+
+.animated {
+    -webkit-animation-delay: 1s; /* Safari 4.0 - 8.0 */
+    animation-delay: 1s;
+}
+
+// Secondary Pages
+.secondary {
+
+	.header-image {
+		min-height: 320px;
+		background-attachment: fixed;
+		background-position: center top;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+
+	.main-block {
+		padding: 30px 0 0 0;
+	}
+
+	.subtitle {
+		font-weight: 500;
+		letter-spacing: 1px;
+		text-transform: uppercase;
+	}
+
+	.entry-title {
+		text-transform: uppercase;
+	}
+
+	.loc-date {
+		text-transform: uppercase;
+	}
+
+	.product-sidebar {
+		margin: 0 0 20px 0;
+	}
+
+	.pro-cta {
+		color: $white-color;
+		padding: 30px 0;
+		text-align: center;
+
+		.small-text,
+		.large-text,
+		a {
+			display: inline-block;
+		}
+
+		.small-text {
+			font-weight: 500;
+			letter-spacing: 3px;
+		}
+
+		.large-text {
+			font-family: 'Raleway', Helvetica, Arial, sans-serif;
+			font-size: 20px;
+			font-weight: 500;
+			line-height: 1.25em;
+		}
+
+		a {
+			color: $white-color;
+		}
+	}
+
+	.cta-btn {
+		margin: 20px 0 0 0;
+	}
+}
+
+.sidebar-gallery {
+
+	.instructions {
+		display: inline-block;
+		font-size: 14px;
+		margin: 0 0 10px 0;
+	}
+
+	ul {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: column;
+		        flex-direction: column;
+	}
+}
+
+// Products and Project Listing Pages
+.page-template-products-template,
+.page-template-projects-template {
+
+	.site-content {
+		padding: 191px 0 0 0;
+	}
+
+	.products-page-info {
+		padding: 30px 0;
+
+		.flexxed {
+			-webkit-box-orient: vertical;
+			-webkit-box-direction: normal;
+			    -ms-flex-direction: column;
+			        flex-direction: column;
+		}
+
+		.sub-text {
+			color: $blackish;
+			font-family: $rale-font;
+			font-size: 20px;
+			font-weight: 700;
+			padding: 10px 0 0 0;
+		}
+	}
+
+	h1.products-heading {
+		color: $darkest;
+	}
+}
+
+.savings-calc {
+	background-color: $darkest;
+	color: $white-color;
+	display: block;
+	font-size: 15px;
+	max-width: 350px;
+	padding: 20px 15px;
+	width: 100%;
+}
+
+.calc-heading {
+	border-bottom: 2px solid;
+	display: block;
+	font-size: 21px;
+	margin: 0 0 10px 0;
+	padding: 0 0 10px 0;
+	text-transform: uppercase;
+}
+
+.OpenCalc {
+	display: block;
+	font-weight: 700;
+	padding: 10px 0 0 10px;
+	position: relative;
+	text-transform: uppercase;
+
+	&:before {
+		color: $white-color;
+		content: '\f0da';
+		font-family: $fa;
+		left: 0;
+		position: absolute;
+		top: 9px;
+	}
+}
+
+.products-tab-list {
+
+	.tab-text {
+		font-size: .65em;
+		text-align: center;
+	    text-transform: uppercase;
+	}
+}
+
+.product-tabs {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	padding: 10px 0 20px 0;
+	
+	li {
+		border-bottom: 2px solid $lt-gray;
+		margin: 0 0 5px 0;
+		padding: 3px 0;
+		text-align: center;
+	}
+
+	a {
+		color: $lt-gray;
+		font-size: 0.9em;
+		font-weight: 700;
+		text-transform: uppercase;
+
+		&.active {
+			border-bottom: 2px solid;
+			padding: 0 0 7px 0;
+		}
+	}
+}
+
+.product-listings {
+	background-color: $grayish;
+	padding: 30px 0 15px 0;
+
+	.tabBlock {
+		display: none;
+
+		&.visible {
+			display: block;
+		}
+	}
+
+	.product-info {
+		background-color: $white-color;
+		margin: 0 0 15px 0;
+	}
+}
+
+.products-list-image {
+	background-position: bottom left;
+	background-repeat: no-repeat;
+	background-size: cover;
+	display: block;
+	height: 215px;
+}
+
+.products-lists-text {
+	display: block;
+	overflow: hidden;
+	padding: 15px 10px;
+
+	.subtitle {
+		font-size: .8em;
+	}
+
+	h2 {
+		border: 0;
+		color: $blackish;
+		font-size: 26px;
+		margin: 0;
+		padding: 0;
+	}
+}
+
+.products-btns-wrapper {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
 }

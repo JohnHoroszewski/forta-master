@@ -1,3 +1,572 @@
+@media only screen and ( min-width: 480px ) {
+
+	// Classes
+	.slider-btn {
+		width: 53%;
+	}
+
+	// Homepage
+	.slider-text {
+		max-width: 100%;
+
+		h2 {
+			font-size: 55px;
+			padding: 0 0 5px 0;
+		}
+	}
+
+	// Secondary Pages
+	.secondary {
+
+		.pro-cta {
+
+			.large-text {
+				font-size: 28px;
+			}
+		}
+	}
+
+	.sidebar-gallery {
+
+		ul {
+			-webkit-box-orient: horizontal;
+			-webkit-box-direction: normal;
+			    -ms-flex-direction: row;
+			        flex-direction: row;
+			-ms-flex-wrap: wrap;
+			    flex-wrap: wrap;
+			-webkit-box-pack: justify;
+			    -ms-flex-pack: justify;
+			        justify-content: space-between;
+		}
+
+		li {
+			width: 49%;
+		}
+	}
+
+	// Products Listing Page
+	.product-tabs {
+
+		li {
+			padding: 3px 10px;
+			width: auto;
+		}
+	}
+
+	.products-list-image {
+		height: 300px;
+	}
+	
+	.products-btns-wrapper {
+		float: right;
+		width: 370px;
+	}
+
+	.products-btn {
+		font-size: 16px;
+		padding: 5px 15px;
+	}
+
+	// Footer
+	.footer-menus {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: row;
+		        flex-direction: row;
+		-webkit-box-pack: justify;
+		    -ms-flex-pack: justify;
+		        justify-content: space-between;
+
+		.footer-menu {
+			width: 47.5%;
+		}
+	}
+}
+
+@media only screen and ( min-width: 568px ) {
+
+	// Classes
+	.slider-btn {
+		padding: 7px 10px;
+		width: 45%;
+	}
+
+	// Homepage
+	.slider-text {
+
+		h2 {
+			font-size: 60px;
+		}
+
+		p {
+			font-size: 20px;
+		}
+	}
+
+	// Products and Project Listing Pages
+	.page-template-products-template,
+	.page-template-projects-template {
+
+		.heading-wrapper {
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			margin: 0 0 20px 0;
+		}
+
+		h1.products-heading {
+			display: inline-block;
+			font-size: 54px;
+		}
+
+		.custom-hr {
+			border-bottom: 4px solid $lt-gray;
+			margin: 0 0 0 20px;
+			width: 100%;
+		}
+	}
+}
+
+@media only screen and ( min-width: 640px ) {
+
+	// Classes
+	.slider-btn {
+		width: 39%;
+	}
+
+	// Secondary Pages
+	.secondary {
+
+		.header-image {
+			min-height: 450px;
+		}
+
+		.pro-cta {
+
+			.large-text {
+				display: block;
+			}
+		}
+	}
+
+	.sidebar-gallery {
+
+		li {
+			width: 32.5%;
+		}
+	}
+
+	// Products and Project Listing Pages
+	.page-template-products-template,
+	.page-template-projects-template {
+
+		h1.products-heading {
+			font-size: 64px;
+		}
+
+		.custom-hr {
+			height: 60px;
+		}
+	}
+
+	.product-tabs {
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: row;
+		        flex-direction: row;
+		-ms-flex-wrap: wrap;
+		    flex-wrap: wrap;
+		-webkit-box-pack: center;
+		    -ms-flex-pack: center;
+		        justify-content: center;
+	}
+
+	.product-listings {
+
+		.product-info {
+			margin: 0 0 20px 0;
+		}
+	}
+
+	.products-lists-text {
+		padding: 30px 50px;
+	}
+}
+
+@media only screen and ( min-width: 768px ) {
+
+	// Classes
+	.slider-btn {
+		margin: 30px auto 0 auto;
+		width: 32%;
+	}
+
+	// Homepage
+	.slider-text {
+
+		h2 {
+			font-size: 80px;
+			padding: 0 0 15px 0;
+		}
+
+		p {
+			font-size: 22px;
+		}
+	}
+
+	// Secondary Pages
+	.secondary {
+
+		.header-image {
+			min-height: 500px;
+		}
+
+
+		.pro-cta {
+
+			.large-text {
+				font-size: 36px;
+			}
+		}		
+	}
+
+	// Products and Project Listing Pages
+	.page-template-products-template,
+	.page-template-projects-template {
+
+		h1.products-heading {
+			font-size: 74px;
+		}
+
+		.custom-hr {
+			height: 70px;
+		}
+
+		.products-page-info {
+
+			.sub-text {
+				font-size: 24px;
+				line-height: 1.25em;
+			}
+		}
+	}
+
+	.product-info {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: row;
+		        flex-direction: row;
+		            flex-grow: 1;
+		margin: 0 0 30px 0;
+
+		&:nth-of-type( even ) {
+			-webkit-box-orient: horizontal;
+			-webkit-box-direction: reverse;
+			    -ms-flex-direction: row-reverse;
+			        flex-direction: row-reverse;
+		}
+
+		&:last-of-type {
+			margin: 0;
+		}
+ 	}
+
+	.products-list-image {
+		height: initial;
+		width: 35%;
+	}
+
+	.products-lists-text {
+		width: 65%;
+	}
+
+	.products-list-heading {
+		margin: 0 0 0 -20px;
+	}
+
+	.products-btns-wrapper {
+		float: none;
+	}
+
+	// Footer
+	.compinfo.flexxed {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: row;
+		        flex-direction: row;
+		-webkit-box-pack: justify;
+		-ms-flex-pack: justify;
+		        justify-content: space-between;
+		margin: 0 auto 10px auto;
+		width: 60%;
+	}
+
+	.compinfo-column {
+		width: 47.5%;
+	}
+
+	.footer-contact {
+		-webkit-box-align: space-between;
+		-ms-flex-align: space-between;
+		align-items: space-between;
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		-ms-flex-direction: column;
+		        flex-direction: column;
+		-ms-flex-flow: wrap;
+		    flex-flow: wrap;
+		margin: 0;
+
+		.contact {
+			height: 20px;
+		}
+	}
+
+	.footer-logo {
+		text-align: left;
+	}
+
+	.footer-address.flexxed {
+		text-align: left;
+	}
+
+	.footer-motto {
+		font-size: 18px;
+		letter-spacing: 2px;
+	}
+}
+
+@media only screen and ( min-width: 860px ) {
+
+	// Classes
+	.slider-btn {
+		max-width: 243px;
+	}
+
+	// Secondary Pages
+	.sidebar-gallery {
+
+		li {
+			width: 24.5%;
+		}
+	}
+
+	// Products and Project Listing Pages
+	.page-template-products-template,
+	.page-template-projects-template {
+
+		.products-page-info {
+
+			.flexxed {
+				-webkit-box-orient: horizontal;
+				-webkit-box-direction: normal;
+				    -ms-flex-direction: row;
+				        flex-direction: row;
+			}
+
+			.sub-text {
+				padding: 15px;
+				width: 35%;
+			}
+
+			.page-description {
+				padding: 15px;
+				width: 65%;
+
+				p {
+					margin: 0;
+				}
+			}
+		}
+	}
+}
+
+@media only screen and ( min-width: 960px ) {
+
+	// Homepage
+	.slider-text {
+
+		h2 {
+			font-size: 100px;
+			padding: 0 0 25px 0;
+		}
+
+		p {
+			font-size: 24px;
+		}
+	}
+
+	// Secondary Pages
+	.secondary {
+
+		.pro-cta {
+			padding: 50px 0;
+
+			.constrain {
+				display: -webkit-box;
+				display: -ms-flexbox;
+				display: flex;
+				-webkit-box-orient: horizontal;
+				-webkit-box-direction: normal;
+				    -ms-flex-direction: row;
+				        flex-direction: row;
+				-webkit-box-pack: justify;
+				    -ms-flex-pack: justify;
+				        justify-content: space-between;
+			}
+
+			.left-block {
+				text-align: left;
+			}
+
+			.small-text {
+				font-size: 22px;
+			}
+
+			.large-text {
+				font-size: 40px;
+			}
+
+			.bottom {
+				padding: 0 0 0 95px;
+			}
+		}
+
+		.right-block {
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-box-align: center;
+			    -ms-flex-align: center;
+			        align-items: center;
+		}
+
+		.cta-btn {
+			margin: 0;
+		}
+	}
+
+	// Products and Project Listing Pages
+	.page-template-products-template,
+	.page-template-projects-template {
+
+		h1.products-heading {
+			font-size: 100px;
+		}
+
+		.custom-hr {
+			height: 95px;
+		}
+
+		.products-page-info {
+
+			.sub-text {
+				font-size: 30px;
+				padding: 20px;
+				width: 45%;
+			}
+
+			.page-description {
+				padding: 20px;
+				width: 55%;
+			}
+		}
+	}
+
+	.product-listings {
+
+		.product-info {
+			margin: 0 0 45px 0;
+		}
+	}
+
+	.products-list-image {
+		width: 50%;
+	}
+
+	.products-lists-text {
+		width: 50%;
+	}
+
+	// Footer
+	.main-footer .flexxed {
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: row;
+		        flex-direction: row;
+		-webkit-box-pack: justify;
+		    -ms-flex-pack: justify;
+		        justify-content: space-between;
+	}
+
+	.footer-block {
+		width: 47.5%;
+	}
+
+	.footer-snippet {
+		text-align: left;
+	}
+
+	.compinfo.flexxed {
+		width: 100%;
+	}
+
+	.footer-address.flexxed {
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: column;
+		        flex-direction: column
+	}
+
+	.legal {
+
+		.footer-block {
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-box-orient: horizontal;
+			-webkit-box-direction: normal;
+			    -ms-flex-direction: row;
+			        flex-direction: row;
+			width: 60%;
+		}
+
+		.legal-box {
+			font-size: 15px;
+			padding: 0 15px 0 0;
+			position: relative;
+
+			&:after {
+				content: '|';
+				position: absolute;
+				right: 5px;
+				top: 0;
+			}
+
+			&:last-of-type {
+				padding: 0;
+
+				&:after {
+					content: '';
+				}
+			}
+		}
+	}
+}
+
 @media only screen and ( min-width: 1024px ) {
 
 	// Header
@@ -54,7 +623,8 @@
 
 	.more-tab {
 		display: none;
-		flex-basis: 0;
+		-ms-flex-preferred-size: 0;
+		    flex-basis: 0;
 	}
 
 	.mobile-nav {
@@ -65,9 +635,57 @@
 		display: none;
 	}
 
+	// Homepage
+	.home-slider {
+
+		.slick-arrow {
+			border: 2px solid $white-color;
+			border-radius: 20px;
+			color: $white-color;
+			height: 40px;
+			position: absolute;
+			top: 47%;
+			width: 40px;
+			z-index: 1;
+
+			&:before {
+				font-size: 24px;
+			}
+		}
+
+		.fa-caret-left {
+			left: 2.5%;
+
+			&:before {
+				left: 12px;
+				position: absolute;
+				top: 6px;
+			}
+		}
+
+		.fa-caret-right {
+			right: 2.5%;
+
+			&:before {
+				left: 15px;
+				position: absolute;
+				top: 5px;
+			}
+		}
+	}
+
+	.slider-text {
+		top: 37.5%;
+
+		h2 {
+			font-size: 120px;
+			padding: 0 0 35px 0;
+		}
+	}
+
 	.main-header {
 		position: fixed;
-		top: 64px;
+		top: 66px;
 
 		.flexxed {
 			-webkit-box-align: center;
@@ -78,12 +696,25 @@
 			        justify-content: space-between;
 		}
 
+		.site-motto {
+			text-align: center;
+			letter-spacing: 4.5px;
+			margin-bottom: 20px;
+		}
+
 		.main-navigation {
 			display: block;
+			overflow: visible;
 		}
 
 		a {
 			color: $white-color;
+		}
+
+		.social-media-links {
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
 		}
 	}
 
@@ -114,6 +745,32 @@
 		    justify-content: space-around;
 
 		font-size: 14px;
+
+		&.sub-menu {
+			display: none;
+			position: absolute;
+			width: 165px;
+
+			a:hover {
+				color: $darkest !important;
+			}
+		}
+	}
+
+	.menu-main-menu-container {
+
+		.fa {
+			font-size: 10px;
+			height: 20px;
+		    right: -20px;
+    		top: -3px;
+			width: 20px;
+		}
+
+		.sub-menu {
+			padding: 10px;
+			width: auto;
+		}
 	}
 
 	.page-template-homepage .main-header {
@@ -123,15 +780,117 @@
 		top: auto;
 
 		&.locked {
-			position: fixed;
+			background-color: rgba( $darkest, 1);
 			bottom: auto;
-			top: 64px;
+			position: fixed;
+			top: 66px;
 
-			-webkit-transition: all 0.5s ease-in-out;
-			-moz-transition: all 0.5s ease-in-out;
-			-ms-transition: all 0.5s ease-in-out;
-			-o-transition: all 0.5s ease-in-out;
-			transition: all 0.5s ease-in-out;
+			-webkit-transition: all 0.25s ease-in-out;
+			-moz-transition: all 0.25s ease-in-out;
+			-ms-transition: all 0.25s ease-in-out;
+			-o-transition: all 0.25s ease-in-out;
+			transition: all 0.25s ease-in-out;
 		}
+	}
+
+	
+	article .constrain {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+	}
+
+	// Product Pages
+	.secondary {
+
+		.main-block {
+			background-color: $white-color;
+			margin-top: -100px;
+			padding: 30px 50px 20px 20px;
+			width: 72.5%;
+		}
+
+		.product-sidebar {
+			max-width: 327px;
+			padding: 45px 0 0 0;
+		}
+
+		.pro-cta {
+			padding: 65px 0;
+		}
+	}
+
+	.sidebar-gallery {
+
+		h2 {
+			margin-top: 10px;
+		}
+
+		li {
+			width: 49%;
+		}
+	}
+
+	// Products and Project Listing Pages
+	.page-template-products-template,
+	.page-template-projects-template {
+
+		article .constrain {
+			display: block;
+		}
+	}
+
+	.side-pro-block {
+		max-width: 327px;
+	}
+
+	.product-listings {
+
+		.product-info {
+			margin: 0 0 60px 0;
+		}
+	}
+
+	// Footer
+	.legal {
+
+		.legal-box {
+			font-size: 16px;
+		}
+	}
+}
+
+@media only screen and ( min-width: 1200px ) {
+
+	// Product Pages
+	.secondary {
+
+		.header-image {
+			min-height: 550px;
+		}
+
+		.pro-cta {
+			padding: 75px 0;
+
+			.large-text {
+				font-size: 48px;
+			}
+		}
+	}
+
+	// Footer
+	.main-footer {
+
+		.footer-block {
+			width: 45%;
+		}
+	}
+}
+
+@media only screen and ( min-width: 1440px ) {
+
+	// Product Pages
+	.secondary .header-image {
+		min-height: 600px;
 	}
 }

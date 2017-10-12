@@ -11,19 +11,56 @@
 	text-shadow: none;
 }
 
+body {
+	color: $font-color;
+	line-height: 1.65em;
+}
+
+ol {
+	margin: 0 0 1.5em 1em;
+}
+
 ul {
 	padding: 0;
 	margin: 0;
 
 	list-style: none;
-}
 
-li {
-	list-style-type: none;
+	li {
+		list-style-type: none;
+	}
 }
 
 a {
 	text-decoration: none;
+
+	-webkit-transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-ms-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+
+	&:hover {
+		-webkit-transition: all 0.2s ease-in-out;
+		-moz-transition: all 0.2s ease-in-out;
+		-ms-transition: all 0.2s ease-in-out;
+		-o-transition: all 0.2s ease-in-out;
+		transition: all 0.2s ease-in-out;
+	}
+}
+
+h1 {
+	color: $blackish;
+	font-family: 'Raleway', Helvetica, Arial, sans-serif;
+	font-size: 48px;
+	line-height: 1.15em;
+	margin: 0;
+}
+
+h2 {
+	border-bottom: 2px solid;
+	padding: 0 0 10px 0;
+	text-transform: uppercase;
 }
 
 input, textarea {
