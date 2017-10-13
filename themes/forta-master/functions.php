@@ -460,3 +460,36 @@ function project_categories() {
 
 }
 add_action( 'init', 'project_categories', 0 );
+
+// Remove 'Categories' from product custom post type
+function remove_category_from_products() {
+  global $submenu;
+  $post_type = 'products';
+  $tax_slug = 'category';
+  if (isset($submenu['edit.php?post_type='.$post_type])) {
+    foreach ($submenu['edit.php?post_type='.$post_type] as $k => $sub) {
+      if (false !== strpos($sub[2],$tax_slug)) {
+        unset($submenu['edit.php?post_type='.$post_type][$k]);
+      }
+    }
+  }
+}
+
+add_action('admin_menu','remove_category_from_products');
+
+
+// Remove 'Categories' from project custom post type
+function remove_category_from_projects() {
+  global $submenu;
+  $post_type = 'project';
+  $tax_slug = 'category';
+  if (isset($submenu['edit.php?post_type='.$post_type])) {
+    foreach ($submenu['edit.php?post_type='.$post_type] as $k => $sub) {
+      if (false !== strpos($sub[2],$tax_slug)) {
+        unset($submenu['edit.php?post_type='.$post_type][$k]);
+      }
+    }
+  }
+}
+
+add_action('admin_menu','remove_category_from_projects');
