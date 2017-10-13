@@ -74,8 +74,11 @@
 			
 				<?php while ( have_rows( 'product_tabs' ) ) : the_row(); ?>
 
+				<!-- convert string to all lowercase -->
+				<?php $tabTitle = strtolower( get_sub_field( 'tab_title' ) ); ?>
+
 					<li>
-						<a href="#" data-ref="<?php the_sub_field( 'tab_title' ); ?>"><?php the_sub_field( 'tab_title' ); ?></a>
+						<a href="#" data-ref="<?php echo $tabTitle ?>"><?php the_sub_field( 'tab_title' ); ?></a>
 					</li>
 	
 				<?php endwhile; ?>
@@ -87,7 +90,10 @@
 
 				<?php while ( have_rows( 'product_tabs' ) ) : the_row(); ?>
 
-					<div id="<?php the_sub_field( 'tab_title' ); ?>" class="tabBlock">
+				<!-- convert string to all lowercase -->
+				<?php $tabTitle = strtolower( get_sub_field( 'tab_title' ) ); ?>
+
+					<div id="<?php echo $tabTitle; ?>" class="tabBlock">
 						<?php the_sub_field( 'tab_content' ); ?>
 					</div>
 

@@ -67,7 +67,7 @@
 								<?php echo $custom_term->name; ?>
 							</a></li>
 
-					    <? }
+					    <?php }
 					} ?>
 
 				</ul>
@@ -101,6 +101,8 @@
 
 						    <?php while( $loop->have_posts() ) : $loop->the_post(); ?>
 
+						    	<?php $postId = $post->ID; ?>
+
 								<div class="product-info">
 
 									<?php if ( has_post_thumbnail() ) : ?>
@@ -119,7 +121,7 @@
 										<?php the_excerpt(); ?>
 
 										<div class="products-btns-wrapper">
-											<a href="#" class="products-btn site-accent-border">FAQs</a>
+											<a href="<?php the_permalink(); ?>#faqs" class="products-btn site-accent-border">FAQs</a>
 											<a href="<?php the_permalink(); ?>" class="products-btn site-accent-border">More Details</a>
 											<a href="#" class="products-btn site-accent-border">Request a Quote</a>
 										</div>
