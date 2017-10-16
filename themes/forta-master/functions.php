@@ -186,6 +186,34 @@ function top_widget_areas() {
 add_action( 'widgets_init', 'top_widget_areas' );
 
 /**
+ * Register General Page Template secondary menu areas
+ */
+function general_page_sidebars() {
+
+	$args = array(
+		'id'            => 'about_sidebar',
+		'class'         => 'general-sidebar-menu',
+		'name'          => __( 'About Page Sidebar Area', 'text_domain' ),
+		'description'   => __( 'Reserved for the secondary About page menu in the sidebar area.', 'text_domain' ),
+		'before_widget' => ' ',
+		'after_widget'  => ' ',
+	);
+	register_sidebar( $args );
+
+	$args = array(
+		'id'            => 'resource_sidebar',
+		'class'         => 'general-sidebar-menu',
+		'name'          => __( 'Resource Page Sidebar Area', 'text_domain' ),
+		'description'   => __( 'Reserved for the secondary Resources page menu in the sidebar area.', 'text_domain' ),
+		'before_widget' => ' ',
+		'after_widget'  => ' ',
+	);
+	register_sidebar( $args );
+
+}
+add_action( 'widgets_init', 'general_page_sidebars' );
+
+/**
  * Register Footer Menu Item Areas
  */
 function footer_menu_area() {
