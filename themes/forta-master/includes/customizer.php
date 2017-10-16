@@ -58,6 +58,7 @@ function forta_master_customizer( $wp_customize ) {
 	$wp_customize->add_setting( 'forta_master_company_state', array( 'default' => __( '' ), 'forta_master' ) );
 	$wp_customize->add_setting( 'forta_master_company_zip', array( 'default' => __( '' ), 'forta_master' ) );
 	$wp_customize->add_setting( 'forta_master_company_country', array( 'default' => __( '' ), 'forta_master' ) );
+	$wp_customize->add_setting( 'forta_master_company_gmap', array( 'default' => __( '' ), 'forta_master' ) );
 	$wp_customize->add_setting( 'forta_master_company_phone', array( 'default' => __( '' ), 'forta_master' ) );
 	$wp_customize->add_setting( 'forta_master_company_tollfree', array( 'default' => __( '' ), 'forta_master' ) );
 	$wp_customize->add_setting( 'forta_master_company_fax', array( 'default' => __( '' ), 'forta_master' ) );
@@ -176,6 +177,13 @@ function forta_master_customizer( $wp_customize ) {
 	    'label'    => __( 'Country', 'forta_master' ),
 	    'section'  => 'forta_master_companyinfo_section',
 	    'settings' => 'forta_master_company_country',
+	) ) );
+
+	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'forta_master_company_country', array(
+		'description' => __( 'Paste the Google Code Snippet Here starting with &lt;iframe&gt;. Please replace width to 100% and height to auto.' ),
+	    'label'    => __( 'Google Map', 'forta_master' ),
+	    'section'  => 'forta_master_companyinfo_section',
+	    'settings' => 'forta_master_company_gmap',
 	) ) );
 
 	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'forta_master_company_phone', array(

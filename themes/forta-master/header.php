@@ -70,6 +70,7 @@
 		.calc-heading { border-color: <?php echo get_theme_mod( 'forta_master_accent_color' ); ?> }
 		a.OpenCalc { color: <?php echo get_theme_mod( 'forta_master_accent_color' ); ?>; }
 		.product-tabs a.active { color: <?php echo get_theme_mod( 'forta_master_accent_color' ); ?>; }
+		.sidebar-comp-info a { color: <?php echo get_theme_mod( 'forta_master_accent_color' ) ?>; }
 	</style>
 	<?php endif; ?>
 </head>
