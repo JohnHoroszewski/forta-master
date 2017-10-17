@@ -173,6 +173,32 @@ a.border-btn {
 	text-align: center;
 }
 
+.main-content-form {
+
+	label {
+		display: inline-block;
+		font-size: 0.75em;
+	}
+
+	input, textarea {
+		background-color: lighten( $lt-gray, 22% );
+		margin: 0 0 10px 0;
+		padding: 3px 5px !important;
+		width: 100%;
+	}
+
+	input {
+
+		&:last-of-type {
+			margin: 0;
+		}
+	}
+
+	input[type=submit] {
+		padding: 12px !important;
+	}
+}
+
 .back-to-top {
 	display: block;
 	border-radius: 3px;

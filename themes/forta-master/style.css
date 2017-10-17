@@ -413,6 +413,23 @@ a.border-btn {
   text-align: center;
 }
 
+.main-content-form label {
+  display: inline-block;
+  font-size: 0.75em;
+}
+.main-content-form input, .main-content-form textarea {
+  background-color: #f6f6f6;
+  margin: 0 0 10px 0;
+  padding: 3px 5px !important;
+  width: 100%;
+}
+.main-content-form input:last-of-type {
+  margin: 0;
+}
+.main-content-form input[type=submit] {
+  padding: 12px !important;
+}
+
 .back-to-top {
   display: block;
   border-radius: 3px;
@@ -1769,6 +1786,16 @@ object {
   .slider-btn {
     margin: 30px auto 0 auto;
     width: 32%;
+  }
+
+  .main-content-form input, .main-content-form textarea {
+    width: 96%;
+  }
+
+  .form-half {
+    float: left;
+    margin: 0 2% 0 0;
+    width: 48%;
   }
 
   .slider-text h2 {

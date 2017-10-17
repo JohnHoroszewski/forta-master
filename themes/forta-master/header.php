@@ -52,6 +52,7 @@
 	<style>
 		::-moz-selection { background-color: <?php echo get_theme_mod( 'forta_master_accent_color' ); ?>; }
 		::selection { background-color: <?php echo get_theme_mod( 'forta_master_accent_color' ); ?>; }
+		.site-content a { color: <?php echo get_theme_mod( 'forta_master_accent_color' ) ?>; }
 		.site-accent { background-color: <?php echo get_theme_mod( 'forta_master_accent_color' ); ?>; }
 		.site-font-accent { color:  <?php echo get_theme_mod( 'forta_master_accent_color' ); ?>; }
 		.main-header a:hover { color: <?php echo get_theme_mod( 'forta_master_accent_color' ); ?>; }
@@ -69,8 +70,12 @@
 		a.border-btn:hover { background-color: <?php echo get_theme_mod( 'forta_master_accent_color' ); ?>; color: #fff; }
 		.calc-heading { border-color: <?php echo get_theme_mod( 'forta_master_accent_color' ); ?> }
 		a.OpenCalc { color: <?php echo get_theme_mod( 'forta_master_accent_color' ); ?>; }
-		.product-tabs a.active { color: <?php echo get_theme_mod( 'forta_master_accent_color' ); ?>; }
-		.sidebar-comp-info a { color: <?php echo get_theme_mod( 'forta_master_accent_color' ) ?>; }
+		.product-tabs a { color: #bcbec0 !important; }
+		.main-content-form label { color: <?php echo get_theme_mod( 'forta_master_accent_color' ); ?> }
+		.main-content-form input[type=submit] { background-color: <?php echo get_theme_mod( 'forta_master_accent_color' ); ?>; color: #fff !important; }
+		.product-tabs a.active { color: <?php echo get_theme_mod( 'forta_master_accent_color' ); ?> !important; }
+		.light-bg-form input { color: <?php echo get_theme_mod( 'forta_master_accent_color' ); ?> !important; border: 1px solid <?php echo get_theme_mod( 'forta_master_accent_color' ); ?>; }
+		.light-bg-form textarea { color: <?php echo get_theme_mod( 'forta_master_accent_color' ); ?>; border: 1px solid <?php echo get_theme_mod( 'forta_master_accent_color' ); ?>; }
 	</style>
 	<?php endif; ?>
 </head>
