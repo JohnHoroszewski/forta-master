@@ -347,3 +347,57 @@
 .gmap {
 	margin: 20px 0 -8px 0;
 }
+
+// Blog Page
+.blog {
+
+	.site-content {
+		padding: 210px 0 0 0;
+	}
+
+	article {
+
+		.constrain {
+			-webkit-box-orient: vertical;
+			-webkit-box-direction: normal;
+			    -ms-flex-direction: column;
+			        flex-direction: column;
+		}
+	}
+}
+
+// Single Article
+.post-template-default {
+
+	.site-content {
+		padding: 210px 0 0 0;
+	}
+
+	article {
+
+		.constrain {
+			-webkit-box-orient: vertical;
+			-webkit-box-direction: normal;
+			    -ms-flex-direction: column;
+			        flex-direction: column;
+		}
+
+		ul {
+			column-width: 320px;
+			margin: 0 0 0 20px;
+
+			li {
+				font-size: 0.9em;
+				margin: 0 0 5px 0;
+				padding: 0 0 0 5px;
+				position: relative;
+
+				&:before {
+					content: '\2022';
+					position: absolute;
+					left: -7px;
+				}
+			}
+		}
+	}
+}
