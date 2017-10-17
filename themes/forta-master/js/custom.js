@@ -52,6 +52,11 @@ jQuery(document).ready(function($) {
 				$mobileMenu.css( 'left', -$winWidth );
 			});
 		});
+
+		// Open sub menu on menu chevron icon click
+		$parentIcon.live( 'click', function(){
+			$parentNavItem.find( '.sub-menu' ).slideToggle();
+		});
 	}
 
 	if ( $winWidth > 1023 ) {
@@ -105,14 +110,6 @@ jQuery(document).ready(function($) {
 
 	// Add down chevron icon to any menu item with children
 	$parentNavItem.prepend( '<i class="fa fa-chevron-down" aria-hidden="true"></i>' );
-
-	// Open sub menu on menu chevron icon click
-	$parentIcon.live( 'click', function(){
-		$parentNavItem.find( '.sub-menu' ).slideToggle();
-	});
-
-	$parentIcon.on( 'click', function()
-		{console.log( 'I was clicked' ) });
 
 	// Lock header to top of window navigation when scrollpoint reached
 	$( window ).on( 'scroll', function(){

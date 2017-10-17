@@ -187,7 +187,18 @@
 
 	ul.sub-menu {
 		display: none;
+		overflow: hidden;
 		position: relative;
+	}
+}
+
+.cat-menu-title {
+	margin: 5px 0 3px 0;
+
+	a {
+		color: black !important;
+		cursor: default;
+		font-size: 1em;
 	}
 }
 

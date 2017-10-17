@@ -1,5 +1,20 @@
 @media only screen and ( min-width: 480px ) {
 
+	// Header
+	ul.sub-menu {
+
+		li {
+			float: left;
+			width: 50%;
+
+			&.cat-menu-title {
+				clear: both;
+				float: none;
+				width: 100%;
+			}
+		}
+	}
+
 	// Classes
 	.slider-btn {
 		width: 53%;
@@ -198,6 +213,11 @@
 }
 
 @media only screen and ( min-width: 768px ) {
+
+	// Header
+	ul.sub-menu li {
+		width: 33%;
+	}
 
 	// Classes
 	.slider-btn {
@@ -741,12 +761,55 @@
 		    flex-basis: 50%;
 	}
 
+	ul.sub-menu li {
+		width: 100%;
+	}
+
 	.social-media-links {
 		-ms-flex-preferred-size: 11%;
 		    flex-basis: 11%;
 	}
 
-	.main-navigation .menu-main-menu-container ul {
+	.main-navigation {
+
+		li.menu-item-has-children:hover > ul.sub-menu {
+			opacity: 1;
+			top: initial;
+			-webkit-transition: all 0.25s ease-in-out;
+			-moz-transition: all 0.25s ease-in-out;
+			-ms-transition: all 0.25s ease-in-out;
+			-o-transition: all 0.25s ease-in-out;
+			transition: all 0.25s ease-in-out;
+			visibility: visible;
+		}
+
+		ul.sub-menu {
+			-webkit-box-shadow: 1px 1px 3px rgba( 0, 0, 0, .25 );
+			box-shadow: 1px 1px 3px rgba( 0, 0, 0, .25 );
+			-webkit-column-count: 2;
+			        column-count: 2;
+			-webkit-columns: 125px;
+			        columns: 125px;
+			display: block;
+			overflow: hidden;
+			opacity: 0;
+			padding: 10px;
+			position: absolute;
+			-webkit-transition: all 0.25s ease-in-out;
+			-moz-transition: all 0.25s ease-in-out;
+			-ms-transition: all 0.25s ease-in-out;
+			-o-transition: all 0.25s ease-in-out;
+			transition: all 0.25s ease-in-out;
+			visibility: hidden;
+			width: 380px;
+
+			a:hover {
+				color: $darkest !important;
+			}
+		}
+	}
+
+	.menu-main-menu-container ul {
 		display: -webkit-box;
 		display: -ms-flexbox;
 		display: flex;
@@ -758,16 +821,6 @@
 		    justify-content: space-around;
 
 		font-size: 14px;
-
-		&.sub-menu {
-			display: none;
-			position: absolute;
-			width: 165px;
-
-			a:hover {
-				color: $darkest !important;
-			}
-		}
 	}
 
 	.menu-main-menu-container {
@@ -779,11 +832,10 @@
     		top: -3px;
 			width: 20px;
 		}
+	}
 
-		.sub-menu {
-			padding: 10px;
-			width: auto;
-		}
+	.cat-menu-title {
+		border-bottom: 1px solid $black-color;
 	}
 
 	.page-template-homepage .main-header {

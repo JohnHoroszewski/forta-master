@@ -1070,7 +1070,17 @@ a:active {
 }
 .menu-item-has-children ul.sub-menu {
   display: none;
+  overflow: hidden;
   position: relative;
+}
+
+.cat-menu-title {
+  margin: 5px 0 3px 0;
+}
+.cat-menu-title a {
+  color: black !important;
+  cursor: default;
+  font-size: 1em;
 }
 
 .page-template-homepage .main-header {
@@ -1639,6 +1649,16 @@ object {
 }
 
 @media only screen and (min-width: 480px) {
+  ul.sub-menu li {
+    float: left;
+    width: 50%;
+  }
+  ul.sub-menu li.cat-menu-title {
+    clear: both;
+    float: none;
+    width: 100%;
+  }
+
   .slider-btn {
     width: 53%;
   }
@@ -1783,6 +1803,10 @@ object {
   }
 }
 @media only screen and (min-width: 768px) {
+  ul.sub-menu li {
+    width: 33%;
+  }
+
   .slider-btn {
     margin: 30px auto 0 auto;
     width: 32%;
@@ -2223,12 +2247,50 @@ object {
     flex-basis: 50%;
   }
 
+  ul.sub-menu li {
+    width: 100%;
+  }
+
   .social-media-links {
     -ms-flex-preferred-size: 11%;
     flex-basis: 11%;
   }
 
-  .main-navigation .menu-main-menu-container ul {
+  .main-navigation li.menu-item-has-children:hover > ul.sub-menu {
+    opacity: 1;
+    top: initial;
+    -webkit-transition: all 0.25s ease-in-out;
+    -moz-transition: all 0.25s ease-in-out;
+    -ms-transition: all 0.25s ease-in-out;
+    -o-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
+    visibility: visible;
+  }
+  .main-navigation ul.sub-menu {
+    -webkit-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25);
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25);
+    -webkit-column-count: 2;
+    column-count: 2;
+    -webkit-columns: 125px;
+    columns: 125px;
+    display: block;
+    overflow: hidden;
+    opacity: 0;
+    padding: 10px;
+    position: absolute;
+    -webkit-transition: all 0.25s ease-in-out;
+    -moz-transition: all 0.25s ease-in-out;
+    -ms-transition: all 0.25s ease-in-out;
+    -o-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
+    visibility: hidden;
+    width: 380px;
+  }
+  .main-navigation ul.sub-menu a:hover {
+    color: #333333 !important;
+  }
+
+  .menu-main-menu-container ul {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -2240,14 +2302,6 @@ object {
     justify-content: space-around;
     font-size: 14px;
   }
-  .main-navigation .menu-main-menu-container ul.sub-menu {
-    display: none;
-    position: absolute;
-    width: 165px;
-  }
-  .main-navigation .menu-main-menu-container ul.sub-menu a:hover {
-    color: #333333 !important;
-  }
 
   .menu-main-menu-container .fa {
     font-size: 10px;
@@ -2256,9 +2310,9 @@ object {
     top: -3px;
     width: 20px;
   }
-  .menu-main-menu-container .sub-menu {
-    padding: 10px;
-    width: auto;
+
+  .cat-menu-title {
+    border-bottom: 1px solid #000000;
   }
 
   .page-template-homepage .main-header {
