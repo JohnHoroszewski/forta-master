@@ -8,8 +8,17 @@
  */
 
 ?>
-	<?php $headerImage = get_field( 'header_image' ); ?>
-<section class="header-image" style="background-image: url( '<?php echo $headerImage[ 'url' ] ?>' );" alt="<?php echo $headerImage[ 'alt' ] ?>"></section>
+	<?php if ( get_field( 'header_image' ) ) :
+		$headerImage = get_field( 'header_image' ); ?>
+
+		<section class="header-image" style="background-image: url( '<?php echo $headerImage[ 'url' ] ?>' );"></section>
+
+	<?php else : ?>
+
+		<section class="header-image" style="background-image: url( '<?php echo get_theme_mod( 'forta_master_post_project' ); ?>' );"></section>
+		
+	<?php endif; ?>
+
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<div class="constrain">
 		<div class="main-block">

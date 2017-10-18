@@ -24,19 +24,25 @@ function forta_master_customizer( $wp_customize ) {
 	$wp_customize->add_section( 'forta_master_social_section' , array(
 	    'title'       => __( 'Social Media', 'forta_master' ),
 	    'priority'    => 30,
-	    'description' => 'Add your social media links and icons',
+	    'description' => 'Add your social media links',
 	) );
-	// Privacy Policy
-	$wp_customize->add_section( 'forta_master_privacy_section' , array(
-	    'title'       => __( 'Privacy Policy', 'forta_master' ),
+	// Page Banners
+	$wp_customize->add_section( 'forta_master_page_banner_section' , array(
+	    'title'       => __( 'Default Page Banners', 'forta_master' ),
 	    'priority'    => 30,
-	    'description' => 'Add your Privacy Policy link here',
+	    'description' => 'Here you can set default page banners for the different page template types',
 	) );
 	// Product Pages
 	$wp_customize->add_section( 'forta_master_product_section' , array(
 	    'title'       => __( 'Product Pages', 'forta_master' ),
 	    'priority'    => 30,
 	    'description' => 'Product Page common elements',
+	) );
+	// Privacy Policy
+	$wp_customize->add_section( 'forta_master_privacy_section' , array(
+	    'title'       => __( 'Privacy Policy', 'forta_master' ),
+	    'priority'    => 30,
+	    'description' => 'Add your Privacy Policy link here',
 	) );
 
 	// Remove default sections
@@ -77,6 +83,13 @@ function forta_master_customizer( $wp_customize ) {
 	$wp_customize->add_setting( 'forta_master_social_pinterest_link', array( 'default' => __( '' ), 'forta_master' ) );
 	// Privacy Policy
 	$wp_customize->add_setting( 'forta_privacy_policy' );
+	// Page Banners
+	$wp_customize->add_setting( 'forta_master_page_banner_section' );
+	$wp_customize->add_setting( 'forta_master_post_product', array( 'default' => __( '' ), 'forta_master' ) );
+	$wp_customize->add_setting( 'forta_master_post_project', array( 'default' => __( '' ), 'forta_master' ) );
+	$wp_customize->add_setting( 'forta_master_post_events', array( 'default' => __( '' ), 'forta_master' ) );
+	$wp_customize->add_setting( 'forta_master_page_contact', array( 'default' => __( '' ), 'forta_master' ) );
+	$wp_customize->add_setting( 'forta_master_page_general', array( 'default' => __( '' ), 'forta_master' ) );
 	// Product Pages
 	$wp_customize->add_setting( 'forta_master_products' );
 	$wp_customize->add_setting( 'forta_master_products_image', array( 'default' => __( '' ), 'forta_master' ) );
@@ -266,11 +279,36 @@ function forta_master_customizer( $wp_customize ) {
 	'settings'   => 'forta_master_accent_color',
 	) ) );
 
-	// Privacy Policy
-	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'forta_privacy_policy', array(
-	    'label'    => __( 'Privacy Policy Link', 'forta_master' ),
-	    'section'  => 'forta_master_privacy_section',
-	    'settings' => 'forta_privacy_policy',
+	// Page Banners
+	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'forta_master_page_general', array(
+		'description' => __( 'Upload Image here' ),
+	    'label'    => __( 'General Page', 'forta_master' ),
+	    'section'  => 'forta_master_page_banner_section',
+	    'settings' => 'forta_master_page_general',
+	) ) );
+	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'forta_master_post_product', array(
+		'description' => __( 'Upload Image here' ),
+	    'label'    => __( 'Single Product Pages', 'forta_master' ),
+	    'section'  => 'forta_master_page_banner_section',
+	    'settings' => 'forta_master_post_product',
+	) ) );
+	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'forta_master_post_project', array(
+		'description' => __( 'Upload Image here' ),
+	    'label'    => __( 'Single Project Pages', 'forta_master' ),
+	    'section'  => 'forta_master_page_banner_section',
+	    'settings' => 'forta_master_post_project',
+	) ) );
+	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'forta_master_page_contact', array(
+		'description' => __( 'Upload Image here' ),
+	    'label'    => __( 'Contact Page', 'forta_master' ),
+	    'section'  => 'forta_master_page_banner_section',
+	    'settings' => 'forta_master_page_contact',
+	) ) );
+	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'forta_master_post_events', array(
+		'description' => __( 'Upload Image here' ),
+	    'label'    => __( 'Single Event Pages', 'forta_master' ),
+	    'section'  => 'forta_master_page_banner_section',
+	    'settings' => 'forta_master_post_events',
 	) ) );
 
 	// Product Pages
@@ -309,6 +347,13 @@ function forta_master_customizer( $wp_customize ) {
 	    'label'    => __( 'Call To Action Button Link', 'forta_master' ),
 	    'section'  => 'forta_master_product_section',
 	    'settings' => 'forta_master_button_link',
+	) ) );
+
+	// Privacy Policy
+	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'forta_privacy_policy', array(
+	    'label'    => __( 'Privacy Policy Link', 'forta_master' ),
+	    'section'  => 'forta_master_privacy_section',
+	    'settings' => 'forta_privacy_policy',
 	) ) );
 }
 

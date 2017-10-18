@@ -1,6 +1,6 @@
 <?php
 /**
- * Template part for displaying page content in general-template.php
+ * Template part for displaying page content in single-events.php
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
@@ -15,10 +15,10 @@
 
 	<?php else : ?>
 
-		<section class="header-image" style="background-image: url( '<?php echo get_theme_mod( 'forta_master_page_general' ); ?>' );"></section>
+		<section class="header-image" style="background-image: url( '<?php echo get_theme_mod( 'forta_master_post_events' ); ?>' );"></section>
 		
 	<?php endif; ?>
-	
+
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<div class="constrain">
 		<div class="main-block">

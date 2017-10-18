@@ -1456,10 +1456,13 @@ a:active {
   margin: 20px 0 -8px 0;
 }
 
-.blog .site-content {
+.blog .site-content, .post-type-archive-events .site-content {
   padding: 210px 0 0 0;
 }
-.blog article .constrain {
+.blog .entry-content, .post-type-archive-events .entry-content {
+  margin: 0;
+}
+.blog article .constrain, .post-type-archive-events article .constrain {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
