@@ -14,11 +14,24 @@ function my_mce_before_init_insert_formats( $init_array ) {
 	$style_formats = array(  
 		// Each array child is a format with it's own settings
 		array(  
+			'title' => 'Border Button Docx',  
+			'selector' => 'span, a',
+			'classes' => 'border-btn docx',
+			'wrapper' => false,
+		),
+		array(  
+			'title' => 'Border Button PDF',  
+			'selector' => 'span, a',  
+			'classes' => 'border-btn pdf',
+			'wrapper' => false,
+		),
+		array(  
 			'title' => 'Border Button',  
 			'selector' => 'span, a',  
 			'classes' => 'border-btn',
 			'wrapper' => false,
 		),
+		// Headings, spans and paragraphs
 		array(  
 			'title' => 'Fade In Down',  
 			'selector' => 'span, p, a, h1, h2, h3, h4',  
@@ -41,30 +54,6 @@ function my_mce_before_init_insert_formats( $init_array ) {
 			'title' => 'Fade In Right',  
 			'selector' => 'span, p, a, h1, h2, h3, h4',  
 			'classes' => 'fadeInRight animated',
-			'wrapper' => false,
-		),
-		array(  
-			'title' => 'Slide In Down',  
-			'selector' => 'span, p, a, h1, h2, h3, h4',  
-			'classes' => 'slideInDown animated',
-			'wrapper' => false,
-		),
-		array(  
-			'title' => 'Slide In Up',  
-			'selector' => 'span, p, a, h1, h2, h3, h4',  
-			'classes' => 'slideInUp animated',
-			'wrapper' => false,
-		),
-		array(  
-			'title' => 'Slide In Left',  
-			'selector' => 'span, p, a, h1, h2, h3, h4',  
-			'classes' => 'slideInLeft animated',
-			'wrapper' => false,
-		),
-		array(  
-			'title' => 'Slide In Right',  
-			'selector' => 'span, p, a, h1, h2, h3, h4',  
-			'classes' => 'slideInRight animated',
 			'wrapper' => false,
 		),
 		array(  
@@ -96,30 +85,6 @@ function my_mce_before_init_insert_formats( $init_array ) {
 			'title' => 'Fade In Right Button',  
 			'selector' => 'span, p, a, h1, h2, h3, h4',  
 			'classes' => 'fadeInRight animated slider-btn',
-			'wrapper' => false,
-		),
-		array(  
-			'title' => 'Slide In Down Button',  
-			'selector' => 'span, p, a, h1, h2, h3, h4',  
-			'classes' => 'slideInDown animated slider-btn',
-			'wrapper' => false,
-		),
-		array(  
-			'title' => 'Slide In Up Button',  
-			'selector' => 'span, p, a, h1, h2, h3, h4',  
-			'classes' => 'slideInUp animated slider-btn',
-			'wrapper' => false,
-		),
-		array(  
-			'title' => 'Slide In Left Button',  
-			'selector' => 'span, p, a, h1, h2, h3, h4',  
-			'classes' => 'slideInLeft animated slider-btn',
-			'wrapper' => false,
-		),
-		array(  
-			'title' => 'Slide In Right Button',  
-			'selector' => 'span, p, a, h1, h2, h3, h4',  
-			'classes' => 'slideInRight animated slider-btn',
 			'wrapper' => false,
 		),
 		array(  

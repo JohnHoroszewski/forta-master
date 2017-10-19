@@ -580,4 +580,12 @@ function remove_category_from_projects() {
   }
 }
 
+// Remove default 'Categories' box from custom post types
 add_action('admin_menu','remove_category_from_projects');
+
+add_action( 'add_meta_boxes', 'forta_remove_categories_meta_box' );
+function forta_remove_categories_meta_box() {
+     
+    remove_meta_box( 'categorydiv', 'project', 'side' ); // remove the Categories box from projects edit screen
+    remove_meta_box( 'categorydiv', 'products', 'side' ); // remove the Categories box from prducts edit screen
+}

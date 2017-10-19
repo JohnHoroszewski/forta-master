@@ -412,6 +412,30 @@ a.border-btn {
   padding: 5px 15px;
   text-align: center;
 }
+a.border-btn.pdf {
+  margin: 0 0 10px 0;
+  min-width: 300px;
+  padding: 5px 15px 5px 30px;
+  position: relative;
+}
+a.border-btn.pdf:before {
+  content: '\f1c1';
+  font-family: "FontAwesome", sans-serif;
+  left: 10px;
+  position: absolute;
+}
+a.border-btn.docx {
+  margin: 0 0 10px 0;
+  min-width: 300px;
+  padding: 5px 15px 5px 30px;
+  position: relative;
+}
+a.border-btn.docx:before {
+  content: '\f1c2';
+  font-family: "FontAwesome", sans-serif;
+  left: 10px;
+  position: absolute;
+}
 
 .main-content-form label {
   display: inline-block;
@@ -1392,6 +1416,21 @@ a:active {
 .product-listings .product-info {
   background-color: #FFFFFF;
   margin: 0 0 15px 0;
+}
+.product-listings ul {
+  column-width: 320px;
+  margin: 0 0 0 20px;
+}
+.product-listings ul li {
+  font-size: 0.9em;
+  margin: 0 0 5px 0;
+  padding: 0 0 0 5px;
+  position: relative;
+}
+.product-listings ul li:before {
+  content: '\2022';
+  position: absolute;
+  left: -7px;
 }
 
 .products-list-image {

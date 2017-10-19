@@ -62,21 +62,6 @@
 		</aside>
 	</div>
 
-	<?php if ( get_theme_mod( 'forta_master_large_text' ) ) : ?>
-	<section class="pro-cta" style="background-image: url( '<?php echo get_theme_mod( 'forta_master_products_image' ); ?>' );">
-		<div class="constrain">
-			<div class="left-block">
-				<span class="small-text site-font-accent"><?php echo get_theme_mod( 'forta_master_small_text' ); ?></span>
-				<span class="large-text top"><?php echo get_theme_mod( 'forta_master_large_top_text' ); ?></span>
-				<span class="large-text bottom"><?php echo get_theme_mod( 'forta_master_large_bottom_text' ); ?></span>
-			</div>
-				<div class="right-block">
-					<a class="cta-btn site-accent" href="<?php echo get_theme_mod( 'forta_master_button_link' ); ?>"><?php echo get_theme_mod( 'forta_master_button_text' ); ?></a>
-				</div>
-		</div>
-	</section>
-	<?php endif; ?>
-
 	<?php if ( have_rows( 'product_tabs' ) ) : ?>
 		<section class="product-details">
 			<ul class="product-tabs">
@@ -84,7 +69,7 @@
 				<?php while ( have_rows( 'product_tabs' ) ) : the_row(); ?>
 
 				<!-- convert string to all lowercase -->
-				<?php $tabTitle = strtolower( get_sub_field( 'tab_title' ) ); ?>
+				<?php $tabTitle = str_replace( ' ', '', strtolower( substr( get_sub_field( 'tab_title' ), 0, 7 ) ) ); ?>
 
 					<li>
 						<a href="#" data-ref="<?php echo $tabTitle ?>"><?php the_sub_field( 'tab_title' ); ?></a>
@@ -100,7 +85,7 @@
 				<?php while ( have_rows( 'product_tabs' ) ) : the_row(); ?>
 
 				<!-- convert string to all lowercase -->
-				<?php $tabTitle = strtolower( get_sub_field( 'tab_title' ) ); ?>
+				<?php $tabTitle = str_replace( ' ', '', strtolower( substr( get_sub_field( 'tab_title' ), 0, 7 ) ) ); ?>
 
 					<div id="<?php echo $tabTitle; ?>" class="tabBlock">
 						<?php the_sub_field( 'tab_content' ); ?>
@@ -112,5 +97,20 @@
 		</section>
 
 	<?php endif; ?><!-- End Product Details -->
+
+	<?php if ( get_theme_mod( 'forta_master_large_text' ) ) : ?>
+	<section class="pro-cta" style="background-image: url( '<?php echo get_theme_mod( 'forta_master_products_image' ); ?>' );">
+		<div class="constrain">
+			<div class="left-block">
+				<span class="small-text site-font-accent"><?php echo get_theme_mod( 'forta_master_small_text' ); ?></span>
+				<span class="large-text top"><?php echo get_theme_mod( 'forta_master_large_top_text' ); ?></span>
+				<span class="large-text bottom"><?php echo get_theme_mod( 'forta_master_large_bottom_text' ); ?></span>
+			</div>
+				<div class="right-block">
+					<a class="cta-btn site-accent" href="<?php echo get_theme_mod( 'forta_master_button_link' ); ?>"><?php echo get_theme_mod( 'forta_master_button_text' ); ?></a>
+				</div>
+		</div>
+	</section>
+	<?php endif; ?>
 
 </article><!-- #post-<?php the_ID(); ?> -->

@@ -108,7 +108,7 @@
 				<?php while ( have_rows( 'project_tabs' ) ) : the_row(); ?>
 
 				<!-- convert string to all lowercase -->
-				<?php $tabTitle = strtolower( get_sub_field( 'tab_title' ) ); ?>
+				<?php $tabTitle = str_replace( ' ', '', strtolower( substr( get_sub_field( 'tab_title' ), 0, 7 ) ) ); ?>
 
 					<li>
 						<a href="#" data-ref="<?php echo $tabTitle; ?>"><?php the_sub_field( 'tab_title' ); ?></a>
@@ -124,7 +124,7 @@
 				<?php while ( have_rows( 'project_tabs' ) ) : the_row(); ?>
 
 					<!-- convert string to all lowercase -->
-					<?php $tabTitle = strtolower( get_sub_field( 'tab_title' ) ); ?>
+					<?php $tabTitle = str_replace( ' ', '', strtolower( substr( get_sub_field( 'tab_title' ), 0, 7 ) ) ); ?>
 
 					<div id="<?php echo $tabTitle; ?>" class="tabBlock">
 						<?php the_sub_field( 'tab_content' ); ?>

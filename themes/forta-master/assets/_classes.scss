@@ -171,6 +171,34 @@ a.border-btn {
 	min-width: 200px;
 	padding: 5px 15px;
 	text-align: center;
+
+	&.pdf {
+		margin: 0 0 10px 0;
+		min-width: 300px;
+		padding: 5px 15px 5px 30px;
+		position: relative;
+
+		&:before {
+			content: '\f1c1';
+			font-family: $fa;
+			left: 10px;
+			position: absolute;
+		}
+	}
+
+	&.docx {
+		margin: 0 0 10px 0;
+		min-width: 300px;
+		padding: 5px 15px 5px 30px;
+		position: relative;
+
+		&:before {
+			content: '\f1c2';
+			font-family: $fa;
+			left: 10px;
+			position: absolute;			
+		}
+	}
 }
 
 .main-content-form {
