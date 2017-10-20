@@ -68,7 +68,53 @@
 	
 
 		</aside>
-	</div>
+	</div><!-- .constrain -->
+
+	<?php
+
+		if ( have_rows( 'training_blocks' ) ) : ?>
+
+		<section class="training">
+			<div class="constrain">
+
+				<?php while ( have_rows( 'training_blocks' ) ) : the_row(); ?>
+
+					<div class="training-block">
+
+						<h3 class="training-heading"><?php the_sub_field( 'seminar_training_title' ); ?></h3>
+						
+						<div class="training-details">
+							
+							<?php if ( get_sub_field( 'training_credits' ) ) : ?>
+
+								<div class="detail"><strong>Credit:</strong> <?php the_sub_field( 'training_credits' ); ?></div>
+
+							<?php endif; ?>
+
+								<div class="detail"><strong>Length:</strong> <?php the_sub_field( 'seminar_length' ); ?> minutes</div>
+
+							<?php if ( get_sub_field( 'cost_option' ) == 'yes' ) : ?>
+
+								<div class="detail"><strong>Cost:</strong> <?php the_sub_field( 'cost_for_seminar_training' ); ?></div>
+
+							<?php else : ?>
+
+								<div class="detail"><strong>Cost:</strong> There is no charge</div>
+
+							<?php endif; ?>
+
+							<a target="_blank" class="border-btn training-preview" href="<?php the_sub_field( 'seminar_preview_file' ); ?>">Seminar Overview</a>
+
+						</div><!-- .training-details -->
+
+					</div><!-- .training-block -->
+
+				<?php endwhile; ?>
+			
+			</div><!-- .constrain -->
+		</section>
+
+	<?php endif; ?>
 
 	<?php if ( get_theme_mod( 'forta_master_large_text' ) ) : ?>
 	<section class="pro-cta" style="background-image: url( '<?php echo get_theme_mod( 'forta_master_products_image' ); ?>' );">

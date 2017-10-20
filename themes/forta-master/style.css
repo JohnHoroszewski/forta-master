@@ -706,7 +706,7 @@ a:hover {
 h1 {
   color: #231f20;
   font-family: 'Raleway', Helvetica, Arial, sans-serif;
-  font-size: 48px;
+  font-size: 40px;
   line-height: 1.15em;
   margin: 0;
 }
@@ -1466,6 +1466,45 @@ a:active {
   justify-content: space-between;
 }
 
+.training {
+  padding: 0 0 30px 0;
+}
+.training .constrain {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.training-block {
+  background-color: #ebebec;
+  display: block;
+  margin: 0 0 10px 0;
+  min-height: 225px;
+  padding: 10px;
+  position: relative;
+}
+.training-block a.training-preview {
+  background-color: #FFFFFF;
+  bottom: 15px;
+  left: 10px;
+  position: absolute;
+}
+
+.training-heading {
+  border-bottom: 2px solid;
+  margin: 0 0 10px 0;
+  padding: 0 0 3px 0;
+  text-transform: uppercase;
+}
+
+.training-details strong {
+  text-transform: uppercase;
+}
+
 .sidebar-comp-info {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1833,6 +1872,22 @@ object {
     margin: 0 0 0 20px;
     width: 100%;
   }
+
+  .training .constrain {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+
+  .training-block {
+    width: 49%;
+  }
 }
 @media only screen and (min-width: 640px) {
   .slider-btn {
@@ -1966,6 +2021,10 @@ object {
     float: none;
   }
 
+  .training-block {
+    margin: 0 0 15px 0;
+  }
+
   .compinfo.flexxed {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2046,6 +2105,10 @@ object {
   .page-template-products-template .products-page-info .page-description p,
   .page-template-projects-template .products-page-info .page-description p {
     margin: 0;
+  }
+
+  .training-block {
+    width: 32%;
   }
 }
 @media only screen and (min-width: 960px) {
@@ -2448,6 +2511,10 @@ object {
 
   .product-listings .product-info {
     margin: 0 0 60px 0;
+  }
+
+  .training-block {
+    width: 32.5%;
   }
 
   .legal .legal-box {

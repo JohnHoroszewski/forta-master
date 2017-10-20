@@ -74,6 +74,7 @@
 		.main-content-form label { color: <?php echo get_theme_mod( 'forta_master_accent_color' ); ?> }
 		.main-content-form input[type=submit] { background-color: <?php echo get_theme_mod( 'forta_master_accent_color' ); ?>; color: #fff !important; }
 		.product-tabs a.active { color: <?php echo get_theme_mod( 'forta_master_accent_color' ); ?> !important; }
+		.training-heading { border-color: <?php echo get_theme_mod( 'forta_master_accent_color' );  ?>; }
 		.light-bg-form input { color: <?php echo get_theme_mod( 'forta_master_accent_color' ); ?> !important; border: 1px solid <?php echo get_theme_mod( 'forta_master_accent_color' ); ?>; }
 		.light-bg-form textarea { color: <?php echo get_theme_mod( 'forta_master_accent_color' ); ?>; border: 1px solid <?php echo get_theme_mod( 'forta_master_accent_color' ); ?>; }
 		.single article ul li:before { color: <?php echo get_theme_mod( 'forta_master_accent_color' ); ?>; }

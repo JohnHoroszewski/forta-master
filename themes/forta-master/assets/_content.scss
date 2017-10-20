@@ -333,6 +333,51 @@
 	        justify-content: space-between;
 }
 
+// General Page
+.training {
+	padding: 0 0 30px 0;
+
+	.constrain {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: column;
+		        flex-direction: column;
+	}
+}
+
+.training-block {
+	background-color: $grayish;
+	display: block;
+	margin: 0 0 10px 0;
+	min-height: 225px;
+	padding: 10px;
+	position: relative;
+
+	a.training-preview {
+		background-color: $white-color;
+		bottom: 15px;
+		left: 10px;
+		position: absolute;
+	}
+}
+
+.training-heading {
+	border-bottom: 2px solid;
+	margin: 0 0 10px 0;
+	padding: 0 0 3px 0;
+	text-transform: uppercase;
+}
+
+.training-details {
+
+	strong {
+		text-transform: uppercase;
+	}
+}
+
 // Contact Page
 .sidebar-comp-info {
 	display: -webkit-box;
