@@ -123,6 +123,9 @@ function forta_master_scripts() {
 	// Add slick.js
 	wp_enqueue_script( 'forta-master-slick-js', get_template_directory_uri() . '/js/slick.min.js', array( 'jquery' ), '20151215', true );
 
+	// Add calculator.js
+	wp_enqueue_script( 'forta-master-calculator-js', get_template_directory_uri() . '/js/calculator.js', array( 'jquery' ), '20151215', true );
+
 	// Add fancybox.js
 	wp_enqueue_script( 'forta-master-fancybox-js', get_template_directory_uri() . '/js/fancybox/jquery.fancybox-1.3.4.js', array( 'jquery' ), '20151215', true );
 

@@ -227,6 +227,87 @@ a.border-btn {
 	}
 }
 
+#ContentOverlay {
+	border: 1px solid;
+	-webkit-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25);
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25);
+    display: none;
+    position: absolute;
+    z-index: 999999;
+    width: 710px;
+    height: 470px;
+    margin-right: auto;
+    margin-left: auto;
+	background-color: #fff;
+	background-repeat: no-repeat;
+	padding: 30px;
+}
+
+#CloseCalc {
+	overflow: hidden;
+
+	a.CloseCalc {
+		clear: both;
+		color: $white-color;	
+		display: block;
+		float: right;
+		padding: 3px 10px;
+	}
+}
+
+#CalcTitle {
+	border-bottom: 2px solid;
+	font-size: 18px;
+	font-weight: 700;
+	margin: 0 0 20px 0;
+	padding: 0 0 5px 0;
+}
+
+#CalcInfo {
+	background-color: $darkest;
+	color: $white-color;
+	display: inline-block;
+	float: left;
+	font-size: 14px;
+	overflow: hidden;
+	padding: 15px;
+
+	#SelectUnit {
+		margin: 0 0 10px 0;
+	}
+
+	input[type=radio] {
+		margin: 0 7px 0 3px;
+	}
+
+	input[type=text] {
+		margin: 0 0 10px 0;
+	}
+
+	#Calculate {
+		color: $white-color;
+		margin: 10px 0 0 0;
+		padding: 7px 15px;
+	}
+}
+
+#CalcInstructions {
+	display: block;
+	margin-left: 265px;	
+	padding: 0 0 0 20px;
+	text-align: left;
+}
+
+#CalcResults {
+    margin-left: 265px;
+    height: 200px;
+    border: 1px none #999999;
+    padding: 15px;
+    font-weight: bold;
+    color: #666666;
+    display: none;
+}
+
 .back-to-top {
 	display: block;
 	border-radius: 3px;

@@ -68,7 +68,7 @@
 		a.products-btn:hover { color: #fff; background-color: <?php echo get_theme_mod( 'forta_master_accent_color' ); ?>; }
 		a.border-btn { border-color: <?php echo get_theme_mod( 'forta_master_accent_color' );  ?>; color: <?php echo get_theme_mod( 'forta_master_accent_color' ); ?>; }
 		a.border-btn:hover { background-color: <?php echo get_theme_mod( 'forta_master_accent_color' ); ?>; color: #fff; }
-		.calc-heading { border-color: <?php echo get_theme_mod( 'forta_master_accent_color' ); ?> }
+		.calc-heading { border-color: <?php echo get_theme_mod( 'forta_master_accent_color' ); ?>; }
 		a.OpenCalc { color: <?php echo get_theme_mod( 'forta_master_accent_color' ); ?>; }
 		.product-tabs a { color: #bcbec0 !important; }
 		.main-content-form label { color: <?php echo get_theme_mod( 'forta_master_accent_color' ); ?> }
@@ -78,6 +78,10 @@
 		.light-bg-form input { color: <?php echo get_theme_mod( 'forta_master_accent_color' ); ?> !important; border: 1px solid <?php echo get_theme_mod( 'forta_master_accent_color' ); ?>; }
 		.light-bg-form textarea { color: <?php echo get_theme_mod( 'forta_master_accent_color' ); ?>; border: 1px solid <?php echo get_theme_mod( 'forta_master_accent_color' ); ?>; }
 		.single article ul li:before { color: <?php echo get_theme_mod( 'forta_master_accent_color' ); ?>; }
+		#ContentOverlay { border-color: <?php echo get_theme_mod( 'forta_master_accent_color' );  ?>; }
+		a.CloseCalc { background-color: <?php echo get_theme_mod( 'forta_master_accent_color' ); ?>; }
+		#CalcTitle { color: <?php echo get_theme_mod( 'forta_master_accent_color' ); ?>; border-color: <?php echo get_theme_mod( 'forta_master_accent_color' );  ?>; }
+		#Calculate { background-color: <?php echo get_theme_mod( 'forta_master_accent_color' ); ?>; }
 	</style>
 	<?php endif; ?>
 </head>

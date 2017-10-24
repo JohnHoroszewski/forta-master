@@ -454,6 +454,82 @@ a.border-btn.docx:before {
   padding: 12px !important;
 }
 
+#ContentOverlay {
+  border: 1px solid;
+  -webkit-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25);
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25);
+  display: none;
+  position: absolute;
+  z-index: 999999;
+  width: 710px;
+  height: 470px;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: #fff;
+  background-repeat: no-repeat;
+  padding: 30px;
+}
+
+#CloseCalc {
+  overflow: hidden;
+}
+#CloseCalc a.CloseCalc {
+  clear: both;
+  color: #FFFFFF;
+  display: block;
+  float: right;
+  padding: 3px 10px;
+}
+
+#CalcTitle {
+  border-bottom: 2px solid;
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0 0 20px 0;
+  padding: 0 0 5px 0;
+}
+
+#CalcInfo {
+  background-color: #333333;
+  color: #FFFFFF;
+  display: inline-block;
+  float: left;
+  font-size: 14px;
+  overflow: hidden;
+  padding: 15px;
+}
+#CalcInfo #SelectUnit {
+  margin: 0 0 10px 0;
+}
+#CalcInfo input[type=radio] {
+  margin: 0 7px 0 3px;
+}
+#CalcInfo input[type=text] {
+  margin: 0 0 10px 0;
+}
+#CalcInfo #Calculate {
+  color: #FFFFFF;
+  margin: 10px 0 0 0;
+  padding: 7px 15px;
+}
+
+#CalcInstructions {
+  display: block;
+  margin-left: 265px;
+  padding: 0 0 0 20px;
+  text-align: left;
+}
+
+#CalcResults {
+  margin-left: 265px;
+  height: 200px;
+  border: 1px none #999999;
+  padding: 15px;
+  font-weight: bold;
+  color: #666666;
+  display: none;
+}
+
 .back-to-top {
   display: block;
   border-radius: 3px;
@@ -1570,6 +1646,17 @@ a:active {
   content: '\2022';
   position: absolute;
   left: -7px;
+}
+
+.error404 .site-content {
+  padding: 210px 0 0 0;
+  text-align: center;
+}
+
+.company-mark {
+  display: block;
+  margin: 30px auto;
+  max-width: 400px;
 }
 
 /*--------------------------------------------------------------
