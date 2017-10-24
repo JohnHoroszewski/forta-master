@@ -1030,7 +1030,7 @@ a:active {
 .top-form input {
   background-color: #dadada;
   padding: 3px 10px;
-  width: calc(100% - 30px);
+  width: calc(100% - 10px);
 }
 .top-form label {
   font-size: 10px;
@@ -1944,14 +1944,15 @@ object {
     width: 32%;
   }
 
-  .main-content-form input, .main-content-form textarea {
-    width: 96%;
+  .input-half {
+    width: 49.5%;
   }
 
-  .form-half {
+  .input-wrapper.col-left {
     float: left;
-    margin: 0 2% 0 0;
-    width: 48%;
+  }
+  .input-wrapper.col-right {
+    float: right;
   }
 
   .slider-text h2 {
