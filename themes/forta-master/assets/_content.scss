@@ -157,7 +157,8 @@
 
 // Products and Project Listing Pages
 .page-template-products-template,
-.page-template-projects-template {
+.page-template-projects-template,
+.page-template-advantages-template {
 
 	.site-content {
 		padding: 191px 0 0 0;
@@ -247,6 +248,10 @@
 		margin: 0 0 5px 0;
 		padding: 3px 0;
 		text-align: center;
+
+		&:before {
+			content: '';
+		}
 	}
 
 	a {
@@ -257,8 +262,29 @@
 
 		&.active {
 			border-bottom: 2px solid;
-			padding: 0 0 7px 0;
+			padding: 0 0 9px 0;
 		}
+	}
+}
+
+.video-flex {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+}
+
+.video-block {
+	background-color: $white-color;
+	margin: 0 0 20px 0;
+	padding: 10px;
+
+	h4 {
+		margin: 0 0 10px 0;
+		text-transform: uppercase;
 	}
 }
 

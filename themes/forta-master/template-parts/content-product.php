@@ -89,6 +89,28 @@
 
 					<div id="<?php echo $tabTitle; ?>" class="tabBlock">
 						<?php the_sub_field( 'tab_content' ); ?>
+
+						<?php if ( get_field( 'video_content' ) == 'no' ) : ?>
+
+							<?php the_sub_field( 'tab_content' ); ?>
+
+						<?php else : ?>
+							<div class="video-flex">
+								<?php while ( have_rows( 'videos' ) ) : the_row(); ?>
+
+									<div class="video-block">
+										<h4><?php the_sub_field( 'video_name' ); ?></h4>
+										<div class="video-container">
+											<?php the_sub_field( 'video_url' ); ?>
+										</div>
+										<div class="video-excerpt">
+											<?php the_sub_field( 'video_excerpt' ); ?>
+										</div>
+									</div>
+
+								<?php endwhile; ?>
+							</div>
+						<?php endif; ?>
 					</div>
 
 				<?php endwhile; ?>
@@ -114,3 +136,57 @@
 	<?php endif; ?>
 
 </article><!-- #post-<?php the_ID(); ?> -->
+
+<div id="ContentOverlay">
+	<div id="CloseCalc"><a class="CloseCalc" href="#">Close Calculator</a></div>
+	<div id="SavingsCalculator">
+		<div id="CalcTitle">Calculate Your Savings!</div>
+	<!--BeginCalc-->
+
+		<div id="CalcInfo">
+
+			<div id="SelectUnit">
+			Select Unit:<input name="radio" type="radio" id="Unit" value="US TON" checked="checked">US Ton<input type="radio" name="radio" id="Unit" value="METRIC TON">Metric Ton
+			</div>
+			<div id="EnterValues">
+				<span id="EnterAsphalt">Enter Asphalt:</span><br>
+				<input type="text" name="Asphalt" id="Asphalt">
+				<br>
+				<span id="EnterAsphaltPrice">Enter Asphalt Price:</span><br>
+				<input type="text" name="AsphaltPrice" id="AsphaltPrice">
+			</div>
+			<input type="button" name="Calculate" id="Calculate" value="Calculate Savings">
+		</div>
+
+		<div id="CalcInstructions">
+			<strong>FORTA<em>fied</em> asphalt for Tons of Savings!</strong>
+			<p>Use our Savings Calculator to compare material costs between a traditional asphalt mixture and FORTA<em>fied</em> Asphalt.</p>
+		</div>
+			<div id="CalcResults">
+				<div id="OriginalProjectCost">Original Asphalt Cost: <span class="Result site-font-accent"></span></div>
+				<hr size="1">
+				<!--<div id="ReducedMaterial">Asphalt Required with 25% Reduction: <span class="Result"></span></div>-->
+				<div id="AdjustedAsphaltCost">Reduction in Asphalt Thickness:
+				<select name="Reduction" id="Reduction">
+					<option value=".10">10%</option>
+					<option value=".15">15%</option>
+					<option value=".20">20%</option>
+					<option value=".25" selected="selected">25%</option>
+					<option value=".30">30%</option>
+					<option value=".35">35%</option>
+				</select> <br><br>Reduced Asphalt Cost: <span class="Result site-font-accent"></span>
+				</div>
+
+				<div id="FORTAFICost">Cost of FORTA-FI (based on MSRP): <span class="Result site-font-accent"></span></div>
+				<hr size="1">
+				<div id="RevisedFORTAFiedCost">FORTA<em>fied</em> Asphalt Cost = <span class="Result site-font-accent"></span></div>
+				<hr size="1">
+				<div id="MaterialSavings">Material Cost Savings = <span class="Result site-font-accent"></span></div>
+				<div id="ReducedMaterial">Savings in Tons = <span class="Result site-font-accent"></span></div>
+
+			</div>
+		<div class="clearer2"></div>
+		<br><br>
+		<!-- EndCalc -->
+	</div>
+</div> <!-- .ContentOverlay -->

@@ -82,6 +82,7 @@
 		a.CloseCalc { background-color: <?php echo get_theme_mod( 'forta_master_accent_color' ); ?>; }
 		#CalcTitle { color: <?php echo get_theme_mod( 'forta_master_accent_color' ); ?>; border-color: <?php echo get_theme_mod( 'forta_master_accent_color' );  ?>; }
 		#Calculate { background-color: <?php echo get_theme_mod( 'forta_master_accent_color' ); ?>; }
+		.video-block h4 { color: <?php echo get_theme_mod( 'forta_master_accent_color' ); ?>; }
 	</style>
 	<?php endif; ?>
 </head>

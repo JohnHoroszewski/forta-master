@@ -69,6 +69,16 @@
 		}
 	}
 
+	.video-flex {
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+
+	.video-block {
+		width: 48.5%;
+	}
+
 	.products-list-image {
 		height: 300px;
 	}
@@ -124,7 +134,8 @@
 
 	// Products and Project Listing Pages
 	.page-template-products-template,
-	.page-template-projects-template {
+	.page-template-projects-template,
+	.page-template-advantages-template {
 
 		.heading-wrapper {
 			display: -webkit-box;
@@ -197,7 +208,8 @@
 
 	// Products and Project Listing Pages
 	.page-template-products-template,
-	.page-template-projects-template {
+	.page-template-projects-template,
+	.page-template-advantages-template {
 
 		h1.products-heading {
 			font-size: 64px;
@@ -291,7 +303,8 @@
 
 	// Products and Project Listing Pages
 	.page-template-products-template,
-	.page-template-projects-template {
+	.page-template-projects-template,
+	.page-template-advantages-template {
 
 		h1.products-heading {
 			font-size: 74px;
@@ -426,7 +439,8 @@
 
 	// Products and Project Listing Pages
 	.page-template-products-template,
-	.page-template-projects-template {
+	.page-template-projects-template,
+	.page-template-advantages-template {
 
 		.products-page-info {
 
@@ -451,6 +465,10 @@
 				}
 			}
 		}
+	}
+
+	.video-block {
+		width: 32%;
 	}
 
 	// General Page
@@ -526,7 +544,8 @@
 
 	// Products and Project Listing Pages
 	.page-template-products-template,
-	.page-template-projects-template {
+	.page-template-projects-template,
+	.page-template-advantages-template {
 
 		h1.products-heading {
 			font-size: 100px;
@@ -636,7 +655,7 @@
 
 	// Header
 	.sitetop-links {
-		background-color: rgba( $black-color, 0.8 );
+		background-color: rgba( $black-color, 1 );
 
 		.flexxed {
 			-webkit-box-orient: horizontal;
@@ -930,7 +949,8 @@
 
 	// Products and Project Listing Pages
 	.page-template-products-template,
-	.page-template-projects-template {
+	.page-template-projects-template,
+	.page-template-advantages-template {
 
 		article .constrain {
 			display: block;

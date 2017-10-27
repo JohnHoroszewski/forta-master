@@ -272,6 +272,29 @@ th {
   display: flex;
 }
 
+article ul {
+  column-width: 320px;
+  margin: 0 0 0 20px;
+}
+article ul li {
+  font-size: 0.9em;
+  margin: 0 0 5px 0;
+  padding: 0 0 0 5px;
+  position: relative;
+}
+article ul li:before {
+  content: '\2022';
+  position: absolute;
+  left: -7px;
+}
+
+ul li {
+  font-size: 0.9em;
+  margin: 0 0 5px 0;
+  padding: 0 0 0 5px;
+  position: relative;
+}
+
 div.wpcf7 .ajax-loader {
   display: none;
 }
@@ -1384,22 +1407,26 @@ a:active {
 }
 
 .page-template-products-template .site-content,
-.page-template-projects-template .site-content {
+.page-template-projects-template .site-content,
+.page-template-advantages-template .site-content {
   padding: 191px 0 0 0;
 }
 .page-template-products-template .products-page-info,
-.page-template-projects-template .products-page-info {
+.page-template-projects-template .products-page-info,
+.page-template-advantages-template .products-page-info {
   padding: 30px 0;
 }
 .page-template-products-template .products-page-info .flexxed,
-.page-template-projects-template .products-page-info .flexxed {
+.page-template-projects-template .products-page-info .flexxed,
+.page-template-advantages-template .products-page-info .flexxed {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
 }
 .page-template-products-template .products-page-info .sub-text,
-.page-template-projects-template .products-page-info .sub-text {
+.page-template-projects-template .products-page-info .sub-text,
+.page-template-advantages-template .products-page-info .sub-text {
   color: #231f20;
   font-family: "Raleway", Helvetica, Arial, sans-serif;
   font-size: 20px;
@@ -1407,7 +1434,8 @@ a:active {
   padding: 10px 0 0 0;
 }
 .page-template-products-template h1.products-heading,
-.page-template-projects-template h1.products-heading {
+.page-template-projects-template h1.products-heading,
+.page-template-advantages-template h1.products-heading {
   color: #333333;
 }
 
@@ -1468,6 +1496,9 @@ a:active {
   padding: 3px 0;
   text-align: center;
 }
+.product-tabs li:before {
+  content: '';
+}
 .product-tabs a {
   color: #bcbec0;
   font-size: 0.9em;
@@ -1476,7 +1507,27 @@ a:active {
 }
 .product-tabs a.active {
   border-bottom: 2px solid;
-  padding: 0 0 7px 0;
+  padding: 0 0 9px 0;
+}
+
+.video-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.video-block {
+  background-color: #FFFFFF;
+  margin: 0 0 20px 0;
+  padding: 10px;
+}
+.video-block h4 {
+  margin: 0 0 10px 0;
+  text-transform: uppercase;
 }
 
 .product-listings {
@@ -1898,6 +1949,16 @@ object {
     width: auto;
   }
 
+  .video-flex {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .video-block {
+    width: 48.5%;
+  }
+
   .products-list-image {
     height: 300px;
   }
@@ -1942,19 +2003,22 @@ object {
   }
 
   .page-template-products-template .heading-wrapper,
-  .page-template-projects-template .heading-wrapper {
+  .page-template-projects-template .heading-wrapper,
+  .page-template-advantages-template .heading-wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     margin: 0 0 20px 0;
   }
   .page-template-products-template h1.products-heading,
-  .page-template-projects-template h1.products-heading {
+  .page-template-projects-template h1.products-heading,
+  .page-template-advantages-template h1.products-heading {
     display: inline-block;
     font-size: 54px;
   }
   .page-template-products-template .custom-hr,
-  .page-template-projects-template .custom-hr {
+  .page-template-projects-template .custom-hr,
+  .page-template-advantages-template .custom-hr {
     border-bottom: 4px solid #bcbec0;
     margin: 0 0 0 20px;
     width: 100%;
@@ -1993,11 +2057,13 @@ object {
   }
 
   .page-template-products-template h1.products-heading,
-  .page-template-projects-template h1.products-heading {
+  .page-template-projects-template h1.products-heading,
+  .page-template-advantages-template h1.products-heading {
     font-size: 64px;
   }
   .page-template-products-template .custom-hr,
-  .page-template-projects-template .custom-hr {
+  .page-template-projects-template .custom-hr,
+  .page-template-advantages-template .custom-hr {
     height: 60px;
   }
 
@@ -2058,15 +2124,18 @@ object {
   }
 
   .page-template-products-template h1.products-heading,
-  .page-template-projects-template h1.products-heading {
+  .page-template-projects-template h1.products-heading,
+  .page-template-advantages-template h1.products-heading {
     font-size: 74px;
   }
   .page-template-products-template .custom-hr,
-  .page-template-projects-template .custom-hr {
+  .page-template-projects-template .custom-hr,
+  .page-template-advantages-template .custom-hr {
     height: 70px;
   }
   .page-template-products-template .products-page-info .sub-text,
-  .page-template-projects-template .products-page-info .sub-text {
+  .page-template-projects-template .products-page-info .sub-text,
+  .page-template-advantages-template .products-page-info .sub-text {
     font-size: 24px;
     line-height: 1.25em;
   }
@@ -2174,25 +2243,33 @@ object {
   }
 
   .page-template-products-template .products-page-info .flexxed,
-  .page-template-projects-template .products-page-info .flexxed {
+  .page-template-projects-template .products-page-info .flexxed,
+  .page-template-advantages-template .products-page-info .flexxed {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
     -ms-flex-direction: row;
     flex-direction: row;
   }
   .page-template-products-template .products-page-info .sub-text,
-  .page-template-projects-template .products-page-info .sub-text {
+  .page-template-projects-template .products-page-info .sub-text,
+  .page-template-advantages-template .products-page-info .sub-text {
     padding: 15px;
     width: 35%;
   }
   .page-template-products-template .products-page-info .page-description,
-  .page-template-projects-template .products-page-info .page-description {
+  .page-template-projects-template .products-page-info .page-description,
+  .page-template-advantages-template .products-page-info .page-description {
     padding: 15px;
     width: 65%;
   }
   .page-template-products-template .products-page-info .page-description p,
-  .page-template-projects-template .products-page-info .page-description p {
+  .page-template-projects-template .products-page-info .page-description p,
+  .page-template-advantages-template .products-page-info .page-description p {
     margin: 0;
+  }
+
+  .video-block {
+    width: 32%;
   }
 
   .training-block {
@@ -2248,21 +2325,25 @@ object {
   }
 
   .page-template-products-template h1.products-heading,
-  .page-template-projects-template h1.products-heading {
+  .page-template-projects-template h1.products-heading,
+  .page-template-advantages-template h1.products-heading {
     font-size: 100px;
   }
   .page-template-products-template .custom-hr,
-  .page-template-projects-template .custom-hr {
+  .page-template-projects-template .custom-hr,
+  .page-template-advantages-template .custom-hr {
     height: 95px;
   }
   .page-template-products-template .products-page-info .sub-text,
-  .page-template-projects-template .products-page-info .sub-text {
+  .page-template-projects-template .products-page-info .sub-text,
+  .page-template-advantages-template .products-page-info .sub-text {
     font-size: 30px;
     padding: 20px;
     width: 45%;
   }
   .page-template-products-template .products-page-info .page-description,
-  .page-template-projects-template .products-page-info .page-description {
+  .page-template-projects-template .products-page-info .page-description,
+  .page-template-advantages-template .products-page-info .page-description {
     padding: 20px;
     width: 55%;
   }
@@ -2338,7 +2419,7 @@ object {
 }
 @media only screen and (min-width: 1024px) {
   .sitetop-links {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: black;
   }
   .sitetop-links .flexxed {
     -webkit-box-orient: horizontal;
@@ -2589,7 +2670,8 @@ object {
   }
 
   .page-template-products-template article .constrain,
-  .page-template-projects-template article .constrain {
+  .page-template-projects-template article .constrain,
+  .page-template-advantages-template article .constrain {
     display: block;
   }
 

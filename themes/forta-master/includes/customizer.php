@@ -198,7 +198,7 @@ function forta_master_customizer( $wp_customize ) {
 	    'settings' => 'forta_master_company_country',
 	) ) );
 
-	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'forta_master_company_country', array(
+	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'forta_master_company_gmap', array(
 		'description' => __( 'Paste the Google Code Snippet Here starting with &lt;iframe&gt;. Please replace width to 100% and have the height set to at least 300.' ),
 	    'label'    => __( 'Google Map', 'forta_master' ),
 	    'section'  => 'forta_master_companyinfo_section',

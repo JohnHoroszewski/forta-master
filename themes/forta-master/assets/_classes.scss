@@ -12,6 +12,34 @@
 	display: flex;
 }
 
+article {
+
+	ul {
+		column-width: 320px;
+		margin: 0 0 0 20px;
+		
+		li {
+			font-size: 0.9em;
+			margin: 0 0 5px 0;
+			padding: 0 0 0 5px;
+			position: relative;
+	
+			&:before {
+				content: '\2022';
+				position: absolute;
+				left: -7px;
+			}
+		}
+	}
+}
+
+ul li {
+    font-size: 0.9em;
+    margin: 0 0 5px 0;
+    padding: 0 0 0 5px;
+    position: relative;
+}
+
 div.wpcf7 .ajax-loader {
 	display: none;
 }
