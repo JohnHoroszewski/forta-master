@@ -93,6 +93,27 @@
 		padding: 5px 15px;
 	}
 
+	// General Pages
+	.industry-links-wrapper {
+		
+		p {
+			-webkit-box-orient: horizontal;
+			-webkit-box-direction: normal;
+			    -ms-flex-direction: row;
+			        flex-direction: row;
+			-ms-flex-wrap: wrap;
+			    flex-wrap: wrap;
+			-webkit-box-pack: justify;
+			    -ms-flex-pack: justify;
+			        justify-content: space-between;
+
+			a {
+				width: 47%;
+			}
+		}
+	}
+
+
 	// Footer
 	.footer-menus {
 		display: -webkit-box;
@@ -364,6 +385,16 @@
 	}
 
 	// General Page
+	.industry-links-wrapper {
+		
+		p {
+
+			a {
+				width: 27.5%;
+			}
+		}
+	}
+
 	.training-block {
 		margin: 0 0 15px 0;
 	}
@@ -426,7 +457,7 @@
 
 	// Classes
 	.slider-btn {
-		max-width: 243px;
+		max-width: 255px;
 	}
 
 	// Secondary Pages

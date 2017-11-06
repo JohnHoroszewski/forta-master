@@ -204,10 +204,10 @@ function general_page_sidebars() {
 	register_sidebar( $args );
 
 	$args = array(
-		'id'            => 'resource_sidebar',
+		'id'            => 'news_sidebar',
 		'class'         => 'general-sidebar-menu',
-		'name'          => __( 'Resource Page Sidebar Area', 'text_domain' ),
-		'description'   => __( 'Reserved for the secondary Resources page menu in the sidebar area.', 'text_domain' ),
+		'name'          => __( 'News & Events Page Sidebar Area', 'text_domain' ),
+		'description'   => __( 'Reserved for the secondary News & Events page menu in the sidebar area.', 'text_domain' ),
 		'before_widget' => ' ',
 		'after_widget'  => ' ',
 	);

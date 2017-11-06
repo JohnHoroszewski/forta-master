@@ -1406,6 +1406,20 @@ a:active {
   flex-direction: column;
 }
 
+article ul.menu {
+  -webkit-column-width: 100%;
+  column-width: 100%;
+  margin: 0;
+}
+article ul.menu li {
+  font-size: initial;
+  margin: 0;
+  padding: 0;
+}
+article ul.menu li:before {
+  content: '';
+}
+
 .page-template-products-template .site-content,
 .page-template-projects-template .site-content,
 .page-template-advantages-template .site-content {
@@ -1591,6 +1605,12 @@ a:active {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
+}
+
+.industry-links-wrapper p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .training {
@@ -1973,6 +1993,21 @@ object {
     padding: 5px 15px;
   }
 
+  .industry-links-wrapper p {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+  .industry-links-wrapper p a {
+    width: 47%;
+  }
+
   .footer-menus {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2178,6 +2213,10 @@ object {
     float: none;
   }
 
+  .industry-links-wrapper p a {
+    width: 27.5%;
+  }
+
   .training-block {
     margin: 0 0 15px 0;
   }
@@ -2235,7 +2274,7 @@ object {
 }
 @media only screen and (min-width: 860px) {
   .slider-btn {
-    max-width: 243px;
+    max-width: 255px;
   }
 
   .sidebar-gallery li {

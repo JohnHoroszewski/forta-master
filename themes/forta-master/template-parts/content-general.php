@@ -28,9 +28,18 @@
 			</header><!-- .entry-header -->
 
 			<div class="entry-content">
-				<?php
-					the_content();
-				?>
+
+				<?php if ( get_field( 'industry_links_options' ) == 'yes' ) : ?>
+
+					<div class="industry-links-wrapper">
+						<?php the_content(); ?>
+					</div>
+
+				<?php else : ?>
+
+					<?php the_content(); ?>
+				
+				<?php endif; ?>
 			</div><!-- .entry-content -->
 		</div><!-- .main-block -->
 		<aside class="product-sidebar">
@@ -39,14 +48,14 @@
 
 				if ( get_field( 'sidebar_menu_choice' ) == 'yes' ) : ?>
 
-				<!-- If select is about then show about sidebar | If select is resource then show resource sidebar -->
+				<!-- If select is about then show About sidebar | If select is resource then show Resource sidebar -->
 					<?php if ( get_field( 'sidebar_menu' ) == 'about' ) : ?>
 
 						<?php dynamic_sidebar( 'about_sidebar' ); ?>			
 
-					<?php elseif ( get_field( 'sidebar_menu' ) == 'resources' ) : ?>
+					<?php elseif ( get_field( 'sidebar_menu' ) == 'news' ) : ?>
 
-						<?php dynamic_sidebar( 'resource_sidebar' ); ?>
+						<?php dynamic_sidebar( 'news_sidebar' ); ?>
 
 					<?php endif; ?>
 					
