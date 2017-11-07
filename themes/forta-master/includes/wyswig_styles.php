@@ -13,6 +13,14 @@ function my_mce_before_init_insert_formats( $init_array ) {
 	// Define the style_formats array
 	$style_formats = array(  
 		// Each array child is a format with it's own settings
+		// FAQ Info Wrapper
+		array(  
+			'title' => 'FAQ\'s Text',  
+			'selector' => '',  
+			'classes' => 'info',
+			'wrapper' => true,
+		),
+		// Button styles
 		array(  
 			'title' => 'Border Button Docx',  
 			'selector' => 'span, a',

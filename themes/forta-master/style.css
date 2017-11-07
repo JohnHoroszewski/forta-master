@@ -1364,6 +1364,47 @@ a:active {
 .secondary .product-sidebar {
   margin: 0 0 20px 0;
 }
+.secondary #faqs h3 {
+  background-color: #bcbec0;
+  color: #FFFFFF;
+  margin: 0 0 10px 0;
+  padding: 10px 10px 10px 50px;
+  position: relative;
+}
+.secondary #faqs h3:before {
+  border-radius: 30px;
+  content: '\f067';
+  display: block;
+  font-family: "FontAwesome", sans-serif;
+  height: 30px;
+  left: 10px;
+  padding: 3px 0 0 0;
+  position: absolute;
+  text-align: center;
+  top: 8px;
+  width: 30px;
+}
+.secondary #faqs h3.opened {
+  background-color: #58595b;
+}
+.secondary #faqs h3.opened:before {
+  border-radius: 30px;
+  content: '\f068';
+  display: block;
+  font-family: "FontAwesome", sans-serif;
+  height: 30px;
+  left: 10px;
+  padding: 3px 0 0 0;
+  position: absolute;
+  text-align: center;
+  width: 30px;
+}
+.secondary #faqs .info {
+  display: none;
+  overflow: hidden;
+  margin: 0;
+  padding: 10px;
+}
 .secondary .pro-cta {
   color: #FFFFFF;
   padding: 30px 0;

@@ -20,7 +20,8 @@ jQuery(document).ready(function($) {
 		$vidOverlay = $( '.hm-vid-overlay' ),
 		// $secHeading = $( '.secondary' ).find( 'h1' ),
 		$parentNavItem = $( '#primary-menu > .menu-item-has-children' ),
-		$parentIcon = $parentNavItem.find( '.fa' );
+		$parentIcon = $parentNavItem.find( '.fa' ),
+		$faqHeadings = $( '#faqs h3' );
 
 	// If window is smaller than 1024px
 	if ( $winWidth < 1024 )
@@ -148,8 +149,8 @@ jQuery(document).ready(function($) {
 		nextArrow: '<i class="fa fa-caret-right site-accent-border"></i>'
 	});
 
-	// Turn animation on or off depending on current slide
-	function myTimer() {
+	// Turn text animation on or off depending on current slide
+	function textAnimationTimer() {
 
 		setTimeout( function(){
 			$currentSlide = $hmSlides.find( '.slick-current' );
@@ -159,41 +160,12 @@ jQuery(document).ready(function($) {
 			$slide.find( '.animated' ).css( 'display', 'block' );
 			$noSLide.find( '.animated' ).css( 'display', 'none' );
 
-			myTimer();
+			textAnimationTimer();
 		}, 100);
 
 	}
 
-	myTimer();
-
-	// Smooth Scroll for Back To Top Button *Thank you CSS-TRICKS*
-	$('a[href*="#"]:not([href="#"])').click(function() {
-		if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-			var target = $(this.hash);
-			target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-			if (target.length) {
-				$('html, body').animate({
-				scrollTop: target.offset().top
-			}, 1000);
-				return false;
-			}
-		}
-	});
-
-	// Show/Hide Back to Top button on scroll
-	$( window ).on( 'scroll', function()
-	{
-		var $scrolled = $( window ).scrollTop(),
-			$btt = $( '.back-to-top' );
-
-		if ( $scrolled > 100 )
-		{
-			$btt.addClass( 'visible' );
-		} else if ( $scrolled < 100 )
-		{
-			$btt.removeClass( 'visible' );
-		}
-	});
+	textAnimationTimer();
 
 	// Set 1st product tab and tab content to visible on page load 
 	$( '.product-tabs' ).find( 'li' ).first().find( 'a' ).addClass( 'active' );
@@ -234,6 +206,49 @@ jQuery(document).ready(function($) {
 		'speedIn'		:	600, 
 		'speedOut'		:	200, 
 		'overlayShow'	:	true
+	});
+
+	// Accordian effect on FAQs
+	$faqHeadings.on( 'click', function(){
+
+		if ( $( this ).hasClass( 'opened' ) )
+		{
+			$( this ).removeClass( 'opened' );
+			$( this ).next( '.info' ).slideUp();
+		} else {
+			$( this ).addClass( 'opened' );
+			$( this ).next( '.info' ).slideDown();
+		}
+
+	});
+
+	// Smooth Scroll for Back To Top Button *Thank you CSS-TRICKS*
+	$('a[href*="#"]:not([href="#"])').click(function() {
+		if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+			var target = $(this.hash);
+			target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+			if (target.length) {
+				$('html, body').animate({
+				scrollTop: target.offset().top
+			}, 1000);
+				return false;
+			}
+		}
+	});
+
+	// Show/Hide Back to Top button on scroll
+	$( window ).on( 'scroll', function()
+	{
+		var $scrolled = $( window ).scrollTop(),
+			$btt = $( '.back-to-top' );
+
+		if ( $scrolled > 100 )
+		{
+			$btt.addClass( 'visible' );
+		} else if ( $scrolled < 100 )
+		{
+			$btt.removeClass( 'visible' );
+		}
 	});
 
 });
