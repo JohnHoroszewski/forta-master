@@ -1826,6 +1826,10 @@ article ul.menu li:before {
   vertical-align: top;
 }
 
+.sales-link {
+  margin: 0 0 0 10px;
+}
+
 /*--------------------------------------------------------------
 # Media
 --------------------------------------------------------------*/
@@ -2399,7 +2403,7 @@ object {
     width: 50%;
   }
 
-  .main-footer .flexxed {
+  .site-footer .flexxed {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
     -ms-flex-direction: row;

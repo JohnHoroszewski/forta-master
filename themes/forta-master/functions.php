@@ -667,3 +667,23 @@ function forta_remove_categories_meta_box() {
     remove_meta_box( 'categorydiv', 'project', 'side' ); // remove the Categories box from projects edit screen
     remove_meta_box( 'categorydiv', 'products', 'side' ); // remove the Categories box from prducts edit screen
 }
+
+// Add Sales User role
+add_role(
+    'sales',
+    __( 'Sales' ),
+    array(
+        'read'         => true,  // true allows this capability
+        'edit_posts'   => false, // false denie this capability
+        'delete_posts' => false, // Use false to explicitly deny
+    )
+);
+
+// Block Access to /wp-admin for non admins.
+function forta_blockusers() {
+	if ( is_user_logged_in() && is_admin() && !current_user_can( 'administrator' ) ) {
+	  wp_redirect( home_url() );
+	  exit;
+	}
+  }
+  add_action( 'init', 'forta_blockusers' ); // Hook into 'init'
