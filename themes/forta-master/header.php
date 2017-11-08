@@ -76,6 +76,7 @@
 		.product-tabs a.active { color: <?php echo get_theme_mod( 'forta_master_accent_color' ); ?> !important; }
 		.training-heading { border-color: <?php echo get_theme_mod( 'forta_master_accent_color' );  ?>; }
 		#faqs h3:before { background-color: <?php echo get_theme_mod( 'forta_master_accent_color' ); ?>; }
+		a.literature-btn:before { background-color: <?php echo get_theme_mod( 'forta_master_accent_color' ); ?>; } 
 		.light-bg-form input { color: <?php echo get_theme_mod( 'forta_master_accent_color' ); ?> !important; border: 1px solid <?php echo get_theme_mod( 'forta_master_accent_color' ); ?>; }
 		.light-bg-form textarea { color: <?php echo get_theme_mod( 'forta_master_accent_color' ); ?>; border: 1px solid <?php echo get_theme_mod( 'forta_master_accent_color' ); ?>; }
 		.single article ul li:before { color: <?php echo get_theme_mod( 'forta_master_accent_color' ); ?>; }
@@ -84,6 +85,7 @@
 		#CalcTitle { color: <?php echo get_theme_mod( 'forta_master_accent_color' ); ?>; border-color: <?php echo get_theme_mod( 'forta_master_accent_color' );  ?>; }
 		#Calculate { background-color: <?php echo get_theme_mod( 'forta_master_accent_color' ); ?>; }
 		.video-block h4 { color: <?php echo get_theme_mod( 'forta_master_accent_color' ); ?>; }
+		.blog-posts .entry-meta { color: <?php echo get_theme_mod( 'forta_master_accent_color' ); ?>; }
 	</style>
 	<?php endif; ?>
 </head>

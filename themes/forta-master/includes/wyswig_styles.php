@@ -16,21 +16,21 @@ function my_mce_before_init_insert_formats( $init_array ) {
 		// FAQ Info Wrapper
 		array(  
 			'title' => 'FAQ\'s Text',  
-			'selector' => '',  
+			'selector' => 'span, p, a, h1, h2, h3, h4',  
 			'classes' => 'info',
-			'wrapper' => true,
+			'wrapper' => false,
 		),
 		// Button styles
 		array(  
-			'title' => 'Border Button Docx',  
+			'title' => 'Product Tabs Button - Docx',  
 			'selector' => 'span, a',
-			'classes' => 'border-btn docx',
+			'classes' => 'literature-btn docx',
 			'wrapper' => false,
 		),
 		array(  
-			'title' => 'Border Button PDF',  
+			'title' => 'Product Tabs Button - PDF',  
 			'selector' => 'span, a',  
-			'classes' => 'border-btn pdf',
+			'classes' => 'literature-btn pdf',
 			'wrapper' => false,
 		),
 		array(  

@@ -435,29 +435,39 @@ a.border-btn {
   padding: 5px 15px;
   text-align: center;
 }
-a.border-btn.pdf {
+a.border-btn.solid-white {
+  background-color: #FFFFFF;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.35);
+}
+
+a.literature-btn {
+  background-color: #a1a1a1;
+  color: #FFFFFF !important;
+  display: block;
+  font-weight: 700;
   margin: 0 0 10px 0;
+  min-height: 50px;
   min-width: 300px;
-  padding: 5px 15px 5px 30px;
+  padding: 13px 15px 13px 60px;
   position: relative;
 }
-a.border-btn.pdf:before {
-  content: '\f1c1';
-  font-family: "FontAwesome", sans-serif;
-  left: 10px;
+a.literature-btn:before {
+  content: '';
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  display: block;
+  height: 100%;
+  left: 0;
   position: absolute;
+  top: 0;
+  width: 50px;
 }
-a.border-btn.docx {
-  margin: 0 0 10px 0;
-  min-width: 300px;
-  padding: 5px 15px 5px 30px;
-  position: relative;
+a.literature-btn.pdf:before {
+  background-image: url("images/pdf-icon.png");
 }
-a.border-btn.docx:before {
-  content: '\f1c2';
-  font-family: "FontAwesome", sans-serif;
-  left: 10px;
-  position: absolute;
+a.literature-btn.docx:before {
+  background-image: url("images/doc-icon.png");
 }
 
 .main-content-form label {
@@ -1084,6 +1094,7 @@ a:active {
   position: absolute;
   top: 10px;
   right: 10px;
+  z-index: 999;
   font-size: 24px;
 }
 
@@ -1399,7 +1410,7 @@ a:active {
   text-align: center;
   width: 30px;
 }
-.secondary #faqs .info {
+.secondary #faqs p {
   display: none;
   overflow: hidden;
   margin: 0;
@@ -1591,6 +1602,8 @@ article ul.menu li:before {
 }
 .product-listings .tabBlock {
   display: none;
+  overflow: hidden;
+  width: 100%;
 }
 .product-listings .tabBlock.visible {
   display: block;
@@ -1733,6 +1746,40 @@ article ul.menu li:before {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
+}
+
+article.blog-posts {
+  padding: 30px 0;
+}
+article.blog-posts .constrain {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+  -ms-flex-direction: column-reverse;
+  flex-direction: column-reverse;
+}
+article.blog-posts .entry-meta {
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+article.blog-posts h2 {
+  border: 0;
+  font-family: "Raleway", Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+article.blog-posts h2 a {
+  color: #231f20;
+}
+article.blog-posts img {
+  display: block;
+  margin: 0 0 10px 0;
+}
+article.blog-posts:nth-child(odd) {
+  background-color: #ebebec;
 }
 
 .post-template-default .site-content {
@@ -2266,6 +2313,30 @@ object {
     margin: 0 0 15px 0;
   }
 
+  article.blog-posts .constrain {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+  article.blog-posts h2 {
+    font-size: 28px;
+  }
+  article.blog-posts .post-content {
+    width: 60%;
+  }
+  article.blog-posts img {
+    height: 100%;
+    margin: 0;
+    width: 37.5%;
+  }
+
   .compinfo.flexxed {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2444,6 +2515,13 @@ object {
     width: 50%;
   }
 
+  article.blog-posts .post-content {
+    width: 48%;
+  }
+  article.blog-posts img {
+    width: 48%;
+  }
+
   .site-footer .flexxed {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -2499,6 +2577,14 @@ object {
   }
   .legal .legal-box:last-of-type:after {
     content: '';
+  }
+
+  a.literature-btn {
+    float: left;
+    width: 48.25%;
+  }
+  a.literature-btn:nth-child(even) {
+    float: right;
   }
 }
 @media only screen and (min-width: 1024px) {
@@ -2769,6 +2855,11 @@ object {
 
   .training-block {
     width: 32.5%;
+  }
+
+  article.blog-posts h2 {
+    font-size: 36px;
+    line-height: 1.1em;
   }
 
   .legal .legal-box {

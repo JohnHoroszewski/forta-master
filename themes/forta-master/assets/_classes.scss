@@ -200,32 +200,43 @@ a.border-btn {
 	padding: 5px 15px;
 	text-align: center;
 
-	&.pdf {
-		margin: 0 0 10px 0;
-		min-width: 300px;
-		padding: 5px 15px 5px 30px;
-		position: relative;
+	&.solid-white {
+		background-color: $white-color;
+		box-shadow: $med-shadow;
+	}
+}
 
-		&:before {
-			content: '\f1c1';
-			font-family: $fa;
-			left: 10px;
-			position: absolute;
-		}
+
+a.literature-btn {
+	background-color: rgba( 161, 161, 161, 1 );
+	color: $white-color !important;
+	display: block;
+	font-weight: 700;
+	margin: 0 0 10px 0;
+	min-height: 50px;
+	min-width: 300px;
+	padding: 13px 15px 13px 60px;
+	position: relative;
+
+	&:before {
+		content: '';
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: 100%;
+		display: block;
+		height: 100%;
+		left: 0;
+		position: absolute;
+		top: 0;
+		width: 50px;
 	}
 
-	&.docx {
-		margin: 0 0 10px 0;
-		min-width: 300px;
-		padding: 5px 15px 5px 30px;
-		position: relative;
+	&.pdf:before {
+		background-image: url( 'images/pdf-icon.png' );
+	}
 
-		&:before {
-			content: '\f1c2';
-			font-family: $fa;
-			left: 10px;
-			position: absolute;			
-		}
+	&.docx:before {
+		background-image: url( 'images/doc-icon.png' );
 	}
 }
 

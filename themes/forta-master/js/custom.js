@@ -208,18 +208,38 @@ jQuery(document).ready(function($) {
 		'overlayShow'	:	true
 	});
 
+
+	// Set first h3 to opened and open subsequent selectors on page load.
+	$faqHeadings.first( 'h3' ).addClass( 'opened' ).nextAll().each(function() {
+		if (this.tagName == 'H3') {
+		  return false; // stop execution
+		}
+		$(this).slideDown();
+	  });
+
 	// Accordian effect on FAQs
 	$faqHeadings.on( 'click', function(){
 
 		if ( $( this ).hasClass( 'opened' ) )
 		{
 			$( this ).removeClass( 'opened' );
-			$( this ).next( '.info' ).slideUp();
+			// Select all next selector until h3 is found
+			$(this).nextAll().each(function() {
+				if (this.tagName == 'H3') {
+				  return false; // stop execution
+				}
+				$(this).slideUp();
+			});
 		} else {
 			$( this ).addClass( 'opened' );
-			$( this ).next( '.info' ).slideDown();
+			// Select all next selector until h3 is found
+			$(this).nextAll().each(function() {
+				if (this.tagName == 'H3') {
+				  return false; // stop execution
+				}
+				$(this).slideDown();
+			});
 		}
-
 	});
 
 	// Smooth Scroll for Back To Top Button *Thank you CSS-TRICKS*
