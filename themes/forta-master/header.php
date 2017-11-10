@@ -86,6 +86,8 @@
 		#Calculate { background-color: <?php echo get_theme_mod( 'forta_master_accent_color' ); ?>; }
 		.video-block h4 { color: <?php echo get_theme_mod( 'forta_master_accent_color' ); ?>; }
 		.blog-posts .entry-meta { color: <?php echo get_theme_mod( 'forta_master_accent_color' ); ?>; }
+		.share-article { color: <?php echo get_theme_mod( 'forta_master_accent_color' ); ?>; }
+		.share-article a { color: <?php echo get_theme_mod( 'forta_master_accent_color' ); ?>; }
 	</style>
 	<?php endif; ?>
 </head>

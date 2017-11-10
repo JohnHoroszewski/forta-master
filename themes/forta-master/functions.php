@@ -185,6 +185,18 @@ function top_widget_areas() {
 	);
 	register_sidebar( $args );
 
+	$args = array(
+		'id'            => 'blog-sidebar',
+		'class'         => 'blog-sidebar',
+		'name'          => __( 'Blog Sidebar Area', 'text_domain' ),
+		'description'   => __( 'Holds widgets that will appear on the blog post page', 'text_domain' ),
+		'before_widget' => '',
+		'after_widget'  => '',
+		'before_title'	=> '<h3>',
+		'after_title'	=> '</h3>'
+	);
+	register_sidebar( $args );
+
 }
 add_action( 'widgets_init', 'top_widget_areas' );
 

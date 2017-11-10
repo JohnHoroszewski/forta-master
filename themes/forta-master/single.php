@@ -18,7 +18,10 @@ get_header(); ?>
 			get_template_part( 'template-parts/content', get_post_type() );
 
 			echo '<div class="constrain">';
-				the_post_navigation();
+				the_post_navigation( array(
+					'prev_text' => '< Previous Post',
+					'next_text' => 'Next Post >'
+				) );
 			echo '</div>';
 
 			// If comments are open or we have at least one comment, load up the comment template.

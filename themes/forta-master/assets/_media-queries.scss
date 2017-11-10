@@ -113,6 +113,20 @@
 		}
 	}
 
+	// Blog and Events Pages
+	.single-post {
+
+		article.blog-posts {
+			position: relative;
+
+			.entry-header {
+				margin: -20px auto 0 auto;
+				position: relative;
+				width: 93%;
+				z-index: 8;
+			}
+		}
+	}
 
 	// Footer
 	.footer-menus {
@@ -400,33 +414,36 @@
 	}
 
 	// Blogs and Events Pages
-	article.blog-posts {
+	.blog {
 
-		.constrain {
-			-webkit-box-align: center;
-			    -ms-flex-align: center;
-			        align-items: center;
-			-webkit-box-orient: horizontal;
-			-webkit-box-direction: normal;
-			    -ms-flex-direction: row;
-			        flex-direction: row;
-			-webkit-box-pack: justify;
-			    -ms-flex-pack: justify;
-			        justify-content: space-between;
-		}
-
-		h2 {
-			font-size: 28px;
-		}
-
-		.post-content {
-			width: 60%;
-		}
-
-		img {
-			height: 100%;
-			margin: 0;
-			width: 37.5%;
+		article.blog-posts {
+			
+			.constrain {
+				-webkit-box-align: center;
+					-ms-flex-align: center;
+						align-items: center;
+				-webkit-box-orient: horizontal;
+				-webkit-box-direction: normal;
+					-ms-flex-direction: row;
+						flex-direction: row;
+				-webkit-box-pack: justify;
+					-ms-flex-pack: justify;
+						justify-content: space-between;
+			}
+	
+			h2 {
+				font-size: 28px;
+			}
+	
+			.post-content {
+				width: 60%;
+			}
+	
+			img {
+				height: 100%;
+				margin: 0;
+				width: 37.5%;
+			}
 		}
 	}		
 
@@ -648,14 +665,17 @@
 	}
 
 	// Blogs and Events Pages
-	article.blog-posts {
+	.blog {
 
-		.post-content {
-			width: 48%;
-		}
-
-		img {
-			width: 48%;
+		article.blog-posts {
+	
+			.post-content {
+				width: 48%;
+			}
+	
+			img {
+				width: 48%;
+			}
 		}
 	}
 
@@ -1059,11 +1079,43 @@
 	}
 
 	// Blog and Events Pages
-	article.blog-posts {
+	.blog {
 
-		h2 {
-			font-size: 36px;
-			line-height: 1.1em;
+		article.blog-posts {
+	
+			h2 {
+				font-size: 36px;
+				line-height: 1.1em;
+			}
+		}
+	}
+
+	.post-template-default {
+		
+		article {
+
+			.constrain {
+				-webkit-box-orient: horizontal;
+				-webkit-box-direction: normal;
+					-ms-flex-direction: row;
+						flex-direction: row;
+				justify-content: space-between;
+			}
+		}
+	}
+
+	.single-post {
+
+		article.blog-posts {
+
+			.flex-wrapper {
+				width: 62.5%;
+			}
+
+			aside {
+				max-width: 327px;
+				width: 32%;
+			}
 		}
 	}
 
