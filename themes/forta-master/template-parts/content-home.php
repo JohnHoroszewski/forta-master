@@ -10,11 +10,44 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<div class="constrain">
-		<div class="entry-content">
-			<?php
-				the_content();
-			?>
-		</div><!-- .entry-content -->
-	</div>
+
+	<section class="home-section-block main-content">
+		<div class="constrain">
+			Main Content
+		</div>
+	</section>
+
+	<section class="home-section-block callout-blocks">
+		<div class="constrain">
+			Callout Blocks
+		</div>
+	</section>
+
+	<section class="home-section-block sub-content">
+		<div class="constrain">
+			Sub Content
+		</div>
+	</section>
+
+	<?php if ( get_theme_mod( 'forta_master_large_text' ) ) : ?>
+	<section class="pro-cta" style="background-image: url( '<?php echo get_theme_mod( 'forta_master_products_image' ); ?>' );">
+		<div class="constrain">
+			<div class="left-block">
+				<span class="small-text site-font-accent"><?php echo get_theme_mod( 'forta_master_small_text' ); ?></span>
+				<span class="large-text top"><?php echo get_theme_mod( 'forta_master_large_top_text' ); ?></span>
+				<span class="large-text bottom"><?php echo get_theme_mod( 'forta_master_large_bottom_text' ); ?></span>
+			</div>
+				<div class="right-block">
+					<a class="cta-btn site-accent" href="<?php echo get_theme_mod( 'forta_master_button_link' ); ?>"><?php echo get_theme_mod( 'forta_master_button_text' ); ?></a>
+				</div>
+		</div>
+	</section>
+	<?php endif; ?>
+
+	<section class="home-section-block testimonials">
+		<div class="constrain">
+			Testimonials
+		</div>
+	</section>
+
 </article><!-- #post-<?php the_ID(); ?> -->

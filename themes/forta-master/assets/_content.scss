@@ -70,6 +70,10 @@
     animation-delay: 1s;
 }
 
+.home-section-block {
+	padding: 30px 0;
+}
+
 // Secondary Pages
 .secondary {
 
@@ -149,34 +153,6 @@
 			overflow: hidden;
 			margin: 0;
 			padding: 10px;
-		}
-	}
-
-	.pro-cta {
-		color: $white-color;
-		padding: 30px 0;
-		text-align: center;
-
-		.small-text,
-		.large-text,
-		a {
-			display: inline-block;
-		}
-
-		.small-text {
-			font-weight: 500;
-			letter-spacing: 3px;
-		}
-
-		.large-text {
-			font-family: 'Raleway', Helvetica, Arial, sans-serif;
-			font-size: 20px;
-			font-weight: 500;
-			line-height: 1.25em;
-		}
-
-		a {
-			color: $white-color;
 		}
 	}
 
@@ -741,6 +717,34 @@ a.share-icon {
 				}
 			}
 		}
+	}
+}
+
+.pro-cta {
+	color: $white-color;
+	padding: 30px 0;
+	text-align: center;
+
+	.small-text,
+	.large-text,
+	a {
+		display: inline-block;
+	}
+
+	.small-text {
+		font-weight: 500;
+		letter-spacing: 3px;
+	}
+
+	.large-text {
+		font-family: 'Raleway', Helvetica, Arial, sans-serif;
+		font-size: 20px;
+		font-weight: 500;
+		line-height: 1.25em;
+	}
+
+	a {
+		color: $white-color !important;
 	}
 }
 
