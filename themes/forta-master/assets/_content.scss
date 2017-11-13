@@ -70,8 +70,163 @@
     animation-delay: 1s;
 }
 
+article {
+
+	.home-section-block {
+
+		.constrain {
+			display: block;
+		}
+	}
+}
+
 .home-section-block {
 	padding: 30px 0;
+
+	h2 {
+		font-family: $rale-font;
+		font-weight: 700;
+		margin: 0 0 10px 0;
+		padding: 0;	
+	}
+
+	h2, h3 {
+		border: 0;
+		color: $darkest;
+		text-transform: initial;
+	}
+}
+
+
+.callout-blocks {
+	background-color: $darkest;
+	color: $white-color;
+}
+
+.callout-block {
+	background-color: $md-gray;
+	margin: 0 0 20px 0;
+
+	img {
+		display: block;
+	}
+}
+
+.callout-block-info {
+	padding: 20px 20px 30px 20px;
+	text-align: center;
+
+	.heading {
+		font-family: $rale-font;
+		font-size: 32px;
+		text-transform: uppercase;
+	}
+
+	.subheading {
+		font-size: .9rem;
+		letter-spacing: .5px;
+		margin: 0 0 5px 0;
+		text-transform: uppercase;
+	}
+}
+
+.callout-block-text {
+	line-height: 30px;
+	margin: 30px 0;
+}
+
+.callout-block-image {
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	min-height: 300px;
+}
+
+a.callout-block-btn,
+a.sub-content-btn {
+	border: 2px solid;
+	box-shadow: $med-shadow;
+}
+
+.testimonials {
+	background-color: $lt-gray;
+
+	.testimonial-slider {
+		margin: 30px 0 0 0;
+	}
+
+	.testimonial-block {
+		margin: 0 10px;
+		text-align: center;
+	}
+
+	.testimonial-content {
+		background-color: $white-color;
+		box-shadow: $light-shadow;
+		display: table;
+		padding: 25px;
+		position: relative;
+		margin: 0 auto 50px auto;
+		max-width: 290px;
+		min-height: 275px;
+
+		.testimonial-snippet {
+			display: table-cell;
+			font-style: italic;
+			position: relative;
+			vertical-align: middle;
+			
+			&:before {
+				content: '\201C';
+				display: inline-block;
+				font-family: $rale-font;
+				font-size: 3.5rem;
+				height: 15px;
+				margin: 0 10px 0 0;
+				position: relative;
+				top: 27px;
+			}
+
+			&:after {
+				content: '\201D';
+				display: inline-block;
+				font-family: $rale-font;
+				font-size: 3.5rem;
+				height: 15px;
+				line-height: .3rem;
+				margin: 0;
+				position: relative;
+				top: 27px;
+			}
+		}
+
+		&:after {
+			content: '';
+			position: absolute;
+			width: 0;
+			height: 0;
+			bottom: -64px;
+			left: calc( 50% - 41px );
+			box-sizing: border-box;
+			border: 2em solid black;
+			border-color: transparent transparent $white-color $white-color;		
+			transform-origin: 0 0;
+			transform: rotate(-45deg);
+			
+			box-shadow: -2px 2px 1px -1px rgba(0,0,0,0.15);
+		}
+	}
+
+	.client-name {
+		font-family: $rale-font;
+		font-size: 18px;
+		font-weight: 700;
+	}
+
+	.client-info {
+		color: $darkest;
+		font-size: .9rem;
+	}
 }
 
 // Secondary Pages
@@ -745,6 +900,10 @@ a.share-icon {
 
 	a {
 		color: $white-color !important;
+	}
+
+	.cta-btn {
+		margin: 20px 0 0 0;
 	}
 }
 

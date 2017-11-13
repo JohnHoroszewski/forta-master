@@ -138,7 +138,7 @@ jQuery(document).ready(function($) {
 		}
 	});
 
-	// Initialize slick on homepage
+	// Initialize slick on homepage for hero slider
 	$('.home-bg-slider').slick({
 		arrows: true,
 		autoplay: true,
@@ -148,6 +148,47 @@ jQuery(document).ready(function($) {
 		prevArrow: '<i class="fa fa-caret-left site-accent-border"></i>',
 		nextArrow: '<i class="fa fa-caret-right site-accent-border"></i>'
 	});
+
+	// Initialize slick on homepage for testimonial slider
+	$('.testimonial-slider').slick({
+		dots: false,
+		infinite: true,
+		speed: 300,
+		slidesToShow: 3,
+		slidesToScroll: 1,
+		prevArrow: '<i class="fa fa-chevron-left"></i>',
+		nextArrow: '<i class="fa fa-chevron-right"></i>',
+		responsive: [
+			{
+			breakpoint: 1080,
+			settings: {
+				arrows: false,				
+			}
+			  },
+		  {
+			breakpoint: 1023,
+			settings: {
+				slidesToShow: 3,
+				slidesToScroll: 1,
+				infinite: true,
+			}
+		  },
+		  {
+			breakpoint: 960,
+			settings: {
+				slidesToShow: 2,
+				slidesToScroll: 1
+			}
+		  },
+		  {
+			breakpoint: 640,
+			settings: {
+				slidesToShow: 1,
+				slidesToScroll: 1
+			}
+		  }
+		]
+	  });
 
 	// Turn text animation on or off depending on current slide
 	function textAnimationTimer() {

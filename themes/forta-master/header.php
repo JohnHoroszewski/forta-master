@@ -88,6 +88,10 @@
 		.blog-posts .entry-meta { color: <?php echo get_theme_mod( 'forta_master_accent_color' ); ?>; }
 		.share-article { color: <?php echo get_theme_mod( 'forta_master_accent_color' ); ?>; }
 		.share-article a { color: <?php echo get_theme_mod( 'forta_master_accent_color' ); ?>; }
+		.callout-block-info .subheading { color: <?php echo get_theme_mod( 'forta_master_accent_color' ); ?>; }
+		.testimonials .client-name { color: <?php echo get_theme_mod( 'forta_master_accent_color' ); ?>; }
+		.testimonial-snippet:before {  color: <?php echo get_theme_mod( 'forta_master_accent_color' ); ?>; }
+		.testimonial-snippet:after {  color: <?php echo get_theme_mod( 'forta_master_accent_color' ); ?>; }
 	</style>
 	<?php endif; ?>
 </head>

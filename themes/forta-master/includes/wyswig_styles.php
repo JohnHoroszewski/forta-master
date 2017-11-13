@@ -20,6 +20,18 @@ function my_mce_before_init_insert_formats( $init_array ) {
 			'classes' => 'info',
 			'wrapper' => false,
 		),
+		array(  
+			'title' => 'Heading Font',  
+			'selector' => 'span, p, a, h1, h2, h3, h4',  
+			'classes' => 'heading-font',
+			'wrapper' => false,
+		),
+		array(  
+			'title' => 'Body Font',  
+			'selector' => 'span, div, p, a, h1, h2, h3, h4',  
+			'classes' => 'body-font',
+			'wrapper' => false,
+		),
 		// Button styles
 		array(  
 			'title' => 'Product Tabs Button - Docx',  

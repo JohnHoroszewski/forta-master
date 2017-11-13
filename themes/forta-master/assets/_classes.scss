@@ -12,6 +12,23 @@
 	display: flex;
 }
 
+.heading-font {
+	font-family: $rale-font;
+}
+
+.body-font {
+	font-family: $robo-font;
+}
+
+.uppercase {
+	text-transform: uppercase;
+}
+
+.cols2 {
+	-webkit-column-count: 2;
+	        column-count: 2;
+}
+
 article {
 
 	ul {
