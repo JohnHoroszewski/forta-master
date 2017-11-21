@@ -51,6 +51,12 @@ function my_mce_before_init_insert_formats( $init_array ) {
 			'classes' => 'border-btn',
 			'wrapper' => false,
 		),
+		array(  
+			'title' => 'Flat Button',  
+			'selector' => 'span, a',  
+			'classes' => 'flat-btn',
+			'wrapper' => false,
+		),
 		// Headings, spans and paragraphs
 		array(  
 			'title' => 'Fade In Down',  

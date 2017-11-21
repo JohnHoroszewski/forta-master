@@ -56,7 +56,7 @@ jQuery(document).ready(function($) {
 
 		// Open sub menu on menu chevron icon click
 		$parentIcon.live( 'click', function(){
-			$parentNavItem.find( '.sub-menu' ).slideToggle();
+			$( this ).closest( 'li' ).find( '.sub-menu' ).slideToggle();
 		});
 	}
 

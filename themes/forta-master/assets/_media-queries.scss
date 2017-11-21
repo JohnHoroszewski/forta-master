@@ -30,7 +30,8 @@
 		}
 	}
 
-	.pro-cta {
+	.pro-cta,
+	.page-template-multi-template section.pro-cta  {
 
 		.large-text {
 			font-size: 28px;
@@ -223,7 +224,8 @@
 		}
 	}
 
-	.pro-cta {
+	.pro-cta,
+	.page-template-multi-template section.pro-cta  {
 		
 		.large-text {
 			display: block;
@@ -490,7 +492,8 @@
 		}
 
 
-		.pro-cta {
+		.pro-cta,
+		.page-template-multi-template section.pro-cta {
 
 			.large-text {
 				font-size: 36px;
@@ -575,6 +578,42 @@
 		margin: 0 0 15px 0;
 	}
 
+	// Multi Module Page
+	.page-template-multi-template {
+		
+		section {
+
+			.flexed {
+				display: -webkit-box;
+				display: -ms-flexbox;
+				display: flex;
+				-webkit-box-orient: horizontal;
+				-webkit-box-direction: normal;
+					-ms-flex-direction: row;
+						flex-direction: row;
+				-webkit-box-pack: justify;
+					-ms-flex-pack: justify;
+						justify-content: space-between;
+			}
+		}
+		
+		.module-half {
+			width: 48%;
+		}
+
+		.onethird-width-content {
+			width: 31%;
+		}
+
+		.twothird-width-content {
+			width: 63%;
+		}
+
+		h2.line-heading {
+			font-size: 30px;
+		}
+	}
+		
 	// Blogs and Events Pages
 	.blog {
 
@@ -750,7 +789,8 @@
 				align-items: center;
 	}
 
-	.pro-cta {
+	.pro-cta,
+	.page-template-multi-template section.pro-cta {
 		padding: 50px 0;
 
 		.constrain {
@@ -1235,7 +1275,8 @@
 		}
 	}
 
-	.pro-cta {
+	.pro-cta,
+	.page-template-multi-template section.pro-cta {
 		padding: 65px 0;
 	}
 
@@ -1274,6 +1315,17 @@
 	// General Page
 	.training-block {
 		width: 32.5%;
+	}
+
+	// Multi Module Page
+	.page-template-multi-template {
+		
+		article {
+
+			.constrain {
+				display: block;
+			}
+		}
 	}
 
 	// Blog and Events Pages
@@ -1359,7 +1411,8 @@
 		}
 	}
 
-	.pro-cta {
+	.pro-cta,
+	.page-template-multi-template section.pro-cta {
 		padding: 75px 0;
 
 		.large-text {

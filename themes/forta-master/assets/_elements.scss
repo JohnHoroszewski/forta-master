@@ -51,7 +51,7 @@ a {
 
 h1 {
 	color: $blackish;
-	font-family: 'Raleway', Helvetica, Arial, sans-serif;
+	font-family: $rale-font;
 	font-size: 40px;
 	line-height: 1.15em;
 	margin: 0;
@@ -61,6 +61,21 @@ h2 {
 	border-bottom: 2px solid;
 	padding: 0 0 10px 0;
 	text-transform: uppercase;
+}
+
+.line-heading {
+	border: 0;
+	color: $darkest;
+	font-family: $rale-font;
+	text-transform: initial;
+}
+
+h4 {
+	color: $blackish;
+	font-family: $rale-font;
+	font-size: 24px;
+	font-weight: 300;
+	margin: 0 0 1em 0;
 }
 
 input, textarea {

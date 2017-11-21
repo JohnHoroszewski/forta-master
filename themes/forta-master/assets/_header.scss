@@ -113,6 +113,12 @@
 		width: calc(100% - 10px);
 	}
 
+	input[type=submit] {
+		background-color: $white-color;
+		line-height: 36px;
+		height: 40px;
+	}
+
 	label {
 		font-size: 10px;
 	}
