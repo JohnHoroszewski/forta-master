@@ -20,10 +20,23 @@ get_header(); ?>
 			<!-- Iterate through fields for slick slider -->
 			<?php if ( have_rows( 'homepage_slider' ) ) : ?>
 
+				<?php $i = 0; ?>
+
 				<?php while ( have_rows( 'homepage_slider' ) ) : the_row();
-					$image = get_sub_field( 'hp_slide_image' );
+					$type = get_sub_field( 'slide_type' );
 				?>
-				<div class="slide" style="background-image: url( <?php echo $image[ 'url' ]; ?> );" >
+				<div class="slide">
+				
+					<?php if ( $type == 'video' ) : ?>
+
+						<video id="video-<?php echo $i; ?>" class="hp-slider-element video" src="<?php the_sub_field( 'slide_type_content' ); ?>" type="video/mp4" loop></video>
+
+					<?php else : ?>
+
+						<img class="hp-slider-element" src="<?php the_sub_field( 'slide_type_content' ); ?>" alt="">
+
+					<?php endif; ?>
+
 					<div class="constrain">
 						<div class="slider-text">
 							<?php the_sub_field( 'hp_slide_content' ); ?>
@@ -32,6 +45,7 @@ get_header(); ?>
 					<div class="hm-vid-overlay"></div>
 				</div>
 
+				<?php $i++; ?>
 				<?php endwhile; ?>
 
 			<?php endif; ?>

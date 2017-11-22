@@ -1362,6 +1362,12 @@ a:active {
   text-transform: initial;
 }
 
+.hp-slider-element {
+  position: absolute;
+  min-height: 100%;
+  min-width: 100%;
+}
+
 .slider-text {
   left: 0;
   margin: 0 auto;
@@ -1575,7 +1581,7 @@ a.sub-content-btn {
   font-family: "FontAwesome", sans-serif;
   height: 30px;
   left: 10px;
-  padding: 3px 0 0 0;
+  padding: 3px 0 0 1px;
   position: absolute;
   text-align: center;
   top: 8px;
@@ -1882,6 +1888,7 @@ article ul.menu li:before {
   padding: 191px 0 0 0;
 }
 .page-template-multi-template section {
+  overflow: hidden;
   padding: 20px 0;
 }
 .page-template-multi-template section.gray-bg {
@@ -2808,6 +2815,9 @@ object {
     justify-content: space-between;
   }
   .page-template-multi-template .module-half {
+    width: 48%;
+  }
+  .page-template-multi-template .half-width-content {
     width: 48%;
   }
   .page-template-multi-template .onethird-width-content {

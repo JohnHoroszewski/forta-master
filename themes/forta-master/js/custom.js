@@ -312,4 +312,19 @@ jQuery(document).ready(function($) {
 		}
 	});
 
+	// use js to play videos on chrome
+	$video = $( '.home-slider' ).find( '.video' );
+	$i = 0;
+	$.each( $video, function(){
+		$video[$i].play();
+		$i++;
+	});
+
+	// Autoplay videos (Especially for Chrome)
+	// $video0 = $( '.home-slider' ).find( '#video-0' );
+	// $video1 = $( '.home-slider' ).find( '#video-1' );
+	// $video2 = $( '.home-slider' ).find( '#video-2' );
+	// $video0[0].play();
+	// $video1[0].play();
+	// $video2[0].play();
 });

@@ -31,6 +31,12 @@
 	}
 }
 
+.hp-slider-element {
+	position: absolute;
+	min-height: 100%;
+	min-width: 100%;
+}
+
 .slider-text {
 	left: 0;
 	margin: 0 auto;
@@ -278,7 +284,7 @@ a.sub-content-btn {
 				font-family: $fa;
 				height: 30px;
 				left: 10px;
-				padding: 3px 0 0 0;
+				padding: 3px 0 0 1px;
 				position: absolute;
 				text-align: center;
 				top: 8px;
@@ -633,6 +639,7 @@ article {
 	}
 
 	section {
+		overflow: hidden;
 		padding: 20px 0;
 
 		&.gray-bg {

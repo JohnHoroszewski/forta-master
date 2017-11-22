@@ -40,8 +40,8 @@
 
 					<div class="constrain">
 						<h2 class="line-heading"><?php the_sub_field( 'module_title' ); ?></h2>
-						<?php if ( get_sub_field( 'module_intro_text' ) ) : ?>
-							<div class="module-intro"><?php the_sub_field( 'module_intro_text' ); ?></div>
+						<?php if ( get_sub_field( 'module_intro_content' ) ) : ?>
+							<div class="module-intro"><?php the_sub_field( 'module_intro_content' ); ?></div>
 						<?php endif; ?>
 						<div class="full-width-content"><?php the_sub_field( 'full_width_content' ); ?></div>
 						<?php if ( get_sub_field( 'module_ending_text' ) ) : ?>
@@ -58,8 +58,8 @@
 
 					<div class="constrain">
 						<h2 class="line-heading"><?php the_sub_field( 'module_title' ); ?></h2>
-						<?php if ( get_sub_field( 'module_intro_text' ) ) : ?>
-							<div class="module-intro"><?php the_sub_field( 'module_intro_text' ); ?></div>
+						<?php if ( get_sub_field( 'module_intro_content' ) ) : ?>
+							<div class="module-intro"><?php the_sub_field( 'module_intro_content' ); ?></div>
 						<?php endif; ?>
 						<div class="flexed">
 							<div class="half-width-content"><?php the_sub_field( 'left_half_content' ); ?></div>
