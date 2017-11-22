@@ -157,30 +157,30 @@ function project_post_type() {
 }
 add_action( 'init', 'project_post_type', 0 );
 
-// Register Project Categories Taxonomy
-function project_categories() {
-
+// Register Project Date Taxonomy
+function date_taxonomy() {
+	
 	$labels = array(
-		'name'                       => _x( 'Project Categories', 'Taxonomy General Name', 'text_domain' ),
-		'singular_name'              => _x( 'Project Category', 'Taxonomy Singular Name', 'text_domain' ),
-		'menu_name'                  => __( 'Project Categories', 'text_domain' ),
-		'all_items'                  => __( 'All Project Categories', 'text_domain' ),
-		'parent_item'                => __( 'Parent Project Category', 'text_domain' ),
-		'parent_item_colon'          => __( 'Parent Project Category:', 'text_domain' ),
-		'new_item_name'              => __( 'New Project Category Name', 'text_domain' ),
-		'add_new_item'               => __( 'Add New Project Category', 'text_domain' ),
-		'edit_item'                  => __( 'Edit Project Category', 'text_domain' ),
-		'update_item'                => __( 'Update Project Category', 'text_domain' ),
-		'view_item'                  => __( 'View Project Category', 'text_domain' ),
-		'separate_items_with_commas' => __( 'Separate project categories with commas', 'text_domain' ),
-		'add_or_remove_items'        => __( 'Add or remove project categories', 'text_domain' ),
+		'name'                       => _x( 'Project Dates', 'Taxonomy General Name', 'text_domain' ),
+		'singular_name'              => _x( 'Project Date', 'Taxonomy Singular Name', 'text_domain' ),
+		'menu_name'                  => __( 'Project Date', 'text_domain' ),
+		'all_items'                  => __( 'Project Dates', 'text_domain' ),
+		'parent_item'                => __( 'Parent Project Date', 'text_domain' ),
+		'parent_item_colon'          => __( 'Parent Project Date:', 'text_domain' ),
+		'new_item_name'              => __( 'New Project Date Name', 'text_domain' ),
+		'add_new_item'               => __( 'Add New Project Date', 'text_domain' ),
+		'edit_item'                  => __( 'Edit Project Date', 'text_domain' ),
+		'update_item'                => __( 'Update Project Date', 'text_domain' ),
+		'view_item'                  => __( 'View Project Date', 'text_domain' ),
+		'separate_items_with_commas' => __( 'Separate project date with commas', 'text_domain' ),
+		'add_or_remove_items'        => __( 'Add or remove project dates', 'text_domain' ),
 		'choose_from_most_used'      => __( 'Choose from the most used', 'text_domain' ),
-		'popular_items'              => __( 'Popular Project Categories', 'text_domain' ),
-		'search_items'               => __( 'Search Project Categories', 'text_domain' ),
+		'popular_items'              => __( 'Popular Project Dates', 'text_domain' ),
+		'search_items'               => __( 'Search Project Dates', 'text_domain' ),
 		'not_found'                  => __( 'Not Found', 'text_domain' ),
-		'no_terms'                   => __( 'No project categories', 'text_domain' ),
-		'items_list'                 => __( 'Project Categories list', 'text_domain' ),
-		'items_list_navigation'      => __( 'Project Categories list navigation', 'text_domain' ),
+		'no_terms'                   => __( 'No project dates', 'text_domain' ),
+		'items_list'                 => __( 'Project Dates list', 'text_domain' ),
+		'items_list_navigation'      => __( 'Project Dates list navigation', 'text_domain' ),
 	);
 	$args = array(
 		'labels'                     => $labels,
@@ -191,10 +191,49 @@ function project_categories() {
 		'show_in_nav_menus'          => true,
 		'show_tagcloud'              => true,
 	);
-	register_taxonomy( 'project_categories', array( 'project' ), $args );
+	register_taxonomy( 'project_date', array( 'project' ), $args );
 
 }
-add_action( 'init', 'project_categories', 0 );
+add_action( 'init', 'date_taxonomy', 0 );
+
+// Register Project Categories Taxonomy
+// function project_categories() {
+
+// 	$labels = array(
+// 		'name'                       => _x( 'Project Categories', 'Taxonomy General Name', 'text_domain' ),
+// 		'singular_name'              => _x( 'Project Category', 'Taxonomy Singular Name', 'text_domain' ),
+// 		'menu_name'                  => __( 'Project Categories', 'text_domain' ),
+// 		'all_items'                  => __( 'All Project Categories', 'text_domain' ),
+// 		'parent_item'                => __( 'Parent Project Category', 'text_domain' ),
+// 		'parent_item_colon'          => __( 'Parent Project Category:', 'text_domain' ),
+// 		'new_item_name'              => __( 'New Project Category Name', 'text_domain' ),
+// 		'add_new_item'               => __( 'Add New Project Category', 'text_domain' ),
+// 		'edit_item'                  => __( 'Edit Project Category', 'text_domain' ),
+// 		'update_item'                => __( 'Update Project Category', 'text_domain' ),
+// 		'view_item'                  => __( 'View Project Category', 'text_domain' ),
+// 		'separate_items_with_commas' => __( 'Separate project categories with commas', 'text_domain' ),
+// 		'add_or_remove_items'        => __( 'Add or remove project categories', 'text_domain' ),
+// 		'choose_from_most_used'      => __( 'Choose from the most used', 'text_domain' ),
+// 		'popular_items'              => __( 'Popular Project Categories', 'text_domain' ),
+// 		'search_items'               => __( 'Search Project Categories', 'text_domain' ),
+// 		'not_found'                  => __( 'Not Found', 'text_domain' ),
+// 		'no_terms'                   => __( 'No project categories', 'text_domain' ),
+// 		'items_list'                 => __( 'Project Categories list', 'text_domain' ),
+// 		'items_list_navigation'      => __( 'Project Categories list navigation', 'text_domain' ),
+// 	);
+// 	$args = array(
+// 		'labels'                     => $labels,
+// 		'hierarchical'               => true,
+// 		'public'                     => true,
+// 		'show_ui'                    => true,
+// 		'show_admin_column'          => true,
+// 		'show_in_nav_menus'          => true,
+// 		'show_tagcloud'              => true,
+// 	);
+// 	register_taxonomy( 'project_categories', array( 'project' ), $args );
+
+// }
+// add_action( 'init', 'project_categories', 0 );
 
 // Register Project Advantages Taxonomy
 function project_applications() {
@@ -312,6 +351,45 @@ function project_fibers() {
 
 }
 add_action( 'init', 'project_fibers', 0 );
+
+// Register Project Fiber Length Taxonomy
+function project_fiberlength() {
+	
+	$labels = array(
+		'name'                       => _x( 'Fiber Lengths', 'Taxonomy General Name', 'text_domain' ),
+		'singular_name'              => _x( 'Fiber Length', 'Taxonomy Singular Name', 'text_domain' ),
+		'menu_name'                  => __( 'Fiber Length', 'text_domain' ),
+		'all_items'                  => __( 'All Fiber Lengths', 'text_domain' ),
+		'parent_item'                => __( 'Parent Fiber Length', 'text_domain' ),
+		'parent_item_colon'          => __( 'Parent Fiber Length:', 'text_domain' ),
+		'new_item_name'              => __( 'New Fiber Length Name', 'text_domain' ),
+		'add_new_item'               => __( 'Add New Fiber Length', 'text_domain' ),
+		'edit_item'                  => __( 'Edit Fiber Length', 'text_domain' ),
+		'update_item'                => __( 'Update Fiber Length', 'text_domain' ),
+		'view_item'                  => __( 'View Fiber Length', 'text_domain' ),
+		'separate_items_with_commas' => __( 'Separate fiber lengths with commas', 'text_domain' ),
+		'add_or_remove_items'        => __( 'Add or remove fiber lengths', 'text_domain' ),
+		'choose_from_most_used'      => __( 'Choose from the most used', 'text_domain' ),
+		'popular_items'              => __( 'Popular Fiber Lengths', 'text_domain' ),
+		'search_items'               => __( 'Search Fiber Lengths', 'text_domain' ),
+		'not_found'                  => __( 'Not Found', 'text_domain' ),
+		'no_terms'                   => __( 'No fiber lengths', 'text_domain' ),
+		'items_list'                 => __( 'Fiber Lengths list', 'text_domain' ),
+		'items_list_navigation'      => __( 'Fiber Lengths list navigation', 'text_domain' ),
+	);
+	$args = array(
+		'labels'                     => $labels,
+		'hierarchical'               => true,
+		'public'                     => true,
+		'show_ui'                    => true,
+		'show_admin_column'          => true,
+		'show_in_nav_menus'          => true,
+		'show_tagcloud'              => true,
+	);
+	register_taxonomy( 'fiber_length', array( 'project' ), $args );
+
+}
+add_action( 'init', 'project_fiberlength', 0 );
 
 // Register Project Key Benefits Taxonomy
 function project_key_benefits() {
@@ -543,7 +621,7 @@ function remove_category_from_projects() {
     }
   }
 }
-add_action('admin_menu','remove_tags_from_projects');
+add_action('admin_menu','remove_category_from_projects');
 
 // Remove 'Tags' from project custom post type
 function remove_tags_from_projects() {
