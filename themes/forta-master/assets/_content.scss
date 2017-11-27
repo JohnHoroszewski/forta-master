@@ -658,6 +658,31 @@ article {
 	}
 }
 
+// 2 Column Page
+.col2-section {
+
+	.flexed {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: column;
+		        flex-direction: column;
+		-webkit-box-pack: justify;
+		    -ms-flex-pack: justify;
+		        justify-content: space-between;
+	}
+}
+
+.col2-video {
+	margin: 0 0 20px 0;
+
+	iframe {
+		max-height: 200px;
+	}
+}
+
 // Contact Page
 .sidebar-comp-info {
 	display: -webkit-box;
