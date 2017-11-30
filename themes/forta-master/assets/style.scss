@@ -632,7 +632,8 @@ a:active {
 .site-main .comment-navigation,
 .site-main .posts-navigation,
 .site-main .post-navigation {
-	margin: 0 0 1.5em;
+	margin: 0;
+	padding: 10px 0;
 	overflow: hidden;
 }
 

@@ -666,6 +666,16 @@
 				margin: 0;
 				width: 37.5%;
 			}
+
+			.flex-wrapper {
+				align-items: center;
+				flex-direction: row;
+				justify-content: space-between;
+			}
+		}
+
+		.entry-content {
+			padding: 0 0 0 30px;
 		}
 	}		
 
@@ -897,7 +907,7 @@
 			}
 	
 			img {
-				width: 48%;
+				width: 45%;
 			}
 		}
 	}

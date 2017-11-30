@@ -40,7 +40,9 @@ get_header(); ?>
 
 			endwhile;
 
+			echo '<div class="constrain">';
 			the_posts_navigation();
+			echo '</div>';
 
 		else :
 

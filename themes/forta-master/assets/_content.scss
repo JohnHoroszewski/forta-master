@@ -944,6 +944,13 @@ a.share-icon {
 	}
 }
 
+.single-post {
+
+	.attachment-post-thumbnail {
+		margin: 0 auto;
+	}
+}
+
 .pro-cta,
 .page-template-multi-template section.pro-cta {
 	color: $white-color;
@@ -974,6 +981,22 @@ a.share-icon {
 
 	.cta-btn {
 		margin: 20px 0 0 0;
+	}
+}
+
+article {
+
+	.postbox-container {
+		
+		ul {
+
+			li {
+
+				&:before {
+					content: '';
+				}
+			}
+		}
 	}
 }
 

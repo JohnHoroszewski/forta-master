@@ -1,6 +1,6 @@
 <?php
 /**
- * Template part for displaying page content in project(s)-template.php
+ * Template part for displaying page content in projects-template.php
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
@@ -46,7 +46,7 @@
 					    wp_reset_query();
 					    
 					    $args = array(
-					    	'post_type' => 'project',
+					    	'post_type' => 'projects',
 					        'tax_query' => array(
 					            array(
 					                'taxonomy' => 'project_categories',

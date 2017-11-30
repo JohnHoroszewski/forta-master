@@ -1,7 +1,7 @@
 <?php
 /**
  * Template Name: Project Template
- * Template Post Type: project
+ * Template Post Type: projects
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *

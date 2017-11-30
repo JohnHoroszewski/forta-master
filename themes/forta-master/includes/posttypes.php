@@ -99,9 +99,9 @@ function product_categories() {
 add_action( 'init', 'product_categories', 0 );
 
 /**
- * Register Project Custom Post Type
+ * Register Projects Custom Post Type
  */
-function project_post_type() {
+function projects_post_type() {
 
 	$labels = array(
 		'name'                  => _x( 'Projects', 'Post Type General Name', 'text_domain' ),
@@ -136,7 +136,7 @@ function project_post_type() {
 		'label'                 => __( 'Project', 'text_domain' ),
 		'description'           => __( 'Project Item', 'text_domain' ),
 		'labels'                => $labels,
-		'supports'              => array( 'title', 'editor', 'excerpt', 'thumbnail', ),
+		'supports'              => array( 'title', 'editor', 'excerpt', 'thumbnail', 'custom-fields' ),
 		'taxonomies'            => array( 'category', 'post_tag' ),
 		'hierarchical'          => true,
 		'public'                => true,
@@ -152,49 +152,49 @@ function project_post_type() {
 		'publicly_queryable'    => true,
 		'capability_type'       => 'page',
 	);
-	register_post_type( 'project', $args );
+	register_post_type( 'projects', $args );
 
 }
-add_action( 'init', 'project_post_type', 0 );
+add_action( 'init', 'projects_post_type', 0 );
 
 // Register Project Date Taxonomy
-function date_taxonomy() {
+// function date_taxonomy() {
 	
-	$labels = array(
-		'name'                       => _x( 'Project Dates', 'Taxonomy General Name', 'text_domain' ),
-		'singular_name'              => _x( 'Project Date', 'Taxonomy Singular Name', 'text_domain' ),
-		'menu_name'                  => __( 'Project Date', 'text_domain' ),
-		'all_items'                  => __( 'Project Dates', 'text_domain' ),
-		'parent_item'                => __( 'Parent Project Date', 'text_domain' ),
-		'parent_item_colon'          => __( 'Parent Project Date:', 'text_domain' ),
-		'new_item_name'              => __( 'New Project Date Name', 'text_domain' ),
-		'add_new_item'               => __( 'Add New Project Date', 'text_domain' ),
-		'edit_item'                  => __( 'Edit Project Date', 'text_domain' ),
-		'update_item'                => __( 'Update Project Date', 'text_domain' ),
-		'view_item'                  => __( 'View Project Date', 'text_domain' ),
-		'separate_items_with_commas' => __( 'Separate project date with commas', 'text_domain' ),
-		'add_or_remove_items'        => __( 'Add or remove project dates', 'text_domain' ),
-		'choose_from_most_used'      => __( 'Choose from the most used', 'text_domain' ),
-		'popular_items'              => __( 'Popular Project Dates', 'text_domain' ),
-		'search_items'               => __( 'Search Project Dates', 'text_domain' ),
-		'not_found'                  => __( 'Not Found', 'text_domain' ),
-		'no_terms'                   => __( 'No project dates', 'text_domain' ),
-		'items_list'                 => __( 'Project Dates list', 'text_domain' ),
-		'items_list_navigation'      => __( 'Project Dates list navigation', 'text_domain' ),
-	);
-	$args = array(
-		'labels'                     => $labels,
-		'hierarchical'               => true,
-		'public'                     => true,
-		'show_ui'                    => true,
-		'show_admin_column'          => true,
-		'show_in_nav_menus'          => true,
-		'show_tagcloud'              => true,
-	);
-	register_taxonomy( 'project_date', array( 'project' ), $args );
+// 	$labels = array(
+// 		'name'                       => _x( 'Project Dates', 'Taxonomy General Name', 'text_domain' ),
+// 		'singular_name'              => _x( 'Project Date', 'Taxonomy Singular Name', 'text_domain' ),
+// 		'menu_name'                  => __( 'Project Date', 'text_domain' ),
+// 		'all_items'                  => __( 'Project Dates', 'text_domain' ),
+// 		'parent_item'                => __( 'Parent Project Date', 'text_domain' ),
+// 		'parent_item_colon'          => __( 'Parent Project Date:', 'text_domain' ),
+// 		'new_item_name'              => __( 'New Project Date Name', 'text_domain' ),
+// 		'add_new_item'               => __( 'Add New Project Date', 'text_domain' ),
+// 		'edit_item'                  => __( 'Edit Project Date', 'text_domain' ),
+// 		'update_item'                => __( 'Update Project Date', 'text_domain' ),
+// 		'view_item'                  => __( 'View Project Date', 'text_domain' ),
+// 		'separate_items_with_commas' => __( 'Separate project date with commas', 'text_domain' ),
+// 		'add_or_remove_items'        => __( 'Add or remove project dates', 'text_domain' ),
+// 		'choose_from_most_used'      => __( 'Choose from the most used', 'text_domain' ),
+// 		'popular_items'              => __( 'Popular Project Dates', 'text_domain' ),
+// 		'search_items'               => __( 'Search Project Dates', 'text_domain' ),
+// 		'not_found'                  => __( 'Not Found', 'text_domain' ),
+// 		'no_terms'                   => __( 'No project dates', 'text_domain' ),
+// 		'items_list'                 => __( 'Project Dates list', 'text_domain' ),
+// 		'items_list_navigation'      => __( 'Project Dates list navigation', 'text_domain' ),
+// 	);
+// 	$args = array(
+// 		'labels'                     => $labels,
+// 		'hierarchical'               => true,
+// 		'public'                     => true,
+// 		'show_ui'                    => true,
+// 		'show_admin_column'          => true,
+// 		'show_in_nav_menus'          => true,
+// 		'show_tagcloud'              => true,
+// 	);
+// 	register_taxonomy( 'project_date', array( 'projects' ), $args );
 
-}
-add_action( 'init', 'date_taxonomy', 0 );
+// }
+// add_action( 'init', 'date_taxonomy', 0 );
 
 // Register Project Categories Taxonomy
 // function project_categories() {
@@ -230,13 +230,14 @@ add_action( 'init', 'date_taxonomy', 0 );
 // 		'show_in_nav_menus'          => true,
 // 		'show_tagcloud'              => true,
 // 	);
-// 	register_taxonomy( 'project_categories', array( 'project' ), $args );
+// 	register_taxonomy( 'project_categories', array( 'projects' ), $args );
 
 // }
 // add_action( 'init', 'project_categories', 0 );
 
+
 // Register Project Advantages Taxonomy
-function project_applications() {
+function project_application() {
 
 	$labels = array(
 		'name'                       => _x( 'Applications', 'Taxonomy General Name', 'text_domain' ),
@@ -269,13 +270,13 @@ function project_applications() {
 		'show_in_nav_menus'          => true,
 		'show_tagcloud'              => true,
 	);
-	register_taxonomy( 'applications', array( 'project' ), $args );
+	register_taxonomy( 'application', array( 'projects' ), $args );
 
 }
-add_action( 'init', 'project_applications', 0 );
+add_action( 'init', 'project_application', 0 );
 
 // Register Project Environments Taxonomy
-function project_environments() {
+function project_environment() {
 	
 	$labels = array(
 		'name'                       => _x( 'Environments', 'Taxonomy General Name', 'text_domain' ),
@@ -308,13 +309,13 @@ function project_environments() {
 		'show_in_nav_menus'          => true,
 		'show_tagcloud'              => true,
 	);
-	register_taxonomy( 'environments', array( 'project' ), $args );
+	register_taxonomy( 'environment', array( 'projects' ), $args );
 
 }
-add_action( 'init', 'project_environments', 0 );
+add_action( 'init', 'project_environment', 0 );
 
 // Register Project Fibers Taxonomy
-function project_fibers() {
+function project_fiber() {
 	
 	$labels = array(
 		'name'                       => _x( 'Fibers', 'Taxonomy General Name', 'text_domain' ),
@@ -347,10 +348,10 @@ function project_fibers() {
 		'show_in_nav_menus'          => true,
 		'show_tagcloud'              => true,
 	);
-	register_taxonomy( 'fibers', array( 'project' ), $args );
+	register_taxonomy( 'fiber', array( 'projects' ), $args );
 
 }
-add_action( 'init', 'project_fibers', 0 );
+add_action( 'init', 'project_fiber', 0 );
 
 // Register Project Fiber Length Taxonomy
 function project_fiberlength() {
@@ -386,13 +387,13 @@ function project_fiberlength() {
 		'show_in_nav_menus'          => true,
 		'show_tagcloud'              => true,
 	);
-	register_taxonomy( 'fiber_length', array( 'project' ), $args );
+	register_taxonomy( 'fiber_length', array( 'projects' ), $args );
 
 }
 add_action( 'init', 'project_fiberlength', 0 );
 
 // Register Project Key Benefits Taxonomy
-function project_key_benefits() {
+function project_benefit() {
 	
 	$labels = array(
 		'name'                       => _x( 'Key Benefits', 'Taxonomy General Name', 'text_domain' ),
@@ -425,49 +426,49 @@ function project_key_benefits() {
 		'show_in_nav_menus'          => true,
 		'show_tagcloud'              => true,
 	);
-	register_taxonomy( 'key_benefits', array( 'project' ), $args );
+	register_taxonomy( 'benefit', array( 'projects' ), $args );
 
 }
-add_action( 'init', 'project_key_benefits', 0 );
+add_action( 'init', 'project_benefit', 0 );
 
 // Register Project Dosages Taxonomy
-function project_dosage() {
+// function project_dosage() {
 	
-	$labels = array(
-		'name'                       => _x( 'Dosages', 'Taxonomy General Name', 'text_domain' ),
-		'singular_name'              => _x( 'Dosage', 'Taxonomy Singular Name', 'text_domain' ),
-		'menu_name'                  => __( 'Dosage', 'text_domain' ),
-		'all_items'                  => __( 'Dosages', 'text_domain' ),
-		'parent_item'                => __( 'Parent Dosage', 'text_domain' ),
-		'parent_item_colon'          => __( 'Parent Dosage:', 'text_domain' ),
-		'new_item_name'              => __( 'New Dosage Name', 'text_domain' ),
-		'add_new_item'               => __( 'Add New Dosage', 'text_domain' ),
-		'edit_item'                  => __( 'Edit Dosage', 'text_domain' ),
-		'update_item'                => __( 'Update Dosage', 'text_domain' ),
-		'view_item'                  => __( 'View Dosage', 'text_domain' ),
-		'separate_items_with_commas' => __( 'Separate dosages with commas', 'text_domain' ),
-		'add_or_remove_items'        => __( 'Add or remove dosage', 'text_domain' ),
-		'choose_from_most_used'      => __( 'Choose from the most used', 'text_domain' ),
-		'popular_items'              => __( 'Popular Dosages', 'text_domain' ),
-		'search_items'               => __( 'Search Dosages', 'text_domain' ),
-		'not_found'                  => __( 'Not Found', 'text_domain' ),
-		'no_terms'                   => __( 'No dosage', 'text_domain' ),
-		'items_list'                 => __( 'Dosages list', 'text_domain' ),
-		'items_list_navigation'      => __( 'Dosages list navigation', 'text_domain' ),
-	);
-	$args = array(
-		'labels'                     => $labels,
-		'hierarchical'               => false,
-		'public'                     => true,
-		'show_ui'                    => true,
-		'show_admin_column'          => true,
-		'show_in_nav_menus'          => true,
-		'show_tagcloud'              => true,
-	);
-	register_taxonomy( 'dosage', array( 'project' ), $args );
+// 	$labels = array(
+// 		'name'                       => _x( 'Dosages', 'Taxonomy General Name', 'text_domain' ),
+// 		'singular_name'              => _x( 'Dosage', 'Taxonomy Singular Name', 'text_domain' ),
+// 		'menu_name'                  => __( 'Dosage', 'text_domain' ),
+// 		'all_items'                  => __( 'Dosages', 'text_domain' ),
+// 		'parent_item'                => __( 'Parent Dosage', 'text_domain' ),
+// 		'parent_item_colon'          => __( 'Parent Dosage:', 'text_domain' ),
+// 		'new_item_name'              => __( 'New Dosage Name', 'text_domain' ),
+// 		'add_new_item'               => __( 'Add New Dosage', 'text_domain' ),
+// 		'edit_item'                  => __( 'Edit Dosage', 'text_domain' ),
+// 		'update_item'                => __( 'Update Dosage', 'text_domain' ),
+// 		'view_item'                  => __( 'View Dosage', 'text_domain' ),
+// 		'separate_items_with_commas' => __( 'Separate dosages with commas', 'text_domain' ),
+// 		'add_or_remove_items'        => __( 'Add or remove dosage', 'text_domain' ),
+// 		'choose_from_most_used'      => __( 'Choose from the most used', 'text_domain' ),
+// 		'popular_items'              => __( 'Popular Dosages', 'text_domain' ),
+// 		'search_items'               => __( 'Search Dosages', 'text_domain' ),
+// 		'not_found'                  => __( 'Not Found', 'text_domain' ),
+// 		'no_terms'                   => __( 'No dosage', 'text_domain' ),
+// 		'items_list'                 => __( 'Dosages list', 'text_domain' ),
+// 		'items_list_navigation'      => __( 'Dosages list navigation', 'text_domain' ),
+// 	);
+// 	$args = array(
+// 		'labels'                     => $labels,
+// 		'hierarchical'               => false,
+// 		'public'                     => true,
+// 		'show_ui'                    => true,
+// 		'show_admin_column'          => true,
+// 		'show_in_nav_menus'          => true,
+// 		'show_tagcloud'              => true,
+// 	);
+// 	register_taxonomy( 'dosage', array( 'projects' ), $args );
 
-}
-add_action( 'init', 'project_dosage', 0 );
+// }
+// add_action( 'init', 'project_dosage', 0 );
 
 
 /**
@@ -611,7 +612,7 @@ add_action('admin_menu','remove_category_from_products');
 // Remove 'Categories' from project custom post type
 function remove_category_from_projects() {
   global $submenu;
-  $post_type = 'project';
+  $post_type = 'projects';
   $tax_slug = 'category';
   if (isset($submenu['edit.php?post_type='.$post_type])) {
     foreach ($submenu['edit.php?post_type='.$post_type] as $k => $sub) {
@@ -626,7 +627,7 @@ add_action('admin_menu','remove_category_from_projects');
 // Remove 'Tags' from project custom post type
 function remove_tags_from_projects() {
 	global $submenu;
-	$post_type = 'project';
+	$post_type = 'projects';
 	$tax_slug = 'post_tag';
 	if (isset($submenu['edit.php?post_type='.$post_type])) {
 	  foreach ($submenu['edit.php?post_type='.$post_type] as $k => $sub) {
@@ -657,6 +658,6 @@ function remove_tags_from_projects() {
 add_action( 'add_meta_boxes', 'forta_remove_categories_meta_box' );
 function forta_remove_categories_meta_box() {
      
-    remove_meta_box( 'categorydiv', 'project', 'side' ); // remove the Categories box from projects edit screen
+    remove_meta_box( 'categorydiv', 'projects', 'side' ); // remove the Categories box from projects edit screen
     remove_meta_box( 'categorydiv', 'products', 'side' ); // remove the Categories box from prducts edit screen
 }

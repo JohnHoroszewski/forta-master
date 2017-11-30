@@ -326,4 +326,40 @@ function forta_blockusers() {
 	  exit;
 	}
   }
-  add_action( 'init', 'forta_blockusers' ); // Hook into 'init'
+add_action( 'init', 'forta_blockusers' ); // Hook into 'init'
+
+add_filter('acf/settings/remove_wp_meta_box', '__return_false');
+
+
+
+// Custom content for Info Boxes in Progress Map
+function cspm_custom_infobox_title($default_title, $post_id){
+
+global $post;
+
+$custom_title = $default_title.", ".get_post_meta($post_id, a_map_date, true);
+	
+return (!empty($custom_title)) ? $custom_title : $default_title;
+
+}
+add_filter("cspm_custom_infobox_title", "cspm_custom_infobox_title", 10, 2);
+
+
+function cspm_custom_infobox_description($default_description, $post_id){
+
+$fiber_types = get_the_terms( $post_id, 'fiber' );
+
+		foreach ( $fiber_types as $fiber_type) { $fiber_types = $fiber_type->name ;}	
+
+		$applications = get_the_terms( $post_id, 'application' );
+
+		foreach ( $applications as $application) { $applications = $application->name; }
+
+		$custom_content = $fiber_types . " - " . $applications . " | Fiber Length: "  . get_post_meta( $post_id, a_map_fiber_length, true ) . "\" | Dosage: " . get_post_meta( $post_id, a_map_dosage, true ) . "lbs./cu. yd.<br><br>" . get_post_meta ($post_id, a_map_short_desc, true );	
+
+		return (!empty($custom_content)) ? $custom_content : $default_description;
+
+}
+
+add_filter("cspm_custom_infobox_description", "cspm_custom_infobox_description", 10, 2);
+add_filter("cspm_large_infobox_content", "cspm_custom_infobox_description", 10, 2);
