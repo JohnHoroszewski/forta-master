@@ -87,6 +87,19 @@
 	</section>
 	<?php endif; ?>
 
+	<?php if ( get_field( 'simple_steps_content' ) ) : ?>
+
+	<section class="home-section-block simple-steps">
+		<div class="constrain">
+			<h2 class="line-heading"><?php the_field( 'simple_steps_title' ); ?></h2>
+			<?php the_field( 'simple_steps_content' ); ?>
+		</div>
+	</section>
+
+	<?php endif; ?>
+
+
+	<?php if ( get_field( 'testimonials_heading' ) ) : ?>
 	<section class="home-section-block testimonials">
 		<div class="constrain">
 			<h2 class="line-heading"><?php the_field( 'testimonials_heading' ); ?></h2>
@@ -114,5 +127,6 @@
 			</div>
 		</div>
 	</section>
+	<?php endif; ?>
 
 </article><!-- #post-<?php the_ID(); ?> -->

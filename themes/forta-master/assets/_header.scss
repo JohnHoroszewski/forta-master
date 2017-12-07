@@ -38,7 +38,6 @@
 	position: absolute;
 	display: block;
 	background-color: $black-color;
-	padding: 10px 0;
 	overflow-y: auto;
 	z-index: 9999;
 
@@ -214,7 +213,7 @@
 }
 
 .page-template-homepage .main-header {
-	background-color: rgba( $darkest, .5 );
+	background-color: rgba( $darkest, .75 );
 }
 
 .main-header {

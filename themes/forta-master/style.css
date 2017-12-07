@@ -287,6 +287,8 @@ th {
 .cols2 {
   -webkit-column-count: 2;
   column-count: 2;
+  -webkit-column-width: 265px;
+  column-width: 265px;
 }
 
 article ul {
@@ -523,8 +525,8 @@ a.literature-btn.docx:before {
   display: none;
   position: absolute;
   z-index: 999999;
-  width: 710px;
-  height: 470px;
+  width: 320px;
+  height: auto;
   margin-right: auto;
   margin-left: auto;
   background-color: #fff;
@@ -539,8 +541,9 @@ a.literature-btn.docx:before {
   clear: both;
   color: #FFFFFF;
   display: block;
-  float: right;
+  margin: 0 0 10px 0;
   padding: 3px 10px;
+  text-align: center;
 }
 
 #CalcTitle {
@@ -576,17 +579,16 @@ a.literature-btn.docx:before {
 }
 
 #CalcInstructions {
+  clear: both;
   display: block;
-  margin-left: 265px;
-  padding: 0 0 0 20px;
+  padding: 20px 0 0 0;
   text-align: left;
 }
 
 #CalcResults {
-  margin-left: 265px;
-  height: 200px;
+  clear: both;
   border: 1px none #999999;
-  padding: 15px;
+  padding: 15px 0 0 0;
   font-weight: bold;
   color: #666666;
   display: none;
@@ -628,6 +630,27 @@ a.literature-btn.docx:before {
   left: 11px;
   position: absolute;
   top: 7px;
+}
+
+.results,
+.total {
+  display: block;
+  margin: 0 auto 10px auto;
+  text-align: center;
+}
+
+.total {
+  font-size: 1.25em;
+  font-weight: 700;
+}
+
+.arisfor-calculate {
+  display: block;
+  margin: 0 auto;
+}
+
+input[type=text].arisfor-calculate {
+  border: 1px solid #58595b;
 }
 
 /*--------------------------------------------------------------
@@ -855,6 +878,10 @@ h2 {
   text-transform: uppercase;
 }
 
+h3 {
+  margin: 1em 0 0 0;
+}
+
 .line-heading {
   border: 0;
   color: #333333;
@@ -870,7 +897,32 @@ h4 {
   margin: 0 0 1em 0;
 }
 
+p {
+  margin: 0.5em 0 1em 0;
+}
+
 input, textarea {
+  border: 0;
+}
+
+table {
+  border: 1px solid #b7b7b7;
+}
+table tr {
+  background-color: #FFFFFF;
+  border-bottom: 1px solid #d1d1d1;
+  font-size: 12px;
+}
+table tr:nth-child(even) {
+  background-color: #dddddd;
+}
+table tr td, table tr th {
+  border-right: 1px solid white;
+  min-width: 150px;
+  padding: 3px 5px;
+  text-align: center;
+}
+table tr td:last-of-type, table tr th:last-of-type {
   border: 0;
 }
 
@@ -1126,7 +1178,6 @@ a:active {
   position: absolute;
   display: block;
   background-color: #000000;
-  padding: 10px 0;
   overflow-y: auto;
   z-index: 9999;
   -webkit-transition: all 0.5s ease-in-out;
@@ -1271,7 +1322,7 @@ a:active {
 }
 
 .page-template-homepage .main-header {
-  background-color: rgba(51, 51, 51, 0.5);
+  background-color: rgba(51, 51, 51, 0.75);
 }
 
 .main-header {
@@ -1477,7 +1528,7 @@ a.sub-content-btn {
 }
 
 .testimonials {
-  background-color: #d1d3d4;
+  background-color: #eaeaea;
 }
 .testimonials .testimonial-slider {
   margin: 30px 0 0 0;
@@ -1547,6 +1598,24 @@ a.sub-content-btn {
   font-size: .9rem;
 }
 
+.hp-simple-blocks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  text-align: center;
+}
+.hp-simple-blocks .simple-block {
+  margin: 0 0 10px 0;
+  text-align: center;
+}
+
 .secondary .header-image {
   min-height: 320px;
   background-attachment: fixed;
@@ -1572,14 +1641,14 @@ a.sub-content-btn {
   margin: 0 0 20px 0;
 }
 .secondary #faqs h3 {
-  background-color: #d1d3d4;
-  color: #FFFFFF;
+  background-color: #eaeaea;
   margin: 0 0 10px 0;
   padding: 10px 10px 10px 50px;
   position: relative;
 }
 .secondary #faqs h3:before {
   border-radius: 30px;
+  color: #FFFFFF;
   content: '\f067';
   display: block;
   font-family: "FontAwesome", sans-serif;
@@ -1723,7 +1792,6 @@ article ul.menu li:before {
 }
 
 .products-tab-list .tab-text {
-  font-size: .65em;
   text-align: center;
   text-transform: uppercase;
 }
@@ -1739,7 +1807,7 @@ article ul.menu li:before {
   padding: 10px 0 20px 0;
 }
 .product-tabs li {
-  border-bottom: 2px solid #d1d3d4;
+  border-bottom: 2px solid #eaeaea;
   margin: 0 0 5px 0;
   padding: 3px 0;
   text-align: center;
@@ -1748,14 +1816,14 @@ article ul.menu li:before {
   content: '';
 }
 .product-tabs a {
-  color: #d1d3d4;
-  font-size: 0.9em;
+  color: #eaeaea;
+  font-size: 1.05em;
   font-weight: 700;
   text-transform: uppercase;
 }
 .product-tabs a.active {
   border-bottom: 2px solid;
-  padding: 0 0 9px 0;
+  padding: 0 0 7px 0;
 }
 
 .video-flex {
@@ -1896,7 +1964,7 @@ article ul.menu li:before {
   padding: 20px 0;
 }
 .page-template-multi-template section.gray-bg {
-  background-color: #d1d3d4;
+  background-color: #eaeaea;
 }
 .page-template-multi-template input,
 .page-template-multi-template select,
@@ -1925,6 +1993,14 @@ article ul.menu li:before {
 }
 .col2-video iframe {
   max-height: 200px;
+}
+
+.video-title {
+  display: block;
+  font-size: 0.75em;
+  font-weight: 700;
+  margin: 0 0 10px 0;
+  text-align: center;
 }
 
 .sidebar-comp-info {
@@ -2051,7 +2127,7 @@ article ul.menu li:before {
 .single-post aside .searchsubmit {
   background-color: transparent;
   border: 0;
-  color: #d1d3d4;
+  color: #eaeaea;
   font-size: 20px;
   position: absolute;
   right: 0;
@@ -2177,6 +2253,43 @@ article .postbox-container ul li:before {
   content: '';
 }
 
+.page-template-multicolumns-template .site-content {
+  padding: 210px 0 0 0;
+}
+.page-template-multicolumns-template .site-content .constrain {
+  display: block;
+}
+
+.one-columns,
+.two-columns,
+.three-columns,
+.four-columns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+.one-columns .columns-content-block,
+.two-columns .columns-content-block,
+.three-columns .columns-content-block,
+.four-columns .columns-content-block {
+  margin: 0 0 10px 0;
+  text-align: center;
+  width: 100%;
+}
+.one-columns .columns-content-block img,
+.two-columns .columns-content-block img,
+.three-columns .columns-content-block img,
+.four-columns .columns-content-block img {
+  box-shadow: 1px 1px 13px rgba(0, 0, 0, 0.15);
+}
+
 .error404 .site-content {
   padding: 210px 0 0 0;
   text-align: center;
@@ -2220,7 +2333,7 @@ article .postbox-container ul li:before {
   text-align: center;
 }
 .site-footer .title {
-  color: #d1d3d4;
+  color: #eaeaea;
 }
 
 .main-footer {
@@ -2253,13 +2366,13 @@ article .postbox-container ul li:before {
   width: 100%;
 }
 .footer-menu li a {
-  color: #d1d3d4;
+  color: #eaeaea;
   display: inline-block;
   padding: 5px 0 5px 12px;
   position: relative;
 }
 .footer-menu li a:visited {
-  color: #d1d3d4;
+  color: #eaeaea;
 }
 .footer-menu li a:before {
   content: '\2022';
@@ -2503,6 +2616,12 @@ object {
     width: 45%;
   }
 
+  .results,
+  .total {
+    float: left;
+    width: 50%;
+  }
+
   .slider-text h2 {
     font-size: 60px;
   }
@@ -2527,7 +2646,7 @@ object {
   .page-template-products-template .custom-hr,
   .page-template-projects-template .custom-hr,
   .page-template-advantages-template .custom-hr {
-    border-bottom: 4px solid #d1d3d4;
+    border-bottom: 4px solid #eaeaea;
     margin: 0 0 0 20px;
     width: 100%;
   }
@@ -2558,6 +2677,22 @@ object {
   }
   .col2-section .column-block {
     width: 48%;
+  }
+
+  .two-columns,
+  .three-columns,
+  .four-columns {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+  .two-columns .columns-content-block,
+  .three-columns .columns-content-block,
+  .four-columns .columns-content-block {
+    width: 45%;
   }
 }
 @media only screen and (min-width: 640px) {
@@ -2630,6 +2765,29 @@ object {
     float: right;
   }
 
+  #ContentOverlay {
+    width: 710px;
+  }
+
+  #CloseCalc {
+    overflow: hidden;
+  }
+  #CloseCalc a.CloseCalc {
+    float: right;
+  }
+
+  #CalcInstructions {
+    clear: none;
+    margin-left: 265px;
+    padding: 0 0 0 20px;
+  }
+
+  #CalcResults {
+    clear: none;
+    margin-left: 265px;
+    padding: 15px;
+  }
+
   .line-heading {
     display: inline-block;
     position: relative;
@@ -2642,6 +2800,15 @@ object {
     right: -155px;
     position: absolute;
     width: 150px;
+  }
+
+  .results,
+  .total {
+    width: 33.3%;
+  }
+
+  .total {
+    width: 100%;
   }
 
   .slider-text h2 {
@@ -2775,6 +2942,16 @@ object {
     margin: 0;
   }
 
+  .hp-simple-blocks {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+  .hp-simple-blocks .simple-block {
+    width: 33%;
+  }
+
   .secondary .header-image {
     min-height: 500px;
   }
@@ -2904,6 +3081,21 @@ object {
   }
   .blog .entry-content {
     padding: 0 0 0 30px;
+  }
+
+  .three-columns,
+  .four-columns {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+  .three-columns .columns-content-block,
+  .four-columns .columns-content-block {
+    margin: 0 0 20px 0;
+    width: 30%;
   }
 
   .compinfo.flexxed {
@@ -3165,6 +3357,10 @@ object {
   }
 }
 @media only screen and (min-width: 1024px) {
+  table tr td, table tr th {
+    min-width: 110px;
+  }
+
   .sitetop-links {
     background-color: black;
   }
@@ -3199,7 +3395,6 @@ object {
     position: relative;
     -ms-flex-preferred-size: 25%;
     flex-basis: 25%;
-    padding: 10px 0;
   }
   .top-right:after {
     content: '';
@@ -3265,7 +3460,7 @@ object {
 
   .main-header {
     position: fixed;
-    top: 66px;
+    top: 50px;
   }
   .main-header .flexxed {
     -webkit-box-align: center;
@@ -3381,7 +3576,7 @@ object {
     background-color: #333333;
     bottom: auto;
     position: fixed;
-    top: 66px;
+    top: 50px;
     -webkit-transition: all 0.25s ease-in-out;
     -moz-transition: all 0.25s ease-in-out;
     -ms-transition: all 0.25s ease-in-out;
@@ -3487,6 +3682,18 @@ object {
   .single-post article.blog-posts aside {
     max-width: 327px;
     width: 32%;
+  }
+
+  .four-columns {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+  .four-columns .columns-content-block {
+    width: 22%;
   }
 
   .legal .legal-box {

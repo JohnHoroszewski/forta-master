@@ -3,8 +3,15 @@ jQuery(document).ready(function($) {
                 var obj = this;
                 if(!loaded) {
 						var newheight= ($(window).height()/2-this.height()/2) + $(window).scrollTop();
-                        obj.css('top', newheight);
-                        obj.css('left', $(window).width()/2-this.width()/2);
+						obj.css('top', newheight);
+						
+						// Check for window size on mobile
+						if ( $( window ).width() < 768 ) {
+							obj.css('left', 0);
+						} else {
+							obj.css('left', $(window).width()/2-this.width()/2);
+						}
+						
                         $(window).resize(function(){ obj.centerScreen(!loaded); });
                 } else {
                         obj.stop();

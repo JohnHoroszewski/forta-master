@@ -55,6 +55,7 @@
 
 											<div class="column-block col2-video">
 												<?php the_sub_field( 'video_content' ); ?>
+												<span class="video-title"><?php the_sub_field( 'video_title' ); ?></span>
 											</div>
 
 										<?php endif; ?>

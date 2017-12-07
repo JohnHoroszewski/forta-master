@@ -26,7 +26,9 @@
 
 .cols2 {
 	-webkit-column-count: 2;
-	        column-count: 2;
+	column-count: 2;
+	-webkit-column-width: 265px;
+	column-width: 265px;
 }
 
 article {
@@ -299,9 +301,9 @@ a.literature-btn {
     display: none;
     position: absolute;
     z-index: 999999;
-    width: 710px;
-    height: 470px;
-    margin-right: auto;
+	width: 320px;
+	height: auto;
+	margin-right: auto;
     margin-left: auto;
 	background-color: #fff;
 	background-repeat: no-repeat;
@@ -315,8 +317,9 @@ a.literature-btn {
 		clear: both;
 		color: $white-color;	
 		display: block;
-		float: right;
+		margin: 0 0 10px 0;
 		padding: 3px 10px;
+		text-align: center;
 	}
 }
 
@@ -357,17 +360,16 @@ a.literature-btn {
 }
 
 #CalcInstructions {
+	clear: both;
 	display: block;
-	margin-left: 265px;	
-	padding: 0 0 0 20px;
+	padding: 20px 0 0 0;
 	text-align: left;
 }
 
 #CalcResults {
-    margin-left: 265px;
-    height: 200px;
+	clear: both;
     border: 1px none #999999;
-    padding: 15px;
+    padding: 15px 0 0 0;
     font-weight: bold;
     color: #666666;
     display: none;
@@ -413,4 +415,25 @@ a.literature-btn {
     left: 11px;
     position: absolute;
     top: 7px;
+}
+
+.results,
+.total {
+	display: block;
+	margin: 0 auto 10px auto;
+	text-align: center;
+}
+
+.total {
+	font-size: 1.25em;
+	font-weight: 700;
+}
+
+.arisfor-calculate {
+	display: block;
+	margin: 0 auto;
+}
+
+input[type=text].arisfor-calculate {
+	border: 1px solid $md-gray;
 }

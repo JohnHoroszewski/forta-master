@@ -94,6 +94,9 @@
 		.testimonials .client-name { color: <?php echo get_theme_mod( 'forta_master_accent_color' ); ?>; }
 		.testimonial-snippet:before {  color: <?php echo get_theme_mod( 'forta_master_accent_color' ); ?>; }
 		.testimonial-snippet:after {  color: <?php echo get_theme_mod( 'forta_master_accent_color' ); ?>; }
+		input[type=button].arisfor-calculate {  background-color: <?php echo get_theme_mod( 'forta_master_accent_color' ); ?>; color: #fff; }
+		.total { color: <?php echo get_theme_mod( 'forta_master_accent_color' ); ?>; }
+		.video-title { color: <?php echo get_theme_mod( 'forta_master_accent_color' ); ?>; }
 	</style>
 	<?php endif; ?>
 </head>

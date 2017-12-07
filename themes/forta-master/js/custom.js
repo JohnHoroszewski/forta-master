@@ -320,11 +320,17 @@ jQuery(document).ready(function($) {
 		$i++;
 	});
 
-	// Autoplay videos (Especially for Chrome)
-	// $video0 = $( '.home-slider' ).find( '#video-0' );
-	// $video1 = $( '.home-slider' ).find( '#video-1' );
-	// $video2 = $( '.home-slider' ).find( '#video-2' );
-	// $video0[0].play();
-	// $video1[0].play();
-	// $video2[0].play();
+	// Arisfor Unit Calculator
+	$( '#calculate' ).on( 'click', function(){
+		
+		$variable = $( '#variable' ).val(),
+		$byFiveHun = $( '.equals' ),
+		$byOneHun = $( '.equates' ),
+		$pailsMesh = Math.ceil( $variable / 500 ),
+		$bags = Math.ceil( $variable / 100 );
+		
+		$byFiveHun.html( $pailsMesh );
+		$byOneHun.html( $bags );
+		
+	});
 });

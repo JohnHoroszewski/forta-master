@@ -235,6 +235,25 @@ a.sub-content-btn {
 	}
 }
 
+.hp-simple-blocks {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	text-align: center;
+
+	.simple-block {
+		margin: 0 0 10px 0;
+		text-align: center;
+	}
+}
+
 // Secondary Pages
 .secondary {
 
@@ -272,13 +291,13 @@ a.sub-content-btn {
 		
 		h3 {
 			background-color: $lt-gray;
-			color: $white-color;
 			margin: 0 0 10px 0;
 			padding: 10px 10px 10px 50px;
 			position: relative;
 
 			&:before {
 				border-radius: 30px;
+				color: $white-color;
 				content: '\f067';
 				display: block;
 				font-family: $fa;
@@ -443,7 +462,6 @@ article {
 .products-tab-list {
 
 	.tab-text {
-		font-size: .65em;
 		text-align: center;
 	    text-transform: uppercase;
 	}
@@ -472,13 +490,13 @@ article {
 
 	a {
 		color: $lt-gray;
-		font-size: 0.9em;
+		font-size: 1.05em;
 		font-weight: 700;
 		text-transform: uppercase;
 
 		&.active {
 			border-bottom: 2px solid;
-			padding: 0 0 9px 0;
+			padding: 0 0 7px 0;
 		}
 	}
 }
@@ -681,6 +699,14 @@ article {
 	iframe {
 		max-height: 200px;
 	}
+}
+
+.video-title {
+    display: block;
+    font-size: 0.75em;
+    font-weight: 700;
+	margin: 0 0 10px 0;
+	text-align: center;	
 }
 
 // Contact Page
@@ -999,6 +1025,46 @@ article {
 		}
 	}
 }
+
+// Multicolumns Template
+.page-template-multicolumns-template {
+
+	.site-content {
+		padding: 210px 0 0 0;
+		
+		.constrain {
+			display: block;
+		}
+	}
+}
+
+.one-columns,
+.two-columns,
+.three-columns,
+.four-columns {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	        justify-content: space-between;
+		
+	.columns-content-block {
+		margin: 0 0 10px 0;
+		text-align: center;
+		width: 100%;
+
+		img {
+			box-shadow: 1px 1px 13px rgba(0,0,0,0.15);			
+		}
+	}
+}
+
+
 
 // 404 Page
 .error404 {

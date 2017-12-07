@@ -186,7 +186,6 @@
 
 			</div>
 		<div class="clearer2"></div>
-		<br><br>
 		<!-- EndCalc -->
 	</div>
 </div> <!-- .ContentOverlay -->
