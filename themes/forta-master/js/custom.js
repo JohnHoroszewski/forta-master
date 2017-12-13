@@ -21,7 +21,8 @@ jQuery(document).ready(function($) {
 		// $secHeading = $( '.secondary' ).find( 'h1' ),
 		$parentNavItem = $( '#primary-menu > .menu-item-has-children' ),
 		$parentIcon = $parentNavItem.find( '.fa' ),
-		$faqHeadings = $( '#faqs h3' );
+		$faqHeadings = $( '#faqs h3' ),
+		$isHome = $( '.page-template-homepage' );
 
 	// If window is smaller than 1024px
 	if ( $winWidth < 1024 )
@@ -61,16 +62,6 @@ jQuery(document).ready(function($) {
 	}
 
 	if ( $winWidth > 1023 ) {
-
-		// Keep secondary page content and sidebar aligned
-		// if ( $secHeading.outerHeight() > 55 )
-		// {
-		// 	$secHeading.css(
-		// 	{
-		// 		'fontSize' : '40px',
-		// 		'height' : '55px'
-		// 	});
-		// }
 
 		// Parallax effect on secondary page header images
 		$( window ).scroll( function(){
@@ -112,6 +103,10 @@ jQuery(document).ready(function($) {
 	// Add down chevron icon to any menu item with children
 	$parentNavItem.prepend( '<i class="fa fa-chevron-down" aria-hidden="true"></i>' );
 
+	if ( $isHome.length > 0 ) {
+			$mainHeader.find( 'ul.sub-menu' ).css( 'bottom', 25 );
+		}
+
 	// Lock header to top of window navigation when scrollpoint reached
 	$( window ).on( 'scroll', function(){
 
@@ -124,6 +119,7 @@ jQuery(document).ready(function($) {
 			$contentScroll = $( '.homepage.content-area' ).offset().top,
 			$topOffset = $winScroll + $sitopLeftHeight;
 			$blockHeight = $sitopLeftHeight + $headerBlock;
+			
 
 
 			if ( $headerScroll < $topOffset )
@@ -134,6 +130,20 @@ jQuery(document).ready(function($) {
 			if ( $contentScroll > $winScroll + $blockHeight )
 			{
 				$mainHeader.removeClass( 'locked' );
+			}
+
+			if ( $isHome ) {
+			
+				if ( $headerScroll > $topOffset )
+				{
+					$mainHeader.find( 'ul.sub-menu' ).css( 'bottom', 25 );
+				}
+	
+				if ( $contentScroll < $winScroll + $blockHeight )
+				{
+					$mainHeader.find( 'ul.sub-menu' ).css( 'bottom', 'initial' );
+				}
+
 			}
 		}
 	});
@@ -162,12 +172,13 @@ jQuery(document).ready(function($) {
 			{
 			breakpoint: 1080,
 			settings: {
-				arrows: false,				
+				arrows: false,			
 			}
 			  },
 		  {
 			breakpoint: 1023,
 			settings: {
+				arrows: false,
 				slidesToShow: 3,
 				slidesToScroll: 1,
 				infinite: true,
@@ -176,6 +187,7 @@ jQuery(document).ready(function($) {
 		  {
 			breakpoint: 960,
 			settings: {
+				arrows: false,
 				slidesToShow: 2,
 				slidesToScroll: 1
 			}
@@ -183,6 +195,7 @@ jQuery(document).ready(function($) {
 		  {
 			breakpoint: 640,
 			settings: {
+				arrows: false,
 				slidesToShow: 1,
 				slidesToScroll: 1
 			}

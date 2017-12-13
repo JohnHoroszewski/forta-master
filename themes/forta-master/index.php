@@ -16,7 +16,11 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
-
+			<section class="blog-title">
+				<div class="constrain">
+					<h1>NEWS & EVENTS</h1>
+				</div>
+			</section>
 		<?php
 		if ( have_posts() ) :
 

@@ -217,8 +217,12 @@ a.border-btn,
 	border: 1px solid;
 	display: inline-block;
 	min-width: 200px;
-	padding: 5px 15px;
+	padding: 10px 15px;
 	text-align: center;
+
+	&:hover {
+		color: $white-color;
+	}
 
 	&.solid-white {
 		background-color: $white-color;
@@ -229,10 +233,18 @@ a.border-btn,
 a.flat-btn,
 .flat-btn,
 input.flat-btn {
+	border: 1px solid;
 	box-shadow: $light-shadow;
+	color: #fff;
 	display: inline-block;
-	padding: 5px 15px;
+	min-width: 200px;
+	padding: 10px 15px;
 	text-align: center;
+
+	&:hover {
+		background-color: $white-color;
+		border: 1px solid;
+	}
 }
 
 a.literature-btn {
@@ -291,6 +303,13 @@ a.literature-btn {
 
 	input[type=submit] {
 		padding: 12px !important;
+	}
+}
+
+.light-bg-form {
+
+	input, textarea {
+		border: 1px solid
 	}
 }
 

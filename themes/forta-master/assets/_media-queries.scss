@@ -26,7 +26,7 @@
 
 		h2 {
 			font-size: 55px;
-			padding: 0 0 5px 0;
+			padding: 0 0 15px 0;
 		}
 	}
 
@@ -100,9 +100,6 @@
 			        flex-direction: row;
 			-ms-flex-wrap: wrap;
 			    flex-wrap: wrap;
-			-webkit-box-pack: justify;
-			    -ms-flex-pack: justify;
-			        justify-content: space-between;
 
 			a {
 				width: 47%;
@@ -397,7 +394,7 @@
 
 		h2 {
 			font-size: 80px;
-			padding: 0 0 15px 0;
+			padding: 0 0 25px 0;
 		}
 
 		p {
@@ -484,7 +481,8 @@
 	}
 
 	.sub-content,
-	.testimonials {
+	.testimonials,
+	.simple-steps {
 
 		h2 {
 			font-size: 30px;
@@ -664,6 +662,10 @@
 	// Multi Module Page
 	.page-template-multi-template {
 		
+		.header-image {
+			min-height: 250px;
+		}
+
 		section {
 
 			.flexed {
@@ -876,7 +878,7 @@
 
 		h2 {
 			font-size: 100px;
-			padding: 0 0 25px 0;
+			padding: 0 0 45px 0;
 		}
 
 		p {
@@ -1191,7 +1193,7 @@
 
 		h2 {
 			font-size: 120px;
-			padding: 0 0 35px 0;
+			padding: 0 0 55px 0;
 		}
 	}
 
@@ -1281,6 +1283,7 @@
 			transition: all 0.25s ease-in-out;
 			visibility: hidden;
 			width: 380px;
+			z-index: 10;
 
 			a:hover {
 				color: $darkest !important;
@@ -1374,7 +1377,8 @@
 	}
 
 	.sub-content,
-	.testimonials {
+	.testimonials,
+	.simple-steps {
 
 		h2 {
 			font-size: 40px;
@@ -1442,6 +1446,10 @@
 	// Multi Module Page
 	.page-template-multi-template {
 		
+		.header-image {
+			min-width: 300px;
+		}
+
 		article {
 
 			.constrain {
@@ -1450,7 +1458,23 @@
 		}
 	}
 
+// Multicolumns Template
+.page-template-multicolumns-template {
+	
+		.header-image {
+			height: 225px;
+			margin: -50px 0 10px 0;
+		}
+	}
+	
 	// Blog and Events Pages
+	.blog {
+		
+			.blog-title {
+				padding: 0 0 40px 0;
+			}
+		}
+
 	.blog {
 
 		article.blog-posts {
@@ -1543,6 +1567,13 @@
 
 		.header-image {
 			min-height: 550px;
+		}
+	}
+
+	.page-template-multi-template {
+
+		.header-image {
+			min-height: 250px;
 		}
 	}
 

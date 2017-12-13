@@ -134,6 +134,8 @@
 		</section>
 
 	<?php endif; ?><!-- End Product Details -->
+	
+	<a href="/projects-examples/"><img style="display:block;" src="/wp-content/uploads/2017/12/projects-map.jpg" alt=""></a>
 
 </article><!-- #post-<?php the_ID(); ?> -->
 

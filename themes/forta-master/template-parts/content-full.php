@@ -8,16 +8,6 @@
  */
 
 ?>
-	<?php if ( get_field( 'header_image' ) ) :
-		$headerImage = get_field( 'header_image' ); ?>
-
-		<section class="header-image" style="background-image: url( '<?php echo $headerImage[ 'url' ] ?>' );"></section>
-
-	<?php else : ?>
-
-		<section class="header-image" style="background-image: url( '<?php echo get_theme_mod( 'forta_master_page_general' ); ?>' );"></section>
-		
-	<?php endif; ?>
 	
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 

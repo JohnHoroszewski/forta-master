@@ -50,7 +50,7 @@
 						<div class="subheading"><?php the_sub_field( 'callout_block_subheading' ); ?></div>
 						<div class="heading"><?php the_sub_field( 'callout_block_heading' ); ?></div>
 						<div class="callout-block-text"><?php the_sub_field( 'callout_block_text' ); ?></div>
-						<a href="<?php the_sub_field( 'callout_block_link' ); ?>" class="border-btn callout-block-btn">More Details</a>
+						<a href="<?php the_sub_field( 'callout_block_link' ); ?>" class="flat-btn">More Details</a>
 					</div>
 					<div class="callout-block-image" style="background-image:url('<?php the_sub_field( 'callout_block_image' ); ?>');">
 					</div>
