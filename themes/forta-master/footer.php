@@ -78,24 +78,27 @@
 		</div><!-- .main-footer -->
 		<div class="legal site-accent">
 			<div class="constrain flexxed">
-				<div class="footer-block">
+				<div class="footer-block footer-block-left">
 					<div class="legal-box">
 						&copy;<?php the_date( 'Y' ); ?> - <?php bloginfo( 'name' ); ?><sup>®</sup>&nbsp;Corporation
 					</div>
 					<div class="legal-box">All Rights Reserved</div>
 					<div class="legal-box"><?php if ( get_theme_mod( 'forta_privacy_policy' ) ){ echo '<a href="' . get_theme_mod( 'forta_privacy_policy' ) . '">Privacy Policy</a>'; }?></div>
 				</div><!-- .footer-block -->
+				
 				<div class="footer-block footer-block-right">
-					<a href="<?php echo site_url(); ?>/wp-admin">
-						<i class="fa fa-wrench" aria-hidden="true"></i>
+				<a href="<?php echo site_url(); ?>/wp-admin">
+					<i style="margin: 0 10px 0 0;" class="fa fa-wrench" aria-hidden="true"></i>
 
-						<?php if ( is_user_logged_in() ) : ?>
-							<!-- Show sales portal login if logged in -->
-							<a class="sales-link" href="<?php echo site_url(); ?>/sales-documents">Sales Portal</a>	
-						<?php endif; ?>
+					<?php if ( is_user_logged_in() ) : ?>
+						<!-- Show sales portal login if logged in -->
+						<a class="sales-link" style="margin: 0 20px 0 10px;" href="<?php echo site_url(); ?>/sales-documents">Sales Portal</a>	
+					<?php endif; ?>
 
-					</a>
-				</div><!-- .footer-block -->
+				</a>
+				Made in the U.S.A.
+			</div><!-- .footer-block -->
+				
 			</div>
 		</div><!-- .legal -->
 	</footer><!-- #colophon -->

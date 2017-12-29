@@ -14,6 +14,10 @@ jQuery(document).ready(function($) {
 		$headerBlock = $( '.main-header' ).outerHeight(),
 		$mobileBtn = $mainHeader.find( '.mobile-nav-btn' ),
 		$mobileMenu = $( '.mobile-nav' ),
+		$mobileSearch = $mobileMenu.find( '.fa-search' ),
+		$desktopSearch = $mainHeader.find( '.desktop-search' ),
+		$mobileSearchWrapper = $mobileMenu.find( '.search-wrapper' ),
+		$desktopSearchWrapper = $mainHeader.find( '.desktop-search-wrapper' ),
 		$mobileNavHeight = $mobileMenu.outerHeight(),
 		$mobileClose = $mobileMenu.find( '#close-this' ),
 		$hmSlides = $( '.home-slider' ).find( '.slide' ),
@@ -59,6 +63,18 @@ jQuery(document).ready(function($) {
 		$parentIcon.live( 'click', function(){
 			$( this ).closest( 'li' ).find( '.sub-menu' ).slideToggle();
 		});
+
+		// Open search field on mobile
+		$mobileSearch.on( 'click', function(){
+			
+			if ( !$mobileSearchWrapper.hasClass( 'open' ) )
+			{
+				$mobileSearchWrapper.addClass( 'open' );
+			} else {
+				$mobileSearchWrapper.removeClass( 'open' );
+			}
+
+		});
 	}
 
 	if ( $winWidth > 1023 ) {
@@ -72,6 +88,19 @@ jQuery(document).ready(function($) {
 			$headerImage.css({
 				'background-position-y' : -wScroll /8,
 			});
+		});
+
+		// Open search field on mobile
+		$desktopSearch.on( 'click', function(){
+			console.log( 'i am working' );
+
+			if ( !$desktopSearchWrapper.hasClass( 'open' ) )
+			{
+				$desktopSearchWrapper.addClass( 'open' );
+			} else {
+				$desktopSearchWrapper.removeClass( 'open' );
+			}
+
 		});
 	}
 

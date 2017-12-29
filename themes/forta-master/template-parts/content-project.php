@@ -37,6 +37,7 @@
 				<?php
 					the_content();
 				?>
+				<a style="font-size:14px;" href="javascript:window.print()"><i class="fa fa-print" aria-hidden="true"></i> Print this Page</a>
 			</div><!-- .entry-content -->
 		</div><!-- .main-block -->
 		<aside class="product-sidebar">

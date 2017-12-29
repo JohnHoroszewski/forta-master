@@ -45,22 +45,29 @@
 				<?php endwhile; ?>
 			<?php endif; ?>
 
-		<?php
+			<?php if ( get_field( 'quick_link_button' ) == 'yes' ) : ?>
+				<h2>Literature</h2>
+				<a class="literature-btn pdf" href="#literature">Product Literature</a>
+			<?php endif; ?>
 
-			if ( get_field( 'savings_calculator' ) == 'yes' ) : ?>
+			<?php
 
-			<div class="savings-calc">
-				<span class="calc-heading">Calculate your savings!</span>
-				FORTA-FI<sup>®</sup> your asphalt for Tons of Savings! Compare material costs between a traditional asphalt mix and FORTAfied Asphalt.
-				<span class="BoxClick1">
-					<a class="OpenCalc" href="#">Open Savings Calculator</a>
-				</span>
-			</div>
+				if ( get_field( 'savings_calculator' ) == 'yes' ) : ?>
 
-		<?php endif; ?>
+				<div class="savings-calc">
+					<span class="calc-heading">Calculate your savings!</span>
+					FORTA-FI<sup>®</sup> your asphalt for Tons of Savings! Compare material costs between a traditional asphalt mix and FORTAfied Asphalt.
+					<span class="BoxClick1">
+						<a class="OpenCalc" href="#">Open Savings Calculator</a>
+					</span>
+				</div>
+
+			<?php endif; ?>
 
 		</aside>
 	</div>
+
+	<div id="literature"></div>
 
 	<?php if ( get_theme_mod( 'forta_master_large_text' ) ) : ?>
 	<section class="pro-cta" style="background-image: url( '<?php echo get_theme_mod( 'forta_master_products_image' ); ?>' );">
@@ -76,7 +83,6 @@
 		</div>
 	</section>
 	<?php endif; ?>
-
 	<?php if ( have_rows( 'product_tabs' ) ) : ?>
 		<section class="product-details">
 			<ul class="product-tabs">

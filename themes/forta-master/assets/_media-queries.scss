@@ -4,7 +4,7 @@
 	ul.sub-menu {
 
 		li {
-			float: left;
+			// float: left;
 			width: 50%;
 
 			&.cat-menu-title {
@@ -1086,6 +1086,13 @@
 	}
 
 	// Header
+	.main-header {
+
+		.constrain {
+			position: relative;
+		}
+	}
+
 	.sitetop-links {
 		background-color: rgba( $black-color, 1 );
 
@@ -1148,6 +1155,37 @@
 
 	.mobile-nav-btn {
 		display: none;
+	}
+
+	.desktop-search {
+		position: relative;
+	}
+
+	.desktop-search-wrapper {
+		border-radius: 5px;
+		height: 0;
+		overflow: hidden;
+		position: absolute;
+		right: 0;
+		text-align: center;
+		-webkit-transition: all 0.5s ease-in-out;
+		-moz-transition: all 0.5s ease-in-out;
+		-ms-transition: all 0.5s ease-in-out;
+		-o-transition: all 0.5s ease-in-out;
+		transition: all 0.5s ease-in-out;
+		top: 60px;		
+		width: 290px;
+
+		&.open {
+			box-shadow: $med-shadow;
+			height: 40px;
+			padding: 5px 0 0 0;
+			-webkit-transition: all 0.5s ease-in-out;
+			-moz-transition: all 0.5s ease-in-out;
+			-ms-transition: all 0.5s ease-in-out;
+			-o-transition: all 0.5s ease-in-out;
+			transition: all 0.5s ease-in-out;
+		}
 	}
 
 	.home-slider {
@@ -1229,6 +1267,11 @@
 			display: -webkit-box;
 			display: -ms-flexbox;
 			display: flex;
+		}
+
+		.fa-search {
+			color: $white-color;
+			display: block;
 		}
 	}
 
@@ -1534,6 +1577,19 @@
 		.legal-box {
 			font-size: 16px;
 		}
+
+		.footer-block {
+			width: 48.5%;
+
+			&.footer-block-left {
+				width: 55%;
+			}
+
+			&.footer-block-right {
+				font-size: 16px;
+				width: 45%;
+			}
+		}
 	}
 }
 
@@ -1583,14 +1639,6 @@
 
 		.large-text {
 			font-size: 48px;
-		}
-	}
-
-	// Footer
-	.main-footer {
-
-		.footer-block {
-			width: 45%;
 		}
 	}
 }

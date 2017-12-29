@@ -48,7 +48,9 @@
 				<section class="multi-module full-width <?php echo $bgColor; ?>">
 
 					<div class="constrain">
-						<h2 class="line-heading"><?php the_sub_field( 'module_title' ); ?></h2>
+						<?php if ( get_sub_field( 'module_title' ) ) : ?>
+							<h2 class="line-heading"><?php the_sub_field( 'module_title' ); ?></h2>
+						<?php endif; ?>
 						<?php if ( get_sub_field( 'module_intro_content' ) ) : ?>
 							<div class="module-intro"><?php the_sub_field( 'module_intro_content' ); ?></div>
 						<?php endif; ?>
@@ -66,7 +68,9 @@
 				<section class="multi-module half-n-half <?php echo $bgColor; ?>">
 
 					<div class="constrain">
-						<h2 class="line-heading"><?php the_sub_field( 'module_title' ); ?></h2>
+						<?php if ( get_sub_field( 'module_title' ) ) : ?>
+							<h2 class="line-heading"><?php the_sub_field( 'module_title' ); ?></h2>
+						<?php endif; ?>
 						<?php if ( get_sub_field( 'module_intro_content' ) ) : ?>
 							<div class="module-intro"><?php the_sub_field( 'module_intro_content' ); ?></div>
 						<?php endif; ?>
@@ -87,7 +91,9 @@
 				<section class="multi-module thirds <?php echo $bgColor; ?>">
 
 					<div class="constrain">
-						<h2 class="line-heading"><?php the_sub_field( 'module_title' ); ?></h2>
+						<?php if ( get_sub_field( 'module_title' ) ) : ?>
+							<h2 class="line-heading"><?php the_sub_field( 'module_title' ); ?></h2>
+						<?php endif; ?>
 						<?php if ( get_sub_field( 'module_intro_text' ) ) : ?>
 							<div class="module-intro"><?php the_sub_field( 'module_intro_text' ); ?></div>
 						<?php endif; ?>
@@ -109,7 +115,9 @@
 				<section class="multi-module oneandtwo-thirds <?php echo $bgColor; ?>">
 
 					<div class="constrain">
-						<h2 class="line-heading"><?php the_sub_field( 'module_title' ); ?></h2>
+						<?php if ( get_sub_field( 'module_title' ) ) : ?>
+							<h2 class="line-heading"><?php the_sub_field( 'module_title' ); ?></h2>
+						<?php endif; ?>
 						<?php if ( get_sub_field( 'module_intro_text' ) ) : ?>
 							<div class="module-intro"><?php the_sub_field( 'module_intro_text' ); ?></div>
 						<?php endif; ?>
@@ -130,7 +138,9 @@
 				<section class="multi-module twoandone-thirds <?php echo $bgColor; ?>">
 
 					<div class="constrain">
-						<h2 class="line-heading"><?php the_sub_field( 'module_title' ); ?></h2>
+						<?php if ( get_sub_field( 'module_title' ) ) : ?>
+							<h2 class="line-heading"><?php the_sub_field( 'module_title' ); ?></h2>
+						<?php endif; ?>
 						<?php if ( get_sub_field( 'module_intro_text' ) ) : ?>
 							<div class="module-intro"><?php the_sub_field( 'module_intro_text' ); ?></div>
 						<?php endif; ?>

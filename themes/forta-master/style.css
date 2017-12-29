@@ -291,6 +291,15 @@ th {
   column-width: 265px;
 }
 
+.hs-richtext {
+  border-bottom: 1px solid;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 10px 0 20px 0;
+  padding: 20px 0 5px 0;
+  text-transform: uppercase;
+}
+
 article ul {
   column-width: 320px;
   margin: 0 0 0 20px;
@@ -305,6 +314,9 @@ article ul li:before {
   content: '\2022';
   position: absolute;
   left: -7px;
+}
+article .postbox-container ul {
+  column-width: auto;
 }
 
 ul li {
@@ -527,12 +539,53 @@ a.literature-btn.docx:before {
 .main-content-form input:last-of-type {
   margin: 0;
 }
+.main-content-form input[type=checkbox],
+.main-content-form input[type=radio] {
+  margin: 0 5px 0 0;
+  width: auto;
+}
+.main-content-form input[type=file] {
+  border: 0;
+}
+.main-content-form select {
+  min-height: 30px;
+  width: 100%;
+}
 .main-content-form input[type=submit] {
   padding: 12px !important;
 }
+.main-content-form ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.main-content-form ul li {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.main-content-form ul li:before {
+  content: "";
+}
 
+.hs-form-field {
+  margin: 0 0 10px 0;
+}
+
+.hs-form-radio span,
+.hs-form-checkbox span {
+  position: relative;
+  top: -2px;
+}
+
+.light-bg-form {
+  margin: -30px 0 0 0;
+}
 .light-bg-form input, .light-bg-form textarea {
   border: 1px solid;
+}
+.light-bg-form input[type=submit] {
+  margin: 10px 0 0 0;
 }
 
 #ContentOverlay {
@@ -1218,11 +1271,13 @@ a:active {
   color: #FFFFFF;
 }
 
-.top-quote a {
+.top-quote a,
+.request-conversion a {
   position: relative;
   padding: 10px 0;
 }
-.top-quote a:before {
+.top-quote a:before,
+.request-conversion a:before {
   content: '\f1ec';
   position: absolute;
   left: -25px;
@@ -1298,7 +1353,47 @@ a:active {
   font-size: 24px;
 }
 .mobile-nav .social-media-links {
+  float: left;
   margin: 0 0 10px 0;
+}
+.mobile-nav .fa-search {
+  margin: 0 0 0 20px;
+}
+.mobile-nav .search-wrapper {
+  height: 0;
+  overflow: hidden;
+  width: 100%;
+  -webkit-transition: all 0.25s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
+  -ms-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+}
+.mobile-nav .search-wrapper.open {
+  height: 40px;
+  -webkit-transition: all 0.25s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
+  -ms-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+}
+
+.desktop-search-wrapper {
+  height: 0;
+  overflow: hidden;
+}
+.desktop-search-wrapper input {
+  width: auto !important;
+}
+
+.search-wrapper .search-submit,
+.desktop-search-wrapper .search-submit {
+  background-color: #FFFFFF;
+  max-height: 30px;
+  line-height: 20px;
+  padding: 5px 10px;
+  position: relative;
+  top: -1px;
 }
 
 .menu-item-has-children {
@@ -1368,6 +1463,13 @@ a:active {
 }
 .main-header .social-media-links {
   display: none;
+}
+.main-header .fa-search {
+  display: none;
+}
+
+.search-wrapper {
+  height: 0;
 }
 
 .main-navigation,
@@ -1517,6 +1619,7 @@ article .home-section-block .constrain {
 .callout-block-info .heading {
   font-family: "Raleway", Helvetica, Arial, sans-serif;
   font-size: 32px;
+  margin: 0 0 30px 0;
   text-transform: uppercase;
 }
 .callout-block-info .subheading {
@@ -1528,7 +1631,7 @@ article .home-section-block .constrain {
 
 .callout-block-text {
   line-height: 30px;
-  margin: 30px 0;
+  margin: 0 0 30px 0;
 }
 
 .callout-block-image {
@@ -1558,6 +1661,7 @@ a.sub-content-btn {
   background-color: #FFFFFF;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
   display: table;
+  height: 275px;
   padding: 25px;
   position: relative;
   margin: 0 auto 50px auto;
@@ -2350,6 +2454,25 @@ article .postbox-container ul li:before {
   box-shadow: 1px 1px 13px rgba(0, 0, 0, 0.15);
 }
 
+.page-template-callouts-template .callout-blocks {
+  padding: 30px 0;
+}
+.page-template-callouts-template .main-block {
+  padding: 30px 0;
+}
+.page-template-callouts-template .callout-block-info .heading {
+  font-size: 32px;
+  padding: 20px 0 0 0;
+}
+
+.search-results .site-content {
+  padding: 180px 0 0 0;
+}
+
+.search-results-content .constrain {
+  display: block;
+}
+
 .error404 .site-content {
   padding: 210px 0 0 0;
   text-align: center;
@@ -2559,7 +2682,6 @@ object {
 
 @media only screen and (min-width: 480px) {
   ul.sub-menu li {
-    float: left;
     width: 50%;
   }
   ul.sub-menu li.cat-menu-title {
@@ -3422,6 +3544,10 @@ object {
     min-width: 110px;
   }
 
+  .main-header .constrain {
+    position: relative;
+  }
+
   .sitetop-links {
     background-color: black;
   }
@@ -3479,6 +3605,36 @@ object {
 
   .mobile-nav-btn {
     display: none;
+  }
+
+  .desktop-search {
+    position: relative;
+  }
+
+  .desktop-search-wrapper {
+    border-radius: 5px;
+    height: 0;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    top: 60px;
+    width: 290px;
+  }
+  .desktop-search-wrapper.open {
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.35);
+    height: 40px;
+    padding: 5px 0 0 0;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
   }
 
   .home-slider .slick-arrow {
@@ -3547,6 +3703,10 @@ object {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+  }
+  .main-header .fa-search {
+    color: #FFFFFF;
+    display: block;
   }
 
   .site-branding {
@@ -3774,6 +3934,16 @@ object {
   .legal .legal-box {
     font-size: 16px;
   }
+  .legal .footer-block {
+    width: 48.5%;
+  }
+  .legal .footer-block.footer-block-left {
+    width: 55%;
+  }
+  .legal .footer-block.footer-block-right {
+    font-size: 16px;
+    width: 45%;
+  }
 }
 @media only screen and (min-width: 1080px) {
   .testimonials .slick-arrow {
@@ -3808,10 +3978,6 @@ object {
   .page-template-multi-template section.pro-cta .large-text {
     font-size: 48px;
   }
-
-  .main-footer .footer-block {
-    width: 45%;
-  }
 }
 @media only screen and (min-width: 1440px) {
   .secondary .header-image {
@@ -3825,5 +3991,13 @@ object {
 
   .products-list-image {
     height: auto;
+  }
+
+  .desktop-search-wrapper input[type=search] {
+    height: 30px;
+  }
+
+  .slider-text h2 {
+    font-size: 100px;
   }
 }

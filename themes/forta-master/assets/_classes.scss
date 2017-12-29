@@ -31,6 +31,15 @@
 	column-width: 265px;
 }
 
+.hs-richtext {
+	border-bottom: 1px solid;
+	font-size: 20px;
+	font-weight: bold;
+	margin: 10px 0 20px 0;
+	padding: 20px 0 5px 0;
+	text-transform: uppercase;
+}
+
 article {
 
 	ul {
@@ -48,6 +57,13 @@ article {
 				position: absolute;
 				left: -7px;
 			}
+		}
+	}
+
+	.postbox-container {
+		
+		ul {
+			column-width: auto;
 		}
 	}
 }
@@ -301,15 +317,64 @@ a.literature-btn {
 		}
 	}
 
+	input[type=checkbox],
+	input[type=radio] {
+		margin: 0 5px 0 0;
+		width: auto;
+	}
+
+	input[type=file] {
+		border: 0;
+	}
+
+	select {
+		min-height: 30px;
+		width: 100%;
+	}
+
 	input[type=submit] {
 		padding: 12px !important;
+	}
+
+	ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+
+		li {
+			margin: 0;
+			padding: 0;
+			list-style-type: none;
+			
+			&:before {
+				content: ''
+			}
+		}
+	}
+}
+
+.hs-form-field {
+	margin: 0 0 10px 0;
+}
+
+.hs-form-radio,
+.hs-form-checkbox {
+
+	span {
+		position: relative;
+		top: -2px;
 	}
 }
 
 .light-bg-form {
+	margin: -30px 0 0 0;
 
 	input, textarea {
 		border: 1px solid
+	}
+
+	input[type=submit] {
+		margin: 10px 0 0 0;
 	}
 }
 

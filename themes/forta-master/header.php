@@ -62,7 +62,7 @@
 		.main-navigation .menu-main-menu-container ul.sub-menu { background-color:  <?php echo get_theme_mod( 'forta_master_accent_color' ); ?>; }
 		.footer-menu li a:hover { color:  <?php echo get_theme_mod( 'forta_master_accent_color' ); ?>; }
 		.footer-menu li a:before { color:  <?php echo get_theme_mod( 'forta_master_accent_color' ); ?>; }
-		h2, h3 { color:  <?php echo get_theme_mod( 'forta_master_accent_color' ); ?>;border-color: <?php echo get_theme_mod( 'forta_master_accent_color' ); ?> }
+		h2, h3, .hs-richtext { color:  <?php echo get_theme_mod( 'forta_master_accent_color' ); ?>;border-color: <?php echo get_theme_mod( 'forta_master_accent_color' ); ?> }
 		.products-lists-text .subtitle { color: <?php echo get_theme_mod( 'forta_master_accent_color' ); ?>; }
 		a.products-btn { color: <?php echo get_theme_mod( 'forta_master_accent_color' ); ?>; }
 		a.products-btn:hover { color: #fff; background-color: <?php echo get_theme_mod( 'forta_master_accent_color' ); ?>; }
@@ -79,7 +79,7 @@
 		.training-heading { border-color: <?php echo get_theme_mod( 'forta_master_accent_color' );  ?>; }
 		#faqs h3:before { background-color: <?php echo get_theme_mod( 'forta_master_accent_color' ); ?>; }
 		a.literature-btn:before { background-color: <?php echo get_theme_mod( 'forta_master_accent_color' ); ?>; } 
-		.light-bg-form input { color: <?php echo get_theme_mod( 'forta_master_accent_color' ); ?> !important; border: 1px solid <?php echo get_theme_mod( 'forta_master_accent_color' ); ?>; }
+		.light-bg-form input, .light-bg-form select { color: <?php echo get_theme_mod( 'forta_master_accent_color' ); ?> !important; border: 1px solid <?php echo get_theme_mod( 'forta_master_accent_color' ); ?>; }
 		.light-bg-form textarea { color: <?php echo get_theme_mod( 'forta_master_accent_color' ); ?>; border: 1px solid <?php echo get_theme_mod( 'forta_master_accent_color' ); ?>; }
 		.single article ul li:before { color: <?php echo get_theme_mod( 'forta_master_accent_color' ); ?>; }
 		#ContentOverlay { border-color: <?php echo get_theme_mod( 'forta_master_accent_color' );  ?>; }
@@ -97,6 +97,28 @@
 		input[type=button].arisfor-calculate {  background-color: <?php echo get_theme_mod( 'forta_master_accent_color' ); ?>; color: #fff; }
 		.total { color: <?php echo get_theme_mod( 'forta_master_accent_color' ); ?>; }
 		.video-title { color: <?php echo get_theme_mod( 'forta_master_accent_color' ); ?>; }
+		.desktop-search-wrapper { background-color: <?php echo get_theme_mod( 'forta_master_accent_color' ); ?>; }
+	</style>
+	<style>
+		@media print {
+
+			.main-block {
+				margin: 0 !important;
+				overflow: visible !important;
+			}
+
+			footer, nav, img,
+			.header-image,
+			.sitetop-links,
+			.site-header,
+			.mobile-nav,
+			.pro-cta,
+			.product-tabs,
+			.product-listings
+			 {
+				display: none !important;
+			}
+		}
 	</style>
 	<?php endif; ?>
 </head>
@@ -155,6 +177,8 @@
 						<a target="_blank" class="pinterest-icon <?php echo $iconsCount; ?>" href="<?php echo esc_attr( get_theme_mod( 'forta_master_social_pinterest_link' ) ); ?>">Pinterest</a>
 					<?php endif; ?>
 				</div>
+				<i id="search-icon" class="fa fa-search" aria-hidden="true"></i>
+				<div class="search-wrapper"><?php get_search_form(); ?></div>
 			<?php endif; ?>
 
 			<?php
@@ -200,8 +224,10 @@
 					) );
 				?>
 			</nav><!-- #site-navigation -->
-
+			<i id="search-icon" class="fa fa-search desktop-search" aria-hidden="true"></i>
+			<div class="desktop-search-wrapper"><?php get_search_form(); ?></div>
 			<?php if ( !empty( $socialArray ) ) : ?>
+				
 				<div class="social-media-links flexxed">
 					<?php if ( get_theme_mod( 'forta_master_social_facebook_link' ) ) : ?>
 						<a target="_blank" class="facebook-icon <?php echo $iconsCount; ?>" href="<?php echo esc_attr( get_theme_mod( 'forta_master_social_facebook_link' ) ); ?>">Facebook</a>

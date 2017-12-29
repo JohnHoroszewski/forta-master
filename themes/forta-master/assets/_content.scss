@@ -125,6 +125,7 @@ article {
 	.heading {
 		font-family: $rale-font;
 		font-size: 32px;
+		margin: 0 0 30px 0;
 		text-transform: uppercase;
 	}
 
@@ -138,7 +139,7 @@ article {
 
 .callout-block-text {
 	line-height: 30px;
-	margin: 30px 0;
+	margin: 0 0 30px 0;
 }
 
 .callout-block-image {
@@ -170,6 +171,7 @@ a.sub-content-btn {
 		background-color: $white-color;
 		box-shadow: $light-shadow;
 		display: table;
+		height: 275px;
 		padding: 25px;
 		position: relative;
 		margin: 0 auto 50px auto;
@@ -1111,7 +1113,39 @@ article {
 	}
 }
 
+.page-template-callouts-template {
 
+	.callout-blocks {
+		padding: 30px 0;
+	}
+
+	.main-block {
+		padding: 30px 0;
+	}
+
+	.callout-block-info {
+
+		.heading {
+			font-size: 32px;
+			padding: 20px 0 0 0;
+		}
+	}
+}
+
+// Search Results Page
+.search-results {
+
+	.site-content {
+		padding: 180px 0 0 0;
+	}
+}
+
+.search-results-content {
+
+	.constrain {
+		display: block;
+	}
+}
 
 // 404 Page
 .error404 {
