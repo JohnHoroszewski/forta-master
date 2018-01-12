@@ -9,10 +9,6 @@
 
 get_header(); ?>
 
-<!-- 	<div class="home-slider">	
-		<?php echo do_shortcode( '[slick-slider]' ); ?>
-	</div> --><!-- .home-slider -->
-
 	<div class="home-slider">	
 		
 		<div class="home-bg-slider">
@@ -29,7 +25,7 @@ get_header(); ?>
 				
 					<?php if ( $type == 'video' ) : ?>
 
-						<video muted id="video-<?php echo $i; ?>" class="hp-slider-element video" src="<?php the_sub_field( 'slide_type_content' ); ?>" type="video/mp4" loop></video>
+						<video controls="false" muted id="video-<?php echo $i; ?>" class="hp-slider-element video" src="<?php the_sub_field( 'slide_type_content' ); ?>" type="video/mp4" loop></video>
 
 					<?php else : ?>
 

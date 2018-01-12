@@ -56,7 +56,7 @@
 					<div class="bottom-info">
 						<?php if ( get_theme_mod( 'forta_master_company_phone' ) ) : ?>
 							<span class="contact">
-								<span class="title">Phone:</span> <a href="<?php echo get_theme_mod( 'forta_master_company_phone' ); ?>"><?php echo get_theme_mod( 'forta_master_company_phone' ); ?></a>
+								<span class="title">Phone:</span> <a href="tel:<?php echo get_theme_mod( 'forta_master_company_phone' ); ?>"><?php echo get_theme_mod( 'forta_master_company_phone' ); ?></a>
 							</span>
 						<?php endif; ?>
 						<?php if ( get_theme_mod( 'forta_master_company_tollfree' ) ) : ?>

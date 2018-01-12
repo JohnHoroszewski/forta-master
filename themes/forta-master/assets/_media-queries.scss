@@ -1143,6 +1143,13 @@
 		}
 	}
 
+	.request-conversion {
+
+		a {
+			font-size: 14px;
+		}
+	}
+
 	.more-tab {
 		display: none;
 		-ms-flex-preferred-size: 0;
@@ -1529,7 +1536,8 @@
 		}
 	}
 
-	.post-template-default {
+	.post-template-default,
+	.attachment-template-default {
 		
 		article {
 
@@ -1543,7 +1551,8 @@
 		}
 	}
 
-	.single-post {
+	.single-post,
+	.single-attachment {
 
 		article.blog-posts {
 

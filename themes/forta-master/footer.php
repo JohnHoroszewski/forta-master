@@ -80,7 +80,7 @@
 			<div class="constrain flexxed">
 				<div class="footer-block footer-block-left">
 					<div class="legal-box">
-						&copy;<?php the_date( 'Y' ); ?> - <?php bloginfo( 'name' ); ?><sup>®</sup>&nbsp;Corporation
+						&copy;<?php the_date( 'Y' ); ?> - <?php bloginfo( 'name' ); ?>&nbsp;Corporation
 					</div>
 					<div class="legal-box">All Rights Reserved</div>
 					<div class="legal-box"><?php if ( get_theme_mod( 'forta_privacy_policy' ) ){ echo '<a href="' . get_theme_mod( 'forta_privacy_policy' ) . '">Privacy Policy</a>'; }?></div>

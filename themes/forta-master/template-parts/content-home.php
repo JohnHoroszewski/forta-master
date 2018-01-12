@@ -64,7 +64,7 @@
 
 	<section class="home-section-block sub-content">
 		<div class="constrain">
-			<h2 class="line-heading"><?php the_field( 'sub_content_heading' ); ?></h2>
+			<h2><?php the_field( 'sub_content_heading' ); ?></h2>
 			<div class="flex-wrapper">
 				<div class="left-block"><?php the_field( 'sub_content_left_text_column' ); ?></div>
 				<div class="right-block"><?php the_field( 'sub_content_right_text_column' ); ?></div>
@@ -91,7 +91,7 @@
 
 	<section class="home-section-block simple-steps">
 		<div class="constrain">
-			<h2 class="line-heading"><?php the_field( 'simple_steps_title' ); ?></h2>
+			<h2><?php the_field( 'simple_steps_title' ); ?></h2>
 			<?php the_field( 'simple_steps_content' ); ?>
 		</div>
 	</section>
@@ -102,7 +102,7 @@
 	<?php if ( get_field( 'testimonials_heading' ) ) : ?>
 	<section class="home-section-block testimonials">
 		<div class="constrain">
-			<h2 class="line-heading"><?php the_field( 'testimonials_heading' ); ?></h2>
+			<h2><?php the_field( 'testimonials_heading' ); ?></h2>
 		
 			<div class="flex-wrapper">
 				<div class="left-block"><?php the_field( 'testimonials_left_text_column' ); ?></div>

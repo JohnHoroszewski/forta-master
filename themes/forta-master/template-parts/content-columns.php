@@ -43,7 +43,8 @@
                         <h2><?php the_sub_field( 'columns_section_title' ); ?></h2>
                     <?php endif; ?>
 
-                    <div class="columns-container <?php the_sub_field( 'columns_count' ); ?>">
+
+                    <div class="columns-container <?php the_sub_field( 'columns_count' ); ?> <?php the_sub_field( 'colored_backgrounds_for_linked_items' ); ?>">
 
                         <?php if ( have_rows( 'columns_content' ) ) : ?>
 

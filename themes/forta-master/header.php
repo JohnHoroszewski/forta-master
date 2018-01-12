@@ -64,8 +64,8 @@
 		.footer-menu li a:before { color:  <?php echo get_theme_mod( 'forta_master_accent_color' ); ?>; }
 		h2, h3, .hs-richtext { color:  <?php echo get_theme_mod( 'forta_master_accent_color' ); ?>;border-color: <?php echo get_theme_mod( 'forta_master_accent_color' ); ?> }
 		.products-lists-text .subtitle { color: <?php echo get_theme_mod( 'forta_master_accent_color' ); ?>; }
-		a.products-btn { color: <?php echo get_theme_mod( 'forta_master_accent_color' ); ?>; }
-		a.products-btn:hover { color: #fff; background-color: <?php echo get_theme_mod( 'forta_master_accent_color' ); ?>; }
+		a.products-btn { color: #fff; background-color: <?php echo get_theme_mod( 'forta_master_accent_color' ); ?>; }
+		a.products-btn:hover {  color: <?php echo get_theme_mod( 'forta_master_accent_color' ); ?>; background-color: #ffffff; }
 		a.border-btn, .border-btn { border-color: <?php echo get_theme_mod( 'forta_master_accent_color' );  ?>; color: <?php echo get_theme_mod( 'forta_master_accent_color' ); ?>; }
 		a.border-btn:hover { background-color: <?php echo get_theme_mod( 'forta_master_accent_color' ); ?>; color: #fff; }
 		a.flat-btn, .flat-btn { background-color: <?php echo get_theme_mod( 'forta_master_accent_color' ); ?>; border-color: <?php echo get_theme_mod( 'forta_master_accent_color' ); ?>; color: #fff; }
@@ -77,6 +77,8 @@
 		.main-content-form input[type=submit] { background-color: <?php echo get_theme_mod( 'forta_master_accent_color' ); ?>; color: #fff !important; }
 		.product-tabs a.active { color: <?php echo get_theme_mod( 'forta_master_accent_color' ); ?> !important; }
 		.training-heading { border-color: <?php echo get_theme_mod( 'forta_master_accent_color' );  ?>; }
+		.training-block a.training-preview { background-color: <?php echo get_theme_mod( 'forta_master_accent_color' ); ?> }
+		.training-block a.training-preview:hover { color: <?php echo get_theme_mod( 'forta_master_accent_color' ); ?> !important; }
 		#faqs h3:before { background-color: <?php echo get_theme_mod( 'forta_master_accent_color' ); ?>; }
 		a.literature-btn:before { background-color: <?php echo get_theme_mod( 'forta_master_accent_color' ); ?>; } 
 		.light-bg-form input, .light-bg-form select { color: <?php echo get_theme_mod( 'forta_master_accent_color' ); ?> !important; border: 1px solid <?php echo get_theme_mod( 'forta_master_accent_color' ); ?>; }
@@ -98,6 +100,9 @@
 		.total { color: <?php echo get_theme_mod( 'forta_master_accent_color' ); ?>; }
 		.video-title { color: <?php echo get_theme_mod( 'forta_master_accent_color' ); ?>; }
 		.desktop-search-wrapper { background-color: <?php echo get_theme_mod( 'forta_master_accent_color' ); ?>; }
+		.lnk-bkg .columns-content-block { background-color: <?php echo get_theme_mod( 'forta_master_accent_color' ); ?>; }
+		.col2-block { background-color: <?php echo get_theme_mod( 'forta_master_accent_color' ); ?>; color: #ffffff; }
+		.col2-block a, .col2-block h3 { color: #ffffff; }
 	</style>
 	<style>
 		@media print {

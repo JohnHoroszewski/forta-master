@@ -427,8 +427,20 @@ article {
 	}
 }
 
+.search-no-results {
+	
+	.site-content {
+		padding: 190px 0 0 0;
+	}
+}
+
+.search-none {
+	margin: 20px 0;
+}
+
 .savings-calc {
 	background-color: $darkest;
+	clear: both;
 	color: $white-color;
 	display: block;
 	font-size: 15px;
@@ -652,10 +664,14 @@ ul.product-tabs {
 	position: relative;
 
 	a.training-preview {
-		background-color: $white-color;
+		color: $white-color;
 		bottom: 15px;
 		left: 10px;
 		position: absolute;
+
+		&:hover {
+			background-color: $white-color;
+		}
 	}
 }
 
@@ -728,6 +744,11 @@ ul.product-tabs {
 		    -ms-flex-pack: justify;
 		        justify-content: space-between;
 	}
+}
+
+.col2-block {
+	margin: 0 0 10px 0;
+	padding: 10px 20px;
 }
 
 .col2-video {
@@ -849,7 +870,8 @@ ul.product-tabs {
 	}
 }
 
-.single-post {
+.single-post,
+.single-attachment {
 
 	article.blog-posts {
 
@@ -920,6 +942,21 @@ ul.product-tabs {
 	}
 }
 
+.single-attachment {
+	
+	article.blog-posts {
+
+		.flex-wrapper {
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-box-orient: vertical;
+			-ms-flex-direction: row;
+			    flex-direction: row;
+		}
+	}
+}
+
 .share-article {
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -979,7 +1016,8 @@ a.share-icon {
 }
 
 // Single Article
-.post-template-default {
+.post-template-default,
+.attachment-template-default {
 
 	.site-content {
 		padding: 210px 0 0 0;
@@ -1106,6 +1144,29 @@ article {
 		margin: 0 0 10px 0;
 		text-align: center;
 		width: 100%;
+
+		img {
+			box-shadow: 1px 1px 13px rgba(0,0,0,0.15);			
+		}
+	}
+}
+
+.lnk-bkg {
+			
+	.columns-content-block {
+		color: $white-color;
+		margin: 0 0 10px 0;
+		padding: 10px;
+		text-align: center;
+		width: 100%;
+
+		a, h3 {
+			color: $white-color;
+		}
+
+		.fa {
+			margin: 0 10px 0 0;
+		}
 
 		img {
 			box-shadow: 1px 1px 13px rgba(0,0,0,0.15);			

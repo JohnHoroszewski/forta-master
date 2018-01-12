@@ -118,10 +118,14 @@
 
 										<?php the_excerpt(); ?>
 
+										<?php 	$sds = get_field( 'safety_data_sheet_upload', $postId );
+												$fds = get_field( 'technical_data_upload', $postId );
+										?>
+
 										<div class="products-btns-wrapper">
-											<a href="<?php the_permalink(); ?>#faqs" class="products-btn site-accent-border">FAQs</a>
+											<a target="_blank" href="<?php echo $sds[ 'url' ]; ?>" class="products-btn site-accent-border">SDS</a>
+											<a target="_blank" href="<?php echo $fds[ 'url' ]; ?>" class="products-btn site-accent-border">Technical Data</a>
 											<a href="<?php the_permalink(); ?>" class="products-btn site-accent-border">More Details</a>
-											<a href="#" class="products-btn site-accent-border">Request a Quote</a>
 										</div>
 
 									</div><!-- .products-lists-text -->

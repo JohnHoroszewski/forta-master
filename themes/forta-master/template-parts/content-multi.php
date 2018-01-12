@@ -49,7 +49,7 @@
 
 					<div class="constrain">
 						<?php if ( get_sub_field( 'module_title' ) ) : ?>
-							<h2 class="line-heading"><?php the_sub_field( 'module_title' ); ?></h2>
+							<h2><?php the_sub_field( 'module_title' ); ?></h2>
 						<?php endif; ?>
 						<?php if ( get_sub_field( 'module_intro_content' ) ) : ?>
 							<div class="module-intro"><?php the_sub_field( 'module_intro_content' ); ?></div>
@@ -69,7 +69,7 @@
 
 					<div class="constrain">
 						<?php if ( get_sub_field( 'module_title' ) ) : ?>
-							<h2 class="line-heading"><?php the_sub_field( 'module_title' ); ?></h2>
+							<h2><?php the_sub_field( 'module_title' ); ?></h2>
 						<?php endif; ?>
 						<?php if ( get_sub_field( 'module_intro_content' ) ) : ?>
 							<div class="module-intro"><?php the_sub_field( 'module_intro_content' ); ?></div>
@@ -92,7 +92,7 @@
 
 					<div class="constrain">
 						<?php if ( get_sub_field( 'module_title' ) ) : ?>
-							<h2 class="line-heading"><?php the_sub_field( 'module_title' ); ?></h2>
+							<h2><?php the_sub_field( 'module_title' ); ?></h2>
 						<?php endif; ?>
 						<?php if ( get_sub_field( 'module_intro_text' ) ) : ?>
 							<div class="module-intro"><?php the_sub_field( 'module_intro_text' ); ?></div>
@@ -116,7 +116,7 @@
 
 					<div class="constrain">
 						<?php if ( get_sub_field( 'module_title' ) ) : ?>
-							<h2 class="line-heading"><?php the_sub_field( 'module_title' ); ?></h2>
+							<h2><?php the_sub_field( 'module_title' ); ?></h2>
 						<?php endif; ?>
 						<?php if ( get_sub_field( 'module_intro_text' ) ) : ?>
 							<div class="module-intro"><?php the_sub_field( 'module_intro_text' ); ?></div>
@@ -139,7 +139,7 @@
 
 					<div class="constrain">
 						<?php if ( get_sub_field( 'module_title' ) ) : ?>
-							<h2 class="line-heading"><?php the_sub_field( 'module_title' ); ?></h2>
+							<h2><?php the_sub_field( 'module_title' ); ?></h2>
 						<?php endif; ?>
 						<?php if ( get_sub_field( 'module_intro_text' ) ) : ?>
 							<div class="module-intro"><?php the_sub_field( 'module_intro_text' ); ?></div>
