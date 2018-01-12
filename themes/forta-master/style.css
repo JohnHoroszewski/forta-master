@@ -1560,7 +1560,7 @@ a:active {
   padding: 0;
 }
 .slider-text p {
-  font-weight: 100;
+  font-weight: 300;
   text-transform: uppercase;
 }
 
@@ -1933,9 +1933,12 @@ article ul.menu li:before {
   top: 9px;
 }
 
+.products-tab-list {
+  background-color: #333333;
+  padding: 20px 0 0 0;
+}
 .products-tab-list .tab-text {
   text-align: center;
-  text-transform: uppercase;
 }
 
 .product-tabs {
@@ -3197,6 +3200,11 @@ object {
     font-size: 36px;
   }
 
+  .page-template-products-template .site-content,
+  .page-template-projects-template .site-content,
+  .page-template-advantages-template .site-content {
+    padding: 200px 0 0 0;
+  }
   .page-template-products-template h1.products-heading,
   .page-template-projects-template h1.products-heading,
   .page-template-advantages-template h1.products-heading {

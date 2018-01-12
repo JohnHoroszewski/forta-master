@@ -56,7 +56,7 @@
 	}
 
 	p {
-		font-weight: 100;
+		font-weight: 300;
 		text-transform: uppercase;
 	}
 }
@@ -484,10 +484,11 @@ article {
 }
 
 .products-tab-list {
+	background-color: $darkest;
+	padding: 20px 0 0 0;
 
 	.tab-text {
 		text-align: center;
-	    text-transform: uppercase;
 	}
 }
 
