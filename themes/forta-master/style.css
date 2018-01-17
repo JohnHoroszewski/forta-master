@@ -423,7 +423,7 @@ a.icons8 {
 
 .slider-btn {
   border: 2px solid;
-  display: inline-block;
+  display: block;
   font-family: "Raleway", Helvetica, Arial, sans-serif;
   font-size: 18px;
   letter-spacing: .5px;
@@ -2452,8 +2452,15 @@ a.share-icon.pinterest:before {
   margin: 20px 0 0 0;
 }
 
+article .postbox-container {
+  font-family: "Roboto", Helvetica, Arial, sans-serif !important;
+}
 article .postbox-container ul li:before {
   content: '';
+}
+
+.cspml_details_title {
+  font-family: "Roboto", Helvetica, Arial, sans-serif !important;
 }
 
 .page-template-multicolumns-template .site-content {

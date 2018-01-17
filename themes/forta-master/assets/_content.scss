@@ -1096,7 +1096,8 @@ a.share-icon {
 article {
 
 	.postbox-container {
-		
+		font-family: $robo-font !important;
+
 		ul {
 
 			li {
@@ -1107,6 +1108,10 @@ article {
 			}
 		}
 	}
+}
+
+.cspml_details_title {
+	font-family: $robo-font !important;
 }
 
 // Multicolumns Template

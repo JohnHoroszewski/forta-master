@@ -34,7 +34,13 @@
 			</div><!-- .entry-content -->
 		</div><!-- .main-block -->
 		<aside class="product-sidebar">
-			
+
+			<?php if ( get_field( 'quick_link_button' ) == 'yes' ) : ?>
+				<h2>Literature</h2>
+				<p>
+				<a class="border-btn pdf literature-btn" href="#literature">Product Literature</a></p>
+			<?php endif; ?>
+
 			<?php if ( have_rows( 'sidebar_content' ) ) : ?>
 				<?php while ( have_rows( 'sidebar_content' ) ) : the_row(); ?>
 
@@ -43,11 +49,6 @@
 					</div>
 
 				<?php endwhile; ?>
-			<?php endif; ?>
-
-			<?php if ( get_field( 'quick_link_button' ) == 'yes' ) : ?>
-				<h2>Literature</h2>
-				<a class="literature-btn pdf" href="#literature">Product Literature</a>
 			<?php endif; ?>
 
 			<?php

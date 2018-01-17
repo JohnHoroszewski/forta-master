@@ -123,8 +123,14 @@
 										?>
 
 										<div class="products-btns-wrapper">
-											<a target="_blank" href="<?php echo $sds[ 'url' ]; ?>" class="products-btn site-accent-border">SDS</a>
+											<?php if ( !empty( $sds ) ) : ?> 
+												<a target="_blank" href="<?php echo $sds[ 'url' ]; ?>" class="products-btn site-accent-border">SDS</a>
+											<?php endif; ?>
+											
+											<?php if ( !empty( $fds ) ) : ?> 
 											<a target="_blank" href="<?php echo $fds[ 'url' ]; ?>" class="products-btn site-accent-border">Technical Data</a>
+											<?php endif; ?>
+
 											<a href="<?php the_permalink(); ?>" class="products-btn site-accent-border">More Details</a>
 										</div>
 
